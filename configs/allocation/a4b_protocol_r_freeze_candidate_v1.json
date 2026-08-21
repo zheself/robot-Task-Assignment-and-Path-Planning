@@ -1,0 +1,354 @@
+{
+  "version": "a4b-protocol-r-freeze-candidate-v1",
+  "protocol_id": "a4b_ordinary_search_recovery_v3",
+  "status": "DRAFT_FOR_REVIEW_NOT_FROZEN_NOT_AUTHORIZED",
+  "formal_action": "HOLD_A4B_LEARNED_DESTROY_TRAINING",
+  "evidence_label": "SIM_GEOMETRIC_DEVELOPMENT_ONLY",
+  "data": {
+    "master_seed": 1047299,
+    "id_prefix": "a4blnsr3",
+    "id_templates": {
+      "regular_train_group": "a4blnsr3-train-{cell}-regular-group-{index:03d}",
+      "challenge_train_group": "a4blnsr3-train-{cell}-challenge-group-{index:03d}",
+      "development_group": "a4blnsr3-development-{cell}-group-{index:03d}",
+      "instance": "{task_group_id}-v{variant:02d}",
+      "workpiece": "{task_group_id}-workpiece",
+      "layout": "{task_group_id}-layout",
+      "parent_curve": "{task_group_id}-curve-{curve_index:03d}"
+    },
+    "splits": ["train", "development"],
+    "forbidden_splits": ["validation", "frozen_test", "stress"],
+    "cells": [
+      "iid_small",
+      "iid_medium",
+      "dense_precedence",
+      "resource_bottleneck",
+      "tight_windows",
+      "scale"
+    ],
+    "regular_train_groups_per_cell": 8,
+    "development_groups_per_cell": 4,
+    "variants_per_group": 2,
+    "challenge_cells": [
+      "dense_precedence",
+      "resource_bottleneck",
+      "tight_windows",
+      "scale"
+    ],
+    "challenge_train_groups_per_challenge_cell": 2,
+    "regular_train_groups_total": 48,
+    "challenge_train_groups_total": 8,
+    "train_groups_total": 56,
+    "development_groups_total": 24,
+    "train_instances_total": 112,
+    "challenge_train_instances_total": 16,
+    "development_instances_total": 48,
+    "operator_calibration_regular_groups_per_cell": 2,
+    "operator_calibration_includes_all_challenge_groups": true,
+    "operator_calibration_instances_total": 40,
+    "isolation_requirements": {
+      "task_group_overlap_between_splits": 0,
+      "instance_overlap_between_splits": 0,
+      "workpiece_overlap_between_splits": 0,
+      "layout_overlap_between_splits": 0,
+      "parent_curve_overlap_between_splits": 0,
+      "development_used_for_parameter_selection": false,
+      "challenge_generation_uses_train_only": true
+    },
+    "generator": {
+      "implementation": "safe_residual_rl.allocation.generation.generate_instance",
+      "parameter_source": "copied_from_a3_5_pointer_pilot_config_without_loading_any_instance_witness_trace_or_checkpoint",
+      "parameter_source_path": "configs/allocation/a3_5_pointer_pilot_v1.json",
+      "parameter_source_sha256": "876933101dc5ed2e56984d8666dae36509481e93d6d6422ec4eed5380a7bea17",
+      "coordinate_frame": "synthetic_workcell_m",
+      "geometry": {
+        "curve_types": ["line", "arc", "bspline", "closed_loop"],
+        "nominal_process_speed_m_s": 0.04,
+        "planning_horizon_s": 1200.0,
+        "robot_base_radius_m": 0.52,
+        "samples_per_curve": 25,
+        "witness_loose_pre_margin_s": 30.0,
+        "witness_tight_post_margin_duration": 0.75,
+        "witness_tight_pre_margin_duration": 0.25,
+        "workpiece_radius_m": 0.32
+      },
+      "cell_specs": {
+        "iid_small": {"robots": [2, 3], "segments": [8, 16], "max_segments_per_curve": 2, "precedence_probability": 0.05, "shared_resource_probability": 0.1, "tight_window_probability": 0.0},
+        "iid_medium": {"robots": [3, 5], "segments": [20, 36], "max_segments_per_curve": 3, "precedence_probability": 0.25, "shared_resource_probability": 0.35, "tight_window_probability": 0.02},
+        "dense_precedence": {"robots": [4, 6], "segments": [36, 52], "max_segments_per_curve": 4, "precedence_probability": 0.55, "shared_resource_probability": 0.35, "tight_window_probability": 0.05},
+        "resource_bottleneck": {"robots": [4, 6], "segments": [36, 52], "max_segments_per_curve": 4, "precedence_probability": 0.3, "shared_resource_probability": 0.7, "tight_window_probability": 0.05},
+        "tight_windows": {"robots": [3, 6], "segments": [30, 46], "max_segments_per_curve": 4, "precedence_probability": 0.35, "shared_resource_probability": 0.5, "tight_window_probability": 0.2},
+        "scale": {"robots": [6, 8], "segments": [56, 72], "max_segments_per_curve": 4, "precedence_probability": 0.4, "shared_resource_probability": 0.6, "tight_window_probability": 0.1}
+      }
+    },
+    "disjoint_id_prefixes": [
+      "a2v2",
+      "a2v3",
+      "a2v4",
+      "a35p1",
+      "a35f1",
+      "a4wsp1",
+      "a4bnlsd1",
+      "a4blnsd2"
+    ],
+    "static_ur5_csv_allowed": false,
+    "frozen_or_stress_generation_allowed": false
+  },
+  "challenge_generation": {
+    "scope": "train_only_initializer_failure_eligibility_not_performance_selection",
+    "required_groups": 8,
+    "required_cells": 4,
+    "required_variants_per_group": 2,
+    "max_base_attempts_per_group": 64,
+    "group_attempt_seed_derivation": "stable_seed(master_seed,challenge,cell,group_slot,attempt)",
+    "variant_constraint_seed_derivation": "generate_instance(group_attempt_seed,variant)",
+    "variants_share_group_geometry": true,
+    "eligibility": {
+      "constructive_witness_verified": true,
+      "hybrid_load_balanced_verifier_feasible": false,
+      "allowed_initializer_failure_reasons": ["time_window_failure"],
+      "all_variants_must_be_eligible": true
+    },
+    "deterministic_algorithm": [
+      "Generate a fresh base instance and constructive witness from the attempt seed.",
+      "Reject immediately if the witness fails the unchanged A1 verifier.",
+      "Run hybrid_load_balanced once; accept the variant if it is already time_window_failure.",
+      "Otherwise sort atomic units by descending positive hybrid_finish_minus_witness_finish, then unit_id.",
+      "For prefix lengths 1..N, set each selected unit segment end window to min(original_end, midpoint(witness_finish, hybrid_finish)); never move an end before witness_finish and never change start windows.",
+      "After each prefix, require the original constructive witness plan to remain verifier-feasible and rerun hybrid_load_balanced.",
+      "Accept the first prefix producing time_window_failure; otherwise advance to the next attempt seed.",
+      "Accept a group only when both variants pass; record attempt, tightened units and all instance/witness/initializer hashes.",
+      "Fail corpus generation if any group slot has no eligible pair after 64 attempts; no manual replacement or LNS-outcome filtering is allowed."
+    ],
+    "development_challenge_groups_allowed": false
+  },
+  "initializer": {
+    "primary": "hybrid_load_balanced",
+    "same_for_all_controlled_methods": true,
+    "fallback_allowed": false,
+    "cost_is_in_end_to_end_budget": true
+  },
+  "search": {
+    "fixed_iterations": [10, 20, 30],
+    "fixed_end_to_end_time_s": [0.5, 1.0, 3.0],
+    "safety_watchdog_s": 1800.0,
+    "destroy_ratios": [0.1, 0.25, 0.4],
+    "repair_candidate_evaluation_budget": 256,
+    "random_seeds": [3253, 4099],
+    "profile_seed": 5843,
+    "restart_no_improvement": 12,
+    "allow_infeasible_current": true,
+    "objective_weights": {
+      "makespan": 1.0,
+      "load_variance": 0.05,
+      "travel_setup_time": 0.1,
+      "priority_tardiness": 1.0
+    }
+  },
+  "repair": {
+    "reference_backend": "repair_destroyed_state_v2",
+    "candidate_backend": "repair_destroyed_state_protocol_r",
+    "semantic_change_allowed": false,
+    "candidate_parallelism_allowed": false,
+    "candidate_pruning_allowed": false,
+    "candidate_reordering_allowed": false,
+    "approximate_diagnostic_allowed": false,
+    "allowed_acceleration_stages": [
+      "prepare immutable units robots costs precedence windows resources and robot-index maps once per trace",
+      "reuse canonical state projections and state hashes within a candidate evaluation",
+      "memoize identical state diagnostics within one trace only",
+      "use exact incremental load position precedence window and resource bookkeeping only when shadow-reference equality passes"
+    ],
+    "cache_scope": "same_instance_same_method_same_seed_same_trace_only",
+    "cross_trace_cache_allowed": false,
+    "full_candidate_sequence_hash_required": true,
+    "full_diagnostic_vector_equality_required": true,
+    "selected_state_hash_equality_required": true,
+    "plan_and_verifier_hash_equality_required": true
+  },
+  "methods": [
+    "random_lns",
+    "handcrafted_round_robin",
+    "best_single_train_selected",
+    "adaptive_alns"
+  ],
+  "destroy_operators": [
+    "random_destroy",
+    "worst_cost_destroy",
+    "load_imbalance_destroy",
+    "precedence_chain_destroy",
+    "critical_slack_destroy",
+    "shared_resource_conflict_destroy",
+    "relatedness_destroy",
+    "compound_destroy"
+  ],
+  "alns": {
+    "candidate_update_schemes": ["online", "segmented"],
+    "segment_length": 8,
+    "reaction_factor": 0.2,
+    "initial_temperature_fraction": 0.02,
+    "cooling_rate": 0.97,
+    "rewards": {
+      "global_best": 8.0,
+      "new_feasible": 6.0,
+      "strict_improvement": 4.0,
+      "unseen_diversification": 1.0,
+      "no_signal": 0.0
+    }
+  },
+  "profile_and_parity": {
+    "semantic_fixtures": 12,
+    "fresh_train_instances": 40,
+    "repair_scenarios_per_instance": 24,
+    "repair_scenario_cross_product": "8 destroy operators x 3 destroy ratios",
+    "fixed_iteration_prefix_methods": [
+      "random_lns",
+      "adaptive_alns_online",
+      "adaptive_alns_segmented"
+    ],
+    "fixed_iteration_prefix_length": 5,
+    "real_clock_used_for_speed_only": true,
+    "no_deadline_or_fake_clock_used_for_semantic_parity": true,
+    "fixed_time_common_completed_prefix_must_match": true,
+    "accelerated_extra_fixed_time_suffix_allowed": true,
+    "reference_and_candidate_run_on_same_pinned_cpu_sequentially": true
+  },
+  "expected_matrices": {
+    "train_calibration": {
+      "instances": 40,
+      "fixed_iteration_traces": 400,
+      "fixed_time_traces": 120,
+      "traces_total": 520,
+      "fixed_iteration_metric_rows": 1200,
+      "fixed_time_metric_rows": 120,
+      "metric_rows_total": 1320,
+      "required_exact_30_complete": 400
+    },
+    "development": {
+      "instances": 48,
+      "independent_task_groups": 24,
+      "fixed_iteration_traces": 384,
+      "fixed_time_traces": 384,
+      "traces_total": 768,
+      "metric_rows_total": 2304,
+      "required_exact_30_complete": 384
+    }
+  },
+  "gates": {
+    "semantic_parity": {
+      "fixture_and_train_scenarios_pass_fraction": 1.0,
+      "candidate_sequence_order_hash_match_fraction": 1.0,
+      "diagnostic_vector_bitwise_match_fraction": 1.0,
+      "selected_state_hash_match_fraction": 1.0,
+      "scheduler_diagnostic_plan_verifier_hash_match_fraction": 1.0,
+      "fixed_iteration_transition_signature_match_fraction": 1.0,
+      "random_state_signature_match_fraction": 1.0
+    },
+    "speed": {
+      "global_median_complete_neighborhood_s_max": 0.8,
+      "global_median_repair_path_speedup_min": 7.0,
+      "scale_median_complete_neighborhood_s_max": 2.4,
+      "same_node_paired_measurement_required": true
+    },
+    "search_opportunity": {
+      "per_method_global_median_completed_by_1s_min": 1,
+      "per_method_global_median_completed_by_3s_min": 3,
+      "per_method_fraction_with_one_completed_by_3s_min": 0.9,
+      "per_method_per_cell_median_completed_by_3s_min": 1,
+      "iid_small_and_iid_medium_median_completed_by_3s_min": 3
+    },
+    "challenge_recovery": {
+      "eligible_groups_min": 8,
+      "eligible_cells_min": 4,
+      "ordinary_method_recovered_groups_min": 2,
+      "ordinary_method_recovery_rate_min": 0.25
+    },
+    "alns_non_systematic_weakness": {
+      "paired_coverage_group_deficit_max_at_1s": 1,
+      "paired_coverage_group_deficit_max_at_3s": 1,
+      "paired_mean_normalized_primal_integral_excess_max": 0.02,
+      "median_completed_neighborhood_ratio_vs_random_min": 0.9,
+      "eligible_recovery_group_deficit_vs_random_max": 1,
+      "all_subgates_required": true
+    },
+    "operator_dependence": {
+      "selected_operators_min": 2,
+      "nonuniform_weights_when_rewards_differ": true,
+      "distinct_destroy_and_successor_or_outcome_hashes_in_each_nontrivial_cell": true,
+      "all_operator_fixed_time_outcomes_identitywise_equal_allowed": false
+    },
+    "integrity": {
+      "exact_iteration_complete_required": true,
+      "all_failures_in_denominator": true,
+      "replay_required": true,
+      "source_config_manifest_hash_required": true,
+      "zero_split_or_group_leakage_required": true,
+      "forbidden_path_access_count_max": 0
+    }
+  },
+  "hardware": {
+    "partition": "normal",
+    "account": "v-chengwy",
+    "gpu_requested": false,
+    "gres_requested": false,
+    "candidate_nodes": ["sist_gpu58", "sist_gpu59", "sist_gpu60"],
+    "submission_node_selection": "lexicographically_first_available_with_6_free_cpus_and_32GiB_unallocated_memory",
+    "same_selected_node_for_all_timed_stages": true,
+    "worker_count": 6,
+    "shard_key": "difficulty_cell",
+    "cpus_per_worker": 1,
+    "memory_gb_per_worker": 4,
+    "packed_cpus": 6,
+    "packed_memory_gb": 32,
+    "omp_num_threads": 1,
+    "mkl_num_threads": 1,
+    "openblas_num_threads": 1,
+    "numexpr_num_threads": 1,
+    "cuda_visible_devices": "",
+    "cpu_affinity_required": true,
+    "unique_cpu_per_worker_required": true
+  },
+  "walltime_requests": {
+    "preflight": "00:30:00",
+    "generate_and_challenge_audit": "01:00:00",
+    "profile_parity_packed": "04:00:00",
+    "profile_merge_gate": "00:30:00",
+    "train_calibration_packed": "06:00:00",
+    "train_merge_gate": "01:00:00",
+    "development_smoke": "00:30:00",
+    "development_packed": "08:00:00",
+    "replay_aggregate": "02:00:00",
+    "expected_wall_after_first_allocation_hours": [4.0, 6.0],
+    "queue_time_excluded": true
+  },
+  "execution_chain": [
+    "preflight",
+    "generate_and_challenge_audit",
+    "profile_parity_packed",
+    "profile_merge_gate",
+    "train_calibration_packed",
+    "train_merge_gate",
+    "development_smoke",
+    "development_packed",
+    "replay_aggregate"
+  ],
+  "boundaries": [
+    "This file is a review candidate and is not an executable frozen protocol.",
+    "No A3 or A3.5 frozen instance witness trace prediction or checkpoint is accessed.",
+    "Protocol R has no checkpoint model training label generation reinforcement learning or reinsertion learning stage.",
+    "A4a validation and A4b v1 or v2 outputs are not patched rerun overwritten or reused as Protocol R data.",
+    "No validation frozen_test or stress split is generated.",
+    "All evidence remains SIM_GEOMETRIC development-only.",
+    "HOLD_A4B_LEARNED_DESTROY_TRAINING remains in force after any Protocol R outcome."
+  ],
+  "seal_time_required_fields": {
+    "protocol_document_sha256": null,
+    "config_sha256": null,
+    "profile_evidence_sha256": null,
+    "source_hashes": null,
+    "dependency_versions": null,
+    "selected_node_and_cpu_signature": null,
+    "slurm_script_hashes": null,
+    "test_report_hashes": null
+  }
+}

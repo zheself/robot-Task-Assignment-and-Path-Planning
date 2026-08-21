@@ -1,0 +1,169 @@
+{
+  "acceptance": {
+    "checks": {
+      "all_valid_fixtures_complete_and_verified": true,
+      "minimum_train_complete_rate": true,
+      "zero_verification_failures": true
+    },
+    "passed": true
+  },
+  "accessed_benchmark_splits": [
+    "train"
+  ],
+  "boundaries": [
+    "Optimal is claimed only for complete enumeration within the A1 proxy.",
+    "Limit and unsupported_scale are distinct from infeasible.",
+    "No validation, frozen-test or stress instance may be read.",
+    "The reference is not path, collision, physical-process or factory optimality."
+  ],
+  "created_utc": "2026-08-09T13:08:42.446650+00:00",
+  "evidence_label": "SIM_GEOMETRIC",
+  "manifest_sha256": "a039238d50ac10a6ecc44d6001f07aa75cbc3169c9ac5c8c1800a1794742ae12",
+  "protocol_sha256": "fdc9d68b2135d020089bc66e6e0c3330bcf7e2a7d1490c43b428d675a38b93da",
+  "rows": [
+    {
+      "case_id": "01_valid_minimal.json",
+      "diagnostics": "JOINT_ASSIGNMENT_AND_SEQUENCE_ENUMERATION|ASSIGNMENT_COMBINATIONS=1|ASSIGNMENTS_COMPLETED=1|NODES_EXPANDED=1|SEARCH_COMPLETE=True|TIME_LIMIT_S=10|NODE_LIMIT=250000|OPTIMAL_ONLY_WITHIN_A1_PROXY_IF_SEARCH_COMPLETE|NOT_PATH_COLLISION_OR_FACTORY_OPTIMALITY|A1_PROXY_CONSTRAINT_VERIFIER|NOT_A_CONTINUOUS_COLLISION_CERTIFICATE",
+      "objective_value": 7.5,
+      "robot_count": 1,
+      "runtime_s": 0.0004389910027384758,
+      "segment_count": 1,
+      "source": "fixture",
+      "status": "optimal",
+      "verified": true
+    },
+    {
+      "case_id": "02_valid_same_robot_segments.json",
+      "diagnostics": "JOINT_ASSIGNMENT_AND_SEQUENCE_ENUMERATION|ASSIGNMENT_COMBINATIONS=1|ASSIGNMENTS_COMPLETED=1|NODES_EXPANDED=2|SEARCH_COMPLETE=True|TIME_LIMIT_S=10|NODE_LIMIT=250000|OPTIMAL_ONLY_WITHIN_A1_PROXY_IF_SEARCH_COMPLETE|NOT_PATH_COLLISION_OR_FACTORY_OPTIMALITY|A1_PROXY_CONSTRAINT_VERIFIER|NOT_A_CONTINUOUS_COLLISION_CERTIFICATE",
+      "objective_value": 9.5,
+      "robot_count": 1,
+      "runtime_s": 0.0004941080114804208,
+      "segment_count": 2,
+      "source": "fixture",
+      "status": "optimal",
+      "verified": true
+    },
+    {
+      "case_id": "03_valid_explicit_boundary.json",
+      "diagnostics": "JOINT_ASSIGNMENT_AND_SEQUENCE_ENUMERATION|ASSIGNMENT_COMBINATIONS=1|ASSIGNMENTS_COMPLETED=1|NODES_EXPANDED=2|SEARCH_COMPLETE=True|TIME_LIMIT_S=10|NODE_LIMIT=250000|OPTIMAL_ONLY_WITHIN_A1_PROXY_IF_SEARCH_COMPLETE|NOT_PATH_COLLISION_OR_FACTORY_OPTIMALITY|A1_PROXY_CONSTRAINT_VERIFIER|NOT_A_CONTINUOUS_COLLISION_CERTIFICATE",
+      "objective_value": 9.5,
+      "robot_count": 1,
+      "runtime_s": 0.0004447319661267102,
+      "segment_count": 2,
+      "source": "fixture",
+      "status": "optimal",
+      "verified": true
+    },
+    {
+      "case_id": "04_valid_shared_zone.json",
+      "diagnostics": "JOINT_ASSIGNMENT_AND_SEQUENCE_ENUMERATION|ASSIGNMENT_COMBINATIONS=1|ASSIGNMENTS_COMPLETED=1|NODES_EXPANDED=1|SEARCH_COMPLETE=True|TIME_LIMIT_S=10|NODE_LIMIT=250000|OPTIMAL_ONLY_WITHIN_A1_PROXY_IF_SEARCH_COMPLETE|NOT_PATH_COLLISION_OR_FACTORY_OPTIMALITY|A1_PROXY_CONSTRAINT_VERIFIER|NOT_A_CONTINUOUS_COLLISION_CERTIFICATE",
+      "objective_value": 7.5,
+      "robot_count": 1,
+      "runtime_s": 0.0003076100256294012,
+      "segment_count": 1,
+      "source": "fixture",
+      "status": "optimal",
+      "verified": true
+    },
+    {
+      "case_id": "05_valid_priority_window.json",
+      "diagnostics": "JOINT_ASSIGNMENT_AND_SEQUENCE_ENUMERATION|ASSIGNMENT_COMBINATIONS=1|ASSIGNMENTS_COMPLETED=1|NODES_EXPANDED=1|SEARCH_COMPLETE=True|TIME_LIMIT_S=10|NODE_LIMIT=250000|OPTIMAL_ONLY_WITHIN_A1_PROXY_IF_SEARCH_COMPLETE|NOT_PATH_COLLISION_OR_FACTORY_OPTIMALITY|A1_PROXY_CONSTRAINT_VERIFIER|NOT_A_CONTINUOUS_COLLISION_CERTIFICATE",
+      "objective_value": 7.5,
+      "robot_count": 1,
+      "runtime_s": 0.00027326401323080063,
+      "segment_count": 1,
+      "source": "fixture",
+      "status": "optimal",
+      "verified": true
+    },
+    {
+      "case_id": "v3-train-small_sparse-group-004-v00",
+      "diagnostics": "JOINT_ASSIGNMENT_AND_SEQUENCE_ENUMERATION|ASSIGNMENT_COMBINATIONS=8|ASSIGNMENTS_COMPLETED=8|NODES_EXPANDED=12350|SEARCH_COMPLETE=True|TIME_LIMIT_S=10|NODE_LIMIT=250000|OPTIMAL_ONLY_WITHIN_A1_PROXY_IF_SEARCH_COMPLETE|NOT_PATH_COLLISION_OR_FACTORY_OPTIMALITY|A1_PROXY_CONSTRAINT_VERIFIER|NOT_A_CONTINUOUS_COLLISION_CERTIFICATE",
+      "objective_value": 25.615497053850067,
+      "robot_count": 2,
+      "runtime_s": 0.5812965990044177,
+      "segment_count": 8,
+      "source": "v3_train",
+      "status": "optimal",
+      "verified": true
+    },
+    {
+      "case_id": "v3-train-small_sparse-group-004-v01",
+      "diagnostics": "JOINT_ASSIGNMENT_AND_SEQUENCE_ENUMERATION|ASSIGNMENT_COMBINATIONS=16|ASSIGNMENTS_COMPLETED=16|NODES_EXPANDED=60600|SEARCH_COMPLETE=True|TIME_LIMIT_S=10|NODE_LIMIT=250000|OPTIMAL_ONLY_WITHIN_A1_PROXY_IF_SEARCH_COMPLETE|NOT_PATH_COLLISION_OR_FACTORY_OPTIMALITY|A1_PROXY_CONSTRAINT_VERIFIER|NOT_A_CONTINUOUS_COLLISION_CERTIFICATE",
+      "objective_value": 25.891055439312744,
+      "robot_count": 2,
+      "runtime_s": 2.6505338060087524,
+      "segment_count": 8,
+      "source": "v3_train",
+      "status": "optimal",
+      "verified": true
+    },
+    {
+      "case_id": "v3-train-small_sparse-group-010-v00",
+      "diagnostics": "JOINT_ASSIGNMENT_AND_SEQUENCE_ENUMERATION|ASSIGNMENT_COMBINATIONS=128|ASSIGNMENTS_COMPLETED=106|NODES_EXPANDED=238643|SEARCH_COMPLETE=False|TIME_LIMIT_S=10|NODE_LIMIT=250000|OPTIMAL_ONLY_WITHIN_A1_PROXY_IF_SEARCH_COMPLETE|NOT_PATH_COLLISION_OR_FACTORY_OPTIMALITY|A1_PROXY_CONSTRAINT_VERIFIER|NOT_A_CONTINUOUS_COLLISION_CERTIFICATE",
+      "objective_value": 22.0871164529829,
+      "robot_count": 2,
+      "runtime_s": 10.002319141000044,
+      "segment_count": 8,
+      "source": "v3_train",
+      "status": "feasible_limit",
+      "verified": true
+    },
+    {
+      "case_id": "v3-train-small_sparse-group-010-v01",
+      "diagnostics": "JOINT_ASSIGNMENT_AND_SEQUENCE_ENUMERATION|ASSIGNMENT_COMBINATIONS=8|ASSIGNMENTS_COMPLETED=8|NODES_EXPANDED=76846|SEARCH_COMPLETE=True|TIME_LIMIT_S=10|NODE_LIMIT=250000|OPTIMAL_ONLY_WITHIN_A1_PROXY_IF_SEARCH_COMPLETE|NOT_PATH_COLLISION_OR_FACTORY_OPTIMALITY|A1_PROXY_CONSTRAINT_VERIFIER|NOT_A_CONTINUOUS_COLLISION_CERTIFICATE",
+      "objective_value": 21.931625345530534,
+      "robot_count": 2,
+      "runtime_s": 3.4913698399905115,
+      "segment_count": 8,
+      "source": "v3_train",
+      "status": "optimal",
+      "verified": true
+    },
+    {
+      "case_id": "v3-train-small_sparse-group-021-v00",
+      "diagnostics": "JOINT_ASSIGNMENT_AND_SEQUENCE_ENUMERATION|ASSIGNMENT_COMBINATIONS=8|ASSIGNMENTS_COMPLETED=8|NODES_EXPANDED=90356|SEARCH_COMPLETE=True|TIME_LIMIT_S=10|NODE_LIMIT=250000|OPTIMAL_ONLY_WITHIN_A1_PROXY_IF_SEARCH_COMPLETE|NOT_PATH_COLLISION_OR_FACTORY_OPTIMALITY|A1_PROXY_CONSTRAINT_VERIFIER|NOT_A_CONTINUOUS_COLLISION_CERTIFICATE",
+      "objective_value": 26.780836280089773,
+      "robot_count": 2,
+      "runtime_s": 4.309714988979977,
+      "segment_count": 8,
+      "source": "v3_train",
+      "status": "optimal",
+      "verified": true
+    },
+    {
+      "case_id": "v3-train-small_sparse-group-021-v01",
+      "diagnostics": "JOINT_ASSIGNMENT_AND_SEQUENCE_ENUMERATION|ASSIGNMENT_COMBINATIONS=64|ASSIGNMENTS_COMPLETED=35|NODES_EXPANDED=230167|SEARCH_COMPLETE=False|TIME_LIMIT_S=10|NODE_LIMIT=250000|OPTIMAL_ONLY_WITHIN_A1_PROXY_IF_SEARCH_COMPLETE|NOT_PATH_COLLISION_OR_FACTORY_OPTIMALITY|A1_PROXY_CONSTRAINT_VERIFIER|NOT_A_CONTINUOUS_COLLISION_CERTIFICATE",
+      "objective_value": 23.627995660617366,
+      "robot_count": 2,
+      "runtime_s": 10.003134361992124,
+      "segment_count": 8,
+      "source": "v3_train",
+      "status": "feasible_limit",
+      "verified": true
+    },
+    {
+      "case_id": "v3-train-small_sparse-group-008-v00",
+      "diagnostics": "JOINT_ASSIGNMENT_AND_SEQUENCE_ENUMERATION|ASSIGNMENT_COMBINATIONS=1458|ASSIGNMENTS_COMPLETED=9|NODES_EXPANDED=189861|SEARCH_COMPLETE=False|TIME_LIMIT_S=10|NODE_LIMIT=250000|OPTIMAL_ONLY_WITHIN_A1_PROXY_IF_SEARCH_COMPLETE|NOT_PATH_COLLISION_OR_FACTORY_OPTIMALITY|A1_PROXY_CONSTRAINT_VERIFIER|NOT_A_CONTINUOUS_COLLISION_CERTIFICATE",
+      "objective_value": 28.106112105428497,
+      "robot_count": 3,
+      "runtime_s": 10.007080574985594,
+      "segment_count": 9,
+      "source": "v3_train",
+      "status": "feasible_limit",
+      "verified": true
+    },
+    {
+      "case_id": "v3-train-small_sparse-group-008-v01",
+      "diagnostics": "JOINT_ASSIGNMENT_AND_SEQUENCE_ENUMERATION|ASSIGNMENT_COMBINATIONS=486|ASSIGNMENTS_COMPLETED=12|NODES_EXPANDED=185991|SEARCH_COMPLETE=False|TIME_LIMIT_S=10|NODE_LIMIT=250000|OPTIMAL_ONLY_WITHIN_A1_PROXY_IF_SEARCH_COMPLETE|NOT_PATH_COLLISION_OR_FACTORY_OPTIMALITY|A1_PROXY_CONSTRAINT_VERIFIER|NOT_A_CONTINUOUS_COLLISION_CERTIFICATE",
+      "objective_value": 29.276611786713676,
+      "robot_count": 3,
+      "runtime_s": 10.016193383024074,
+      "segment_count": 9,
+      "source": "v3_train",
+      "status": "feasible_limit",
+      "verified": true
+    }
+  ],
+  "schema_version": "a2-joint-reference-results-v1"
+}

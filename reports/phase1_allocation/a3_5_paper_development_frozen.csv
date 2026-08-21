@@ -1,0 +1,3 @@
+stage,pair_pointer_coverage,matched_static_coverage,paired_improvement,independent_groups
+development,0.7847222222222222,0.5069444444444445,0.2777777777777777,24
+untouched_final,0.6504629629629629,0.4027777777777778,0.24768518518518523,72

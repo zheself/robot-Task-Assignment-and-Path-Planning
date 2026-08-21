@@ -1,0 +1,5 @@
+{
+  "fixture_id": "invalid_unknown_resource", "description": "Segments cannot reference an undeclared shared resource.",
+  "extends": "01_valid_minimal.json", "expected": {"valid": false, "issue_codes": ["UNKNOWN_RESOURCE"]},
+  "patch": [{"op": "replace", "path": "/segments/0/shared_resource_ids", "value": ["missing-zone"]}]
+}

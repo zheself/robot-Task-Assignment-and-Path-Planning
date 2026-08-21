@@ -1,0 +1,7 @@
+scenario,method,aggregate_rmse_mm
+unseen_rbf_prior_unseen_path,projected_ridge_base,1.086440373788372
+unseen_rbf_prior_unseen_path,sac,1.1108982021320501
+unseen_rbf_prior_unseen_path,td3,1.1157914974201648
+unseen_rbf_prior_workspace_holdout,projected_ridge_base,7.470881891705953
+unseen_rbf_prior_workspace_holdout,sac,7.444642534980076
+unseen_rbf_prior_workspace_holdout,td3,7.455300114286422

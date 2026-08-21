@@ -1,0 +1,101 @@
+{
+  "a2_manifest_sha256": "0c98f30e92697ce8b5eca724df0f7d1b7053293df1e792707487ecb6c71b5398",
+  "access_manifest_sha256": "e6d9165b7d932b6bfd483210e25b66e1af9d34cb96fc5b37b0ea222d2d12f432",
+  "boundaries": [
+    "All graphs and results are SIM_GEOMETRIC.",
+    "PointNet is not used in A3 development v1.",
+    "Constructive witnesses are feasible A1-proxy teachers and are not optimal labels.",
+    "No frozen_test or stress instance, witness, label, metric or solver outcome may be read during development.",
+    "No A4 repair, path planning, collision guarantee, physical model or RL is included.",
+    "A separate preregistration is required before one-time frozen evaluation."
+  ],
+  "checks": {
+    "deterministic_same_seed": true,
+    "normalizer_fit_count_equals_train_graph_count": true,
+    "record_counts_192_train_48_validation": true,
+    "smoke_subset_is_cell_balanced": true,
+    "zero_forbidden_split_access": true,
+    "zero_teacher_hash_or_verifier_failures": true,
+    "zero_train_validation_group_leakage": true
+  },
+  "config_sha256": "33dd1c5e22960823f483c0fec4e40b8cb98b0b30fbf9bb5456b4132da6122034",
+  "created_utc": "2026-08-09T18:55:18.263164+00:00",
+  "epochs": 4,
+  "evidence_label": "SIM_GEOMETRIC",
+  "feature_dimensions": {
+    "edge_pair": 12,
+    "resource": 7,
+    "robot": 23,
+    "segment": 39
+  },
+  "history": [
+    {
+      "epoch": 1.0,
+      "train_mean_loss": 1.0443670824170113,
+      "validation_assignment_accuracy": 0.6140350877192983,
+      "validation_mean_loss": 0.8958298787474632,
+      "validation_verified_coverage": 0.875
+    },
+    {
+      "epoch": 2.0,
+      "train_mean_loss": 0.9676921982318163,
+      "validation_assignment_accuracy": 0.6081871345029239,
+      "validation_mean_loss": 0.8603321462869644,
+      "validation_verified_coverage": 0.875
+    },
+    {
+      "epoch": 3.0,
+      "train_mean_loss": 0.9077371172606945,
+      "validation_assignment_accuracy": 0.6257309941520468,
+      "validation_mean_loss": 0.8408785462379456,
+      "validation_verified_coverage": 0.875
+    },
+    {
+      "epoch": 4.0,
+      "train_mean_loss": 0.8759428272023797,
+      "validation_assignment_accuracy": 0.6023391812865497,
+      "validation_mean_loss": 0.8509861454367638,
+      "validation_verified_coverage": 0.875
+    }
+  ],
+  "model_family": "hetero_gnn",
+  "normalizer_sha256": "c1e93d70d6f9a4ffd93f42c638455f2bb12a40e9615fb1125c3d4f83714abb66",
+  "passed": true,
+  "seed": 17,
+  "smoke_train_instances": 16,
+  "smoke_validation_instances": 8,
+  "state_sha256": "e041485c658bda487bd41ade35a3c469692905f44ef946e3f944a2fa831708ed",
+  "train_evaluation": {
+    "atomic_unit_accuracy": 0.6186186186186187,
+    "atomic_unit_correct": 206,
+    "atomic_unit_total": 333,
+    "failure_count": 2,
+    "instance_count": 16,
+    "mean_loss": 0.8185366112738848,
+    "mean_verified_weighted_proxy_score": 85.24670584676281,
+    "median_inference_runtime_s": 0.0029920170200057328,
+    "verified_candidate_coverage": 0.875,
+    "verified_candidates": 14
+  },
+  "train_record_count": 192,
+  "validation_evaluation": {
+    "atomic_unit_accuracy": 0.6023391812865497,
+    "atomic_unit_correct": 103,
+    "atomic_unit_total": 171,
+    "failure_count": 1,
+    "instance_count": 8,
+    "mean_loss": 0.8509861454367638,
+    "mean_verified_weighted_proxy_score": 96.88252192352918,
+    "median_inference_runtime_s": 0.002916138502769172,
+    "verified_candidate_coverage": 0.875,
+    "verified_candidates": 7
+  },
+  "validation_record_count": 48,
+  "version": "a3-w9-foundation-results-v1",
+  "versions": {
+    "numpy": "1.26.4",
+    "python": "3.11.15",
+    "torch": "2.5.1+cu124"
+  },
+  "vocabulary_sha256": "a031d82d29b1d466a8bd4ecd3701a24c2fa89c960859c6798e318ef41ff58aa1"
+}

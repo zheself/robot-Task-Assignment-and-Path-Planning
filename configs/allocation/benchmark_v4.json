@@ -1,0 +1,86 @@
+{
+  "version": "a2-paper-geometric-benchmark-v4",
+  "manifest_version": "a2-paper-split-manifest-v4",
+  "generator_version": "a2-paper-generator-v4",
+  "benchmark_tier": "PAPER_SCALE_FROZEN",
+  "master_seed": 260901,
+  "evidence_label": "SIM_GEOMETRIC",
+  "coordinate_frame": "synthetic_workcell_m",
+  "geometry": {
+    "curve_types": ["line", "arc", "bspline", "closed_loop"],
+    "samples_per_curve": 25,
+    "workpiece_radius_m": 0.32,
+    "robot_base_radius_m": 0.52,
+    "nominal_process_speed_m_s": 0.04,
+    "planning_horizon_s": 1200.0,
+    "witness_tight_pre_margin_duration": 0.25,
+    "witness_tight_post_margin_duration": 0.75,
+    "witness_loose_pre_margin_s": 30.0
+  },
+  "cells": [
+    {"split":"train","cell_id":"small_sparse","paper_role":"in_domain","groups":24,"variants":2,"robots":[2,3],"segments":[8,16],"max_segments_per_curve":2,"precedence_probability":0.05,"shared_resource_probability":0.10,"tight_window_probability":0.00,"feasibility_policy":"constructive_witness_required"},
+    {"split":"train","cell_id":"medium_balanced","paper_role":"in_domain","groups":24,"variants":2,"robots":[3,4],"segments":[20,32],"max_segments_per_curve":3,"precedence_probability":0.15,"shared_resource_probability":0.25,"tight_window_probability":0.00,"feasibility_policy":"constructive_witness_required"},
+    {"split":"train","cell_id":"medium_precedence","paper_role":"in_domain","groups":24,"variants":2,"robots":[3,5],"segments":[24,40],"max_segments_per_curve":3,"precedence_probability":0.35,"shared_resource_probability":0.25,"tight_window_probability":0.02,"feasibility_policy":"constructive_witness_required"},
+    {"split":"train","cell_id":"medium_resource","paper_role":"in_domain","groups":24,"variants":2,"robots":[3,5],"segments":[24,40],"max_segments_per_curve":3,"precedence_probability":0.20,"shared_resource_probability":0.50,"tight_window_probability":0.02,"feasibility_policy":"constructive_witness_required"},
+
+    {"split":"validation","cell_id":"small_sparse","paper_role":"in_domain_selection","groups":6,"variants":2,"robots":[2,3],"segments":[8,16],"max_segments_per_curve":2,"precedence_probability":0.05,"shared_resource_probability":0.10,"tight_window_probability":0.00,"feasibility_policy":"constructive_witness_required"},
+    {"split":"validation","cell_id":"medium_balanced","paper_role":"in_domain_selection","groups":6,"variants":2,"robots":[3,4],"segments":[20,32],"max_segments_per_curve":3,"precedence_probability":0.15,"shared_resource_probability":0.25,"tight_window_probability":0.00,"feasibility_policy":"constructive_witness_required"},
+    {"split":"validation","cell_id":"medium_precedence","paper_role":"in_domain_selection","groups":6,"variants":2,"robots":[3,5],"segments":[24,40],"max_segments_per_curve":3,"precedence_probability":0.35,"shared_resource_probability":0.25,"tight_window_probability":0.02,"feasibility_policy":"constructive_witness_required"},
+    {"split":"validation","cell_id":"medium_resource","paper_role":"in_domain_selection","groups":6,"variants":2,"robots":[3,5],"segments":[24,40],"max_segments_per_curve":3,"precedence_probability":0.20,"shared_resource_probability":0.50,"tight_window_probability":0.02,"feasibility_policy":"constructive_witness_required"},
+
+    {"split":"frozen_test","cell_id":"iid_small","paper_role":"iid_test","groups":12,"variants":2,"robots":[2,3],"segments":[8,18],"max_segments_per_curve":2,"precedence_probability":0.05,"shared_resource_probability":0.10,"tight_window_probability":0.00,"feasibility_policy":"constructive_witness_required"},
+    {"split":"frozen_test","cell_id":"iid_medium","paper_role":"iid_test","groups":12,"variants":2,"robots":[3,5],"segments":[20,40],"max_segments_per_curve":3,"precedence_probability":0.25,"shared_resource_probability":0.35,"tight_window_probability":0.02,"feasibility_policy":"constructive_witness_required"},
+    {"split":"frozen_test","cell_id":"ood_dense_precedence","paper_role":"ood_constraint","groups":12,"variants":2,"robots":[4,6],"segments":[40,56],"max_segments_per_curve":4,"precedence_probability":0.55,"shared_resource_probability":0.35,"tight_window_probability":0.05,"feasibility_policy":"constructive_witness_required"},
+    {"split":"frozen_test","cell_id":"ood_resource_bottleneck","paper_role":"ood_constraint","groups":12,"variants":2,"robots":[4,6],"segments":[40,56],"max_segments_per_curve":4,"precedence_probability":0.30,"shared_resource_probability":0.70,"tight_window_probability":0.05,"feasibility_policy":"constructive_witness_required"},
+    {"split":"frozen_test","cell_id":"ood_tight_windows","paper_role":"ood_constraint","groups":12,"variants":2,"robots":[3,6],"segments":[32,48],"max_segments_per_curve":4,"precedence_probability":0.35,"shared_resource_probability":0.50,"tight_window_probability":0.20,"feasibility_policy":"constructive_witness_required"},
+    {"split":"frozen_test","cell_id":"ood_scale","paper_role":"ood_scale","groups":12,"variants":2,"robots":[6,8],"segments":[64,80],"max_segments_per_curve":4,"precedence_probability":0.40,"shared_resource_probability":0.60,"tight_window_probability":0.10,"feasibility_policy":"constructive_witness_required"},
+
+    {"split":"stress","cell_id":"extreme_scale","paper_role":"stress_only","groups":6,"variants":1,"robots":[8,8],"segments":[80,100],"max_segments_per_curve":4,"precedence_probability":0.45,"shared_resource_probability":0.65,"tight_window_probability":0.15,"feasibility_policy":"constructive_witness_required"},
+    {"split":"stress","cell_id":"extreme_tight_windows","paper_role":"stress_only","groups":6,"variants":1,"robots":[6,8],"segments":[56,72],"max_segments_per_curve":4,"precedence_probability":0.45,"shared_resource_probability":0.60,"tight_window_probability":0.40,"feasibility_policy":"constructive_witness_required"},
+    {"split":"stress","cell_id":"extreme_resource","paper_role":"stress_only","groups":6,"variants":1,"robots":[6,8],"segments":[56,72],"max_segments_per_curve":4,"precedence_probability":0.40,"shared_resource_probability":0.85,"tight_window_probability":0.15,"feasibility_policy":"constructive_witness_required"},
+    {"split":"stress","cell_id":"designed_edge_infeasible","paper_role":"negative_control","groups":6,"variants":1,"robots":[3,5],"segments":[20,32],"max_segments_per_curve":3,"precedence_probability":0.20,"shared_resource_probability":0.30,"tight_window_probability":0.00,"feasibility_policy":"designed_edge_infeasible"}
+  ],
+  "objective_weights": {"makespan":1.0,"load_variance":0.05,"travel_setup_time":0.10,"priority_tardiness":1.0},
+  "baseline_protocol": {
+    "methods":["greedy","load_balanced","hungarian","assignment_milp","deterministic_lns","hybrid_load_balanced","hybrid_assignment_milp","order_aware_lns"],
+    "milp_time_limit_s":3.0,
+    "milp_relative_gap":0.0,
+    "lns_iterations":100,
+    "lns_seed":0
+  },
+  "statistics": {
+    "independent_unit":"task_group_id",
+    "variant_aggregation":"mean_within_group",
+    "primary_split":"frozen_test",
+    "reference_methods":["hybrid_assignment_milp","order_aware_lns"],
+    "bootstrap_seed":260902,
+    "cluster_bootstrap_resamples":5000,
+    "confidence_level":0.95,
+    "multiple_testing":"holm",
+    "quality_population":"pairwise_jointly_verified_only",
+    "feasibility_population":"all_preregistered_groups",
+    "runtime_summary":"median_iqr_all_runs"
+  },
+  "acceptance": {
+    "zero_schema_failures":true,
+    "zero_split_leakage":true,
+    "zero_hash_failures":true,
+    "zero_witness_failures":true,
+    "zero_unexpected_solver_status":true,
+    "minimum_train_candidate_coverage":0.90,
+    "minimum_validation_candidate_coverage":0.80,
+    "minimum_frozen_cell_candidate_coverage":0.50,
+    "designed_infeasible_detection_rate":1.0
+  },
+  "boundaries":[
+    "All instances are programmatic SIM_GEOMETRIC evidence.",
+    "V4 uses a new master seed and v4-prefixed independent task groups; no v2 or v3 frozen instance is reused.",
+    "The v4 sample counts, cells, acceptance thresholds, witness margins and solver budgets were fixed before generation or evaluation.",
+    "Ordinary v4 instances have independently hashed constructive A1-proxy witnesses; candidate methods cannot access witness plans.",
+    "Time windows are reconstructed around a deterministic witness; geometry, capabilities, precedence and shared resources are preserved.",
+    "A constructive proxy witness is not a collision certificate, path-planning proof or real execution evidence.",
+    "The assignment-beam development method was rejected on v3 validation and is excluded from v4.",
+    "schedule_infeasible is a method-pipeline outcome, not proof that an instance is globally infeasible.",
+    "Assignment MILP and hybrid assignment MILP gaps are not joint scheduling or path-planning optimality gaps."
+  ]
+}

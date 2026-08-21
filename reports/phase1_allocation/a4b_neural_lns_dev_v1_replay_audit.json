@@ -1,0 +1,39 @@
+{
+  "version": "a4b-neural-lns-replay-audit-v1",
+  "date": "2026-08-13",
+  "status": "PASS",
+  "controlled_trace_audit": {
+    "cells": 6,
+    "methods": [
+      "random_lns",
+      "handcrafted_round_robin",
+      "single_operator:relatedness_destroy",
+      "adaptive_alns"
+    ],
+    "selected_traces": 24,
+    "replayed_repair_transitions": 148,
+    "checks": [
+      "before_state_sha256",
+      "candidate_state_sha256",
+      "candidate_evaluations",
+      "verifier_feasibility"
+    ],
+    "repair_config_sha256": "8881cfb3ea6d2c7858d0fa060cee8a7b10979bc364184ea43915809f695c4728"
+  },
+  "label_audit": {
+    "train_only_state_records": 12,
+    "candidate_outcomes": 96,
+    "same_repair_candidate_evaluation_budget": 256,
+    "checks": [
+      "record_sha256",
+      "before_state_sha256",
+      "after_state_sha256",
+      "candidate_evaluations",
+      "verifier_feasibility",
+      "before_verifier_sha256_present",
+      "candidate_verifier_sha256_present"
+    ],
+    "label_file_sha256": "b68fcb966b812c36265d60476f4fb5577b665af88a9df3a11f9e075f01623bae"
+  },
+  "scope": "SIM_GEOMETRIC development-only; no frozen/stress path or neural checkpoint"
+}

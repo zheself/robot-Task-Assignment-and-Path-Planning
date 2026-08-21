@@ -1,0 +1,121 @@
+{
+  "version": "a3-5-feasible-pair-pointer-pilot-v1",
+  "stage": "DEVELOPMENT_ONLY_PILOT",
+  "evidence_label": "SIM_GEOMETRIC",
+  "master_seed": 351907,
+  "id_prefix": "a35p1",
+  "access_guard": {
+    "allowed_splits": ["train", "validation"],
+    "forbidden_splits": ["frozen_test", "stress"],
+    "forbidden_path_tokens": ["a2_paper_v2", "a2_paper_v3", "a2_paper_v4", "frozen_test", "stress"],
+    "forbid_v2_v3_v4_instance_or_witness_access": true
+  },
+  "geometry": {
+    "curve_types": ["line", "arc", "bspline", "closed_loop"],
+    "samples_per_curve": 25,
+    "workpiece_radius_m": 0.32,
+    "robot_base_radius_m": 0.52,
+    "nominal_process_speed_m_s": 0.04,
+    "planning_horizon_s": 1200.0,
+    "witness_tight_pre_margin_duration": 0.25,
+    "witness_tight_post_margin_duration": 0.75,
+    "witness_loose_pre_margin_s": 30.0
+  },
+  "cells": [
+    {"cell_id":"iid_small","train_groups":8,"validation_groups":4,"variants":2,"robots":[2,3],"segments":[8,16],"max_segments_per_curve":2,"precedence_probability":0.05,"shared_resource_probability":0.10,"tight_window_probability":0.00},
+    {"cell_id":"iid_medium","train_groups":8,"validation_groups":4,"variants":2,"robots":[3,5],"segments":[20,36],"max_segments_per_curve":3,"precedence_probability":0.25,"shared_resource_probability":0.35,"tight_window_probability":0.02},
+    {"cell_id":"dense_precedence","train_groups":8,"validation_groups":4,"variants":2,"robots":[4,6],"segments":[36,52],"max_segments_per_curve":4,"precedence_probability":0.55,"shared_resource_probability":0.35,"tight_window_probability":0.05},
+    {"cell_id":"resource_bottleneck","train_groups":8,"validation_groups":4,"variants":2,"robots":[4,6],"segments":[36,52],"max_segments_per_curve":4,"precedence_probability":0.30,"shared_resource_probability":0.70,"tight_window_probability":0.05},
+    {"cell_id":"tight_windows","train_groups":8,"validation_groups":4,"variants":2,"robots":[3,6],"segments":[30,46],"max_segments_per_curve":4,"precedence_probability":0.35,"shared_resource_probability":0.50,"tight_window_probability":0.20},
+    {"cell_id":"scale","train_groups":8,"validation_groups":4,"variants":2,"robots":[6,8],"segments":[56,72],"max_segments_per_curve":4,"precedence_probability":0.40,"shared_resource_probability":0.60,"tight_window_probability":0.10}
+  ],
+  "teacher": {
+    "candidate_methods": ["hybrid_assignment_milp", "order_aware_lns", "constructive_witness_fallback"],
+    "selection": "lowest_weighted_proxy_score_among_verified_canonical_unit_block_plans",
+    "milp_time_limit_s": 1.0,
+    "milp_relative_gap": 0.0,
+    "lns_iterations": 50,
+    "lns_seed": 0,
+    "canonical_action_sort": ["planned_start_time", "robot_id", "unit_id"],
+    "claim_boundary": "verified solver/LNS incumbent or constructive fallback; not guaranteed globally optimal and not a real expert"
+  },
+  "objective_weights": {"makespan":1.0,"load_variance":0.05,"travel_setup_time":0.10,"priority_tardiness":1.0},
+  "models": {
+    "variants": [
+      {"id":"edge_mlp_static","encoder":"edge_mlp","decoder":"static"},
+      {"id":"hetero_gnn_static","encoder":"hetero_gnn","decoder":"static"},
+      {"id":"graph_transformer_static","encoder":"graph_transformer","decoder":"static"},
+      {"id":"hetero_gnn_pair_pointer","encoder":"hetero_gnn","decoder":"feasible_pair_pointer"},
+      {"id":"graph_transformer_pair_pointer","encoder":"graph_transformer","decoder":"feasible_pair_pointer"}
+    ],
+    "hidden_dim": 64,
+    "message_passing_layers": 2,
+    "attention_heads": 4,
+    "dropout": 0.1,
+    "pointer_dynamic_features": ["robot_proxy_load", "robot_completion_proxy", "robot_last_position", "last_unit", "last_action", "predecessor_satisfaction", "resource_usage", "feasible_pair_mask"]
+  },
+  "training": {
+    "seeds": [101, 211, 307],
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "max_epochs": 30,
+    "early_stopping_patience": 6,
+    "gradient_clip_norm": 1.0,
+    "device": "cpu",
+    "static_assignment_weight": 1.0,
+    "static_order_weight": 0.25,
+    "pointer_pair_cross_entropy_weight": 1.0
+  },
+  "selection": {
+    "checkpoint_primary": "validation_verified_candidate_coverage",
+    "checkpoint_tie_breakers": ["validation_conditional_weighted_proxy_score", "validation_teacher_forced_pair_accuracy"],
+    "pair_pointer_family_selection": ["mean_validation_verified_candidate_coverage", "conditional_weighted_proxy_score", "teacher_forced_pair_accuracy", "median_inference_runtime"],
+    "report_all_seeds": true,
+    "repair": "forbidden"
+  },
+  "baselines": {
+    "methods": ["hybrid_assignment_milp", "order_aware_lns", "hybrid_load_balanced"],
+    "milp_time_limit_s": 3.0,
+    "milp_relative_gap": 0.0,
+    "lns_iterations": 100,
+    "lns_seed": 0
+  },
+  "continuation_gate": {
+    "integrity_failures_allowed": 0,
+    "minimum_seed_wins_over_matched_static": 2,
+    "minimum_overall_group_equivalent_improvement": 0.041666666666666664,
+    "required_improved_constraint_cells": 2,
+    "constraint_cells": ["dense_precedence", "resource_bottleneck", "tight_windows"],
+    "maximum_cell_regression": 0.25,
+    "decoder_dead_end_rate_must_not_increase": true,
+    "improvement_metric": "final_verifier_coverage",
+    "repair_must_remain_disabled": true,
+    "pass_wording": "development-only evidence supports preregistering a new untouched final protocol; no frozen benchmark is generated",
+    "fail_wording": "the Pair-Pointer pilot did not improve robust un-repaired verifier coverage; close this branch and return to solver/LNS plus path planning"
+  },
+  "reporting": {
+    "independent_unit": "task_group_id",
+    "validation_groups_total": 24,
+    "validation_groups_per_cell": 4,
+    "variants_per_group": 2,
+    "failed_candidates_remain_in_coverage_denominator": true,
+    "conditional_quality_population": "verified_candidates_only_with_coverage_always_reported"
+  },
+  "source_files_to_hash": [
+    "src/safe_residual_rl/allocation/pointer_pilot.py",
+    "src/safe_residual_rl/allocation/pointer_decoder.py",
+    "src/safe_residual_rl/allocation/pointer_training.py",
+    "scripts/generate_a3_5_pointer_data.py",
+    "scripts/run_a3_5_pointer_shard.py",
+    "scripts/aggregate_a3_5_pointer_pilot.py"
+  ],
+  "boundaries": [
+    "All A3.5 data and results are SIM_GEOMETRIC development-only evidence.",
+    "No v2/v3/v4 instance or witness is used for generation, training, selection or evaluation.",
+    "No frozen-test or stress split is generated in this pilot.",
+    "The Feasible-Pair Autoregressive Decoder is not a claim of a classical Pointer Network implementation.",
+    "No A4 repair, RL, path planning, collision guarantee, physical model or real-process evidence is included.",
+    "A passing pilot does not authorise frozen benchmark generation or a paper-success claim."
+  ]
+}

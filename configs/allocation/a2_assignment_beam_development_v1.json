@@ -1,0 +1,38 @@
+{
+  "version": "a2-assignment-beam-development-v1",
+  "evidence_label": "SIM_GEOMETRIC",
+  "source_benchmark": "configs/allocation/benchmark_v3.json",
+  "source_manifest": "data/manifests/allocation/a2_paper_manifest_v3.json",
+  "source_manifest_sha256": "a039238d50ac10a6ecc44d6001f07aa75cbc3169c9ac5c8c1800a1794742ae12",
+  "allowed_splits": ["train", "validation"],
+  "forbidden_splits": ["frozen_test", "stress"],
+  "methods": ["order_aware_lns_v2", "assignment_beam_sequence_v1"],
+  "milp_time_limit_s": 3.0,
+  "milp_relative_gap": 0.0,
+  "lns_iterations": 100,
+  "lns_seed": 0,
+  "assignment_beam_width": 24,
+  "sequence_beam_width": 8,
+  "sequence_node_limit": 30000,
+  "selection_metric": "validation_candidate_coverage_then_pairwise_verified_weighted_proxy_score",
+  "development_gate": {
+    "minimum_validation_candidate_coverage": 0.9791666666666666,
+    "maximum_per_cell_coverage_drop_vs_order_aware_lns": 0.0,
+    "minimum_cells_with_strict_coverage_gain_vs_order_aware_lns": 1,
+    "maximum_validation_median_runtime_s": 8.0
+  },
+  "witness_policy_for_future_v4": {
+    "required": true,
+    "tight_pre_margin_duration": 0.25,
+    "tight_post_margin_duration": 0.75,
+    "loose_pre_margin_s": 30.0,
+    "verification": "independent A1 verifier plus witness SHA-256"
+  },
+  "boundaries": [
+    "Development may access v3 train and validation only.",
+    "V2/v3 frozen-test and stress are forbidden for method or budget selection.",
+    "Assignment and sequence beams are heuristic and do not prove infeasibility or global optimality.",
+    "Constructive witnesses establish only A1 proxy feasibility and alter time windows by a registered rule.",
+    "No path, collision, physical-process or factory claim is supported."
+  ]
+}

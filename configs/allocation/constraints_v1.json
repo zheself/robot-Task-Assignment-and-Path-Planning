@@ -1,0 +1,23 @@
+{
+  "version": "allocation-constraints-v1",
+  "units": "SI",
+  "constraints": [
+    {"id": "unique_assignment", "severity": "hard", "scope": "plan", "stage": "decoder_and_verifier", "description": "Every process segment is assigned exactly once.", "evidence_boundary": "Combinatorial validity only."},
+    {"id": "tool_capability", "severity": "hard", "scope": "robot_segment", "stage": "edge_mask", "description": "Assigned robot provides the required tool and capabilities.", "evidence_boundary": "Declared capability compatibility, not physical validation."},
+    {"id": "reachability_proxy", "severity": "hard", "scope": "robot_segment", "stage": "edge_mask", "description": "The A1 reachability oracle marks the edge feasible.", "evidence_boundary": "Proxy or declared kinematics; not full collision-free execution."},
+    {"id": "parent_segment_order", "severity": "hard", "scope": "segment_pair", "stage": "schedule", "description": "Segments of one parent curve respect segment_index and process direction.", "evidence_boundary": "Continuous-process semantic order."},
+    {"id": "precedence", "severity": "hard", "scope": "segment_pair", "stage": "schedule", "description": "All predecessor segments complete before the dependent segment starts.", "evidence_boundary": "Declared precedence only."},
+    {"id": "handoff_policy", "severity": "hard", "scope": "parent_curve", "stage": "assignment_and_schedule", "description": "Free, same-robot, explicit-boundary and non-splittable semantics are enforced.", "evidence_boundary": "Declared process rule supplied by the instance."},
+    {"id": "process_direction", "severity": "hard", "scope": "segment", "stage": "route_order", "description": "The selected traversal respects forward, reverse or either direction.", "evidence_boundary": "Direction semantics; no process-quality prediction."},
+    {"id": "time_window", "severity": "hard", "scope": "segment", "stage": "schedule", "description": "Segment execution occurs inside its release and due window.", "evidence_boundary": "Configured time windows, not measured factory cycle time."},
+    {"id": "robot_non_overlap", "severity": "hard", "scope": "robot_schedule", "stage": "schedule", "description": "A robot executes at most one segment at any time.", "evidence_boundary": "Schedule validity only."},
+    {"id": "resource_capacity", "severity": "hard", "scope": "resource_schedule", "stage": "schedule", "description": "Concurrent use does not exceed shared resource capacity.", "evidence_boundary": "Conservative resource abstraction."},
+    {"id": "no_go_proxy", "severity": "hard", "scope": "robot_segment", "stage": "edge_mask_and_verifier", "description": "Edges intersecting a declared no-go proxy are forbidden.", "evidence_boundary": "Not a complete robot-fixture collision guarantee."}
+  ],
+  "objectives": [
+    {"id": "makespan", "sense": "minimize", "unit": "s", "description": "Maximum completion time across robots."},
+    {"id": "load_variance", "sense": "minimize", "unit": "s^2", "description": "Variance of robot assigned execution loads."},
+    {"id": "travel_setup_time", "sense": "minimize", "unit": "s", "description": "Estimated transition and setup time."},
+    {"id": "priority_tardiness", "sense": "minimize", "unit": "priority*s", "description": "Priority-weighted tardiness against due times."}
+  ]
+}

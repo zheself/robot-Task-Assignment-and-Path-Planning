@@ -1,0 +1,10 @@
+[legacy]
+root = "/absolute/path/to/legacy/repository/data/DATA/DATA"
+kinematics_root = "/absolute/path/to/legacy/repository/data/hxa"
+read_only = true
+
+[outputs]
+processed_root = "data/processed"
+manifest_root = "data/manifests"
+card_root = "data/cards"
+

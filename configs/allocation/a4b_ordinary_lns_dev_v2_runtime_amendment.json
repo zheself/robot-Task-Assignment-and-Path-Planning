@@ -1,0 +1,33 @@
+{
+  "version": "a4b-ordinary-lns-dev-v2-runtime-amendment-v2",
+  "protocol_id": "a4b_ordinary_lns_dev_v2",
+  "status": "FROZEN_BEFORE_FIRST_SEARCH_EXECUTION",
+  "amendment_date": "2026-08-18",
+  "base_config_sha256": "90b20a1335d48bac28252615284509d5993e9b21811f80175a5c53fe703c7cbc",
+  "reason": "The cpu partition remained fully allocated for more than six hours. The first amended hexm_l40 CPU-only request and a normal-partition request under account hexm were rejected before execution by inherited QOSMinGRES. The normal GPU-node partition under account v-chengwy permits CPU-only execution without reserving a GPU.",
+  "scope": "runtime_hardware_only",
+  "supersedes": {
+    "hardware.partition": "cpu"
+  },
+  "runtime_hardware": {
+    "partition": "normal",
+    "account": "v-chengwy",
+    "node_family": "sist_gpu59",
+    "nodelist": "sist_gpu59",
+    "cpus_per_task": 1,
+    "memory_gb": 8,
+    "omp_num_threads": 1,
+    "mkl_num_threads": 1,
+    "gpu_requested": false,
+    "gres_requested": false,
+    "cuda_visible_devices": ""
+  },
+  "invariants": [
+    "No search calibration development or aggregation job ran under the original cpu-partition request.",
+    "The generated corpus base configuration seed IDs splits geometry and manifest remain unchanged.",
+    "All controlled methods and all train development smoke replay and aggregation stages use the same amended partition account CPU memory and thread settings.",
+    "No GPU is allocated used or reported as method compute.",
+    "End-to-end timing results are attributable only to the amended normal-partition sist_gpu59 CPU environment and are not pooled with A4b v1 or any earlier run.",
+    "The rejected jobs 980995 980996 and 981050 through 981053 had QOSMinGRES or dependency state elapsed zero and produced no search output."
+  ]
+}

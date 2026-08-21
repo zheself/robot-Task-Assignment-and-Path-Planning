@@ -1,0 +1,5 @@
+{
+  "fixture_id": "invalid_not_splittable_parent", "description": "A non-splittable parent curve cannot contain multiple allocation segments.",
+  "extends": "02_valid_same_robot_segments.json", "expected": {"valid": false, "issue_codes": ["NOT_SPLITTABLE_PARENT"]},
+  "patch": [{"op": "replace", "path": "/segments/0/handoff_policy", "value": "not_splittable"}]
+}

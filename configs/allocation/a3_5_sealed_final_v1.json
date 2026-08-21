@@ -1,0 +1,164 @@
+{
+  "version": "a3-5-sealed-final-v1",
+  "status": "PREREGISTERED_BEFORE_FROZEN_GENERATION",
+  "evidence_label": "SIM_GEOMETRIC",
+  "hypothesis": "A fixed hetero-GNN Feasible-Pair Pointer improves final verifier coverage over the matched fixed hetero-GNN static decoder on untouched continuous-process allocation groups.",
+  "benchmark": {
+    "protocol_id": "a3_5_sealed_final_v1",
+    "master_seed": 913751,
+    "id_prefix": "a35f1",
+    "split": "frozen_test",
+    "groups_per_cell": 12,
+    "variants_per_group": 2,
+    "groups_total": 72,
+    "instances_total": 144,
+    "cells": [
+      "iid_small",
+      "iid_medium",
+      "dense_precedence",
+      "resource_bottleneck",
+      "tight_windows",
+      "scale"
+    ],
+    "cell_generator_parameters": "identical to a3_5_pointer_pilot_v1 except for split, master seed, ID namespace and group counts",
+    "must_be_disjoint_from": ["a2_paper_v2", "a2_paper_v3", "a2_paper_v4", "a3_5_pointer_pilot_v1"],
+    "stress_split": "not_generated",
+    "negative_controls": "not_added",
+    "witness_visibility": "sealed_until_all_candidate_predictions_are_persisted",
+    "generation_authorisation": "requires implementation and evaluator source seal; this preregistration alone does not execute generation"
+  },
+  "fixed_neural_methods": {
+    "pair_pointer": {
+      "variant": "hetero_gnn_pair_pointer",
+      "encoder": "hetero_gnn",
+      "decoder": "feasible_pair_pointer",
+      "seeds": [101, 211, 307],
+      "greedy": true,
+      "hard_mask": true,
+      "repair": "forbidden",
+      "checkpoint_files": {
+        "101": "outputs/phase1_allocation/a3_5_pointer_pilot_v1/shards/hetero_gnn_pair_pointer/seed_101/checkpoint.pt",
+        "211": "outputs/phase1_allocation/a3_5_pointer_pilot_v1/shards/hetero_gnn_pair_pointer/seed_211/checkpoint.pt",
+        "307": "outputs/phase1_allocation/a3_5_pointer_pilot_v1/shards/hetero_gnn_pair_pointer/seed_307/checkpoint.pt"
+      },
+      "checkpoint_file_sha256": {
+        "101": "ff76a3856fc6b9d4c54823476f4bfe3a9ffb1b2a992f410d2a8cbc722ce04e48",
+        "211": "2a2f4c5f8a76dc86db7f797a4976c204ab7b2316387ff1b95d4530b10adc0042",
+        "307": "aafe611a6eb3e1fbc4ed55cbaaa611a900e78676e35515d065e0b0ceeb32063f"
+      },
+      "state_sha256": {
+        "101": "a8733e0d46b2d49bf08c898c1bcb23537cf5452beb3b39924b958c2c1b69da32",
+        "211": "3c3c8b15ab9897856ff976885cb40ed3436bf30a917e03ee5e962d777945bd3b",
+        "307": "29a872ab2d51c1926408a09765e9185e0d4c15bd6540ddefdb5577d6bf2aeabf"
+      }
+    },
+    "matched_static": {
+      "variant": "hetero_gnn_static",
+      "encoder": "hetero_gnn",
+      "decoder": "static",
+      "seeds": [101, 211, 307],
+      "repair": "forbidden",
+      "checkpoint_files": {
+        "101": "outputs/phase1_allocation/a3_5_pointer_pilot_v1/shards/hetero_gnn_static/seed_101/checkpoint.pt",
+        "211": "outputs/phase1_allocation/a3_5_pointer_pilot_v1/shards/hetero_gnn_static/seed_211/checkpoint.pt",
+        "307": "outputs/phase1_allocation/a3_5_pointer_pilot_v1/shards/hetero_gnn_static/seed_307/checkpoint.pt"
+      },
+      "checkpoint_file_sha256": {
+        "101": "4677ccb44436ac269334bfa0572dde8478015d609ac7a896247bd07dc8cef7ca",
+        "211": "d9bb8aefc1cca85c5dacd852de320b0ca7ad3fcf3c560ffdd9f882c461d9115c",
+        "307": "d3c7dfdd2cffd1aba77d10291c0683ab4060b7eb19809e051e19640bed609bd4"
+      },
+      "state_sha256": {
+        "101": "b3c584e314d48d4377573508ced699c9d072eac0e5873e9207092c281516211b",
+        "211": "52e7c87b3207df199ce6274f48e12d7873b470ee5e109031410a61b53233a6d4",
+        "307": "c7c638a1591fb745467c4802f1dc5307c663bafbdc24026d5bb9ada3cca91d30"
+      }
+    }
+  },
+  "training_lock": {
+    "pilot_config_sha256": "876933101dc5ed2e56984d8666dae36509481e93d6d6422ec4eed5380a7bea17",
+    "pilot_manifest_file_sha256": "3a5060e4ac089835c216d44d95fc61768a53b9b174148c3d3aa0275ec1d4b3e1",
+    "pilot_manifest_internal_sha256": "362d3146fa4befa39430806811f035825e660602dd8e8bad5bb3e0abe06ed94e",
+    "train_validation_access_sha256": "dc9ca758bf09480805a078fd46fac2081fdf8aef95cfe2e28a4540b6711c87bb",
+    "vocabulary_sha256": "40ee1fc3baf732487ededa7cc250b276dabe28461d310e7c332d7d847186aeaf",
+    "normalizer_sha256": "97bba5933739656645fb8f0ca0d555317517fbdcbdbcc586261ab06040ffed8c",
+    "retraining_or_checkpoint_selection": "forbidden"
+  },
+  "source_locks": {
+    "src/safe_residual_rl/allocation/graphs/core.py": "923757d7041c796880d5380c6deeb0653351accf24bf9bd210837516c9186fc6",
+    "src/safe_residual_rl/allocation/graphs/dataset.py": "e6ae6bf9fca28dec7d18350af6fb411da93aaa8e7175a4a58219ba7b52f54f9b",
+    "src/safe_residual_rl/allocation/models/heterogeneous.py": "be6a37ea42cd70f88fd82365a14553f4999088c40facb915e539ed759a4df1b7",
+    "src/safe_residual_rl/allocation/pointer_decoder.py": "a5962d4038e81fb1fe757a57e5da3f5e3a9fa5b219afc8647e0234f2f5d1733c",
+    "src/safe_residual_rl/allocation/pointer_pilot.py": "e505c495b3adcd74ff7c42bee22f53f5222f9ac5a4fab62d87b7848e5bcc83ef",
+    "src/safe_residual_rl/allocation/pointer_training.py": "812fecdd2eaa654aa97474f3bd05d5a71c0224aaf3b16dd8e170532e454cc648",
+    "src/safe_residual_rl/allocation/oracle.py": "922caf89e7cc170e6203ba2c5fe1d517a7c2e9b0ce1d0ccc249c3ddf964c17db",
+    "src/safe_residual_rl/allocation/scheduling.py": "221d61c3bf5631dfb9b0045f2a440dd40e8c6548963ae99f80b8e0538040af9c",
+    "src/safe_residual_rl/allocation/verifier.py": "6baddf172ad9606e704ea5b1ac9d25f2b8e966e1ae814567a1bc9ff9c7865d1d"
+  },
+  "strong_baselines": {
+    "methods": ["hybrid_assignment_milp", "order_aware_lns", "hybrid_load_balanced"],
+    "milp_time_limit_s": 3.0,
+    "milp_relative_gap": 0.0,
+    "lns_iterations": 100,
+    "lns_seed": 0,
+    "repair_budget_for_neural_methods": 0
+  },
+  "primary_analysis": {
+    "comparison": "hetero_gnn_pair_pointer_minus_matched_hetero_gnn_static",
+    "outcome": "final_A1_verifier_candidate_coverage",
+    "independent_unit": "task_group_id",
+    "group_value": "mean binary verified outcome across two variants and three matched model-seed pairs",
+    "estimand": "unweighted mean paired coverage difference across 72 task groups",
+    "test": "one-sided paired sign-flip randomization test over task-group differences",
+    "alternative": "pair_pointer_coverage_difference_greater_than_zero",
+    "alpha": 0.05,
+    "randomization_draws": 100000,
+    "randomization_seed": 451903,
+    "confidence_interval": "two-sided 95% task-group cluster bootstrap percentile interval",
+    "bootstrap_draws": 20000,
+    "bootstrap_seed": 451907,
+    "success_requires": [
+      "zero integrity, hash, leakage, mask and atomicity failure",
+      "mean paired coverage difference greater than zero",
+      "one-sided randomization p-value less than 0.05",
+      "95% cluster-bootstrap lower confidence bound greater than zero",
+      "at least two of three seed-wise paired coverage differences greater than zero"
+    ],
+    "multiple_testing": "no cell-wise hypothesis determines the primary result"
+  },
+  "secondary_analysis": {
+    "cell_coverage": "report all six cells with group-clustered intervals; descriptive",
+    "robustness_flag": "no cell mean regression below -1/12 (-0.083333)",
+    "strong_baseline_comparisons": "paired group-level coverage differences and 95% cluster-bootstrap intervals",
+    "strong_advantage_rule": "lower 95% bound above zero",
+    "noninferiority_margin": 0.013888888888888888,
+    "noninferiority_interpretation": "one overall frozen group out of 72; secondary only",
+    "quality_metrics": ["conditional_weighted_proxy_score", "makespan", "load_imbalance", "travel_setup_time"],
+    "runtime_metrics": ["per_instance_median_s", "per_instance_iqr_s", "total_wall_s", "coverage_runtime_pareto"],
+    "runtime_protocol": "single CPU thread on one recorded node class; model load excluded, encoding/decoding/scheduling/verifying included; no test-time warm-up or adaptation",
+    "teacher_forced_pair_accuracy": "report pilot value only as training diagnostic; it is not available or required on sealed instances"
+  },
+  "failure_policy": {
+    "classes": ["decoder_dead_end", "incomplete_assignment", "schedule_infeasible", "precedence_failure", "time_window_failure", "shared_resource_failure", "mask_integrity_failure"],
+    "all_failures_in_coverage_denominator": true,
+    "raw_predictions_persisted_before_witness_access": true,
+    "repair": "forbidden",
+    "beam_search": "forbidden",
+    "rl": "forbidden",
+    "test_time_adaptation": "forbidden"
+  },
+  "result_classes": {
+    "A3_5_FINAL_INVALID": "any source/checkpoint/manifest/leakage/mask/atomicity/sealed-access integrity failure",
+    "A3_5_DECODER_HYPOTHESIS_NOT_SUPPORTED": "valid run but the preregistered primary test fails",
+    "A3_5_DECODER_HYPOTHESIS_SUPPORTED_HETEROGENEOUS": "primary test passes but the robustness flag fails",
+    "A3_5_DECODER_HYPOTHESIS_SUPPORTED": "primary test and robustness flag pass",
+    "A3_5_STRONG_BASELINE_ADVANTAGE": "decoder hypothesis is supported and the secondary lower confidence bound exceeds every strong baseline"
+  },
+  "claim_boundaries": [
+    "The primary paper hypothesis concerns Pair-Pointer versus the matched static decoder, not superiority over CP-SAT/MILP/LNS.",
+    "Training labels are heterogeneous solver-generated verified incumbents, not LNS expert solutions, global optima or real expert actions.",
+    "Teacher-forced sequence accuracy is not the primary outcome because multiple verified action serializations may exist.",
+    "All evidence is SIM_GEOMETRIC and does not establish real deployment, collision safety, sim-to-real transfer or physical-process quality.",
+    "A3 v4 remains failed and immutable; A4 remains closed until this one-time evaluation is complete."
+  ]
+}

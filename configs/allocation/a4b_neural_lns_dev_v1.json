@@ -1,0 +1,128 @@
+{
+  "version": "a4b-neural-lns-dev-v1",
+  "protocol_id": "a4b_neural_lns_dev_v1",
+  "status": "PREREGISTERED_BEFORE_A4B_DATA_GENERATION",
+  "evidence_label": "SIM_GEOMETRIC_DEVELOPMENT_ONLY",
+  "research_question": "Can feasibility-aware neighborhood selection improve the anytime search efficiency of LNS for continuous-process multi-robot allocation under identical initialization, repair, acceptance, scheduling, verification, iteration and end-to-end budgets?",
+  "scope": [
+    "A4b-0 corrected anytime evaluator and initializer provenance",
+    "A4b-1 ordinary LNS and ALNS baselines",
+    "A4b-2 search-generated neighborhood improvement label interface"
+  ],
+  "data": {
+    "master_seed": 842137,
+    "id_prefix": "a4bnlsd1",
+    "splits": ["train", "development"],
+    "forbidden_splits": ["validation", "frozen_test", "stress"],
+    "cells": ["iid_small", "iid_medium", "dense_precedence", "resource_bottleneck", "tight_windows", "scale"],
+    "train_groups_per_cell": 4,
+    "development_groups_per_cell": 2,
+    "variants_per_group": 2,
+    "train_groups_total": 24,
+    "development_groups_total": 12,
+    "train_instances_total": 48,
+    "development_instances_total": 24,
+    "operator_selection_groups_per_cell": 1,
+    "label_states_per_cell": 2,
+    "generator_source": "a3_5_pointer_pilot_v1 geometry and six cell specifications copied by code, with new seed namespace counts and development-only split",
+    "disjoint_id_prefixes": ["a2v2", "a2v3", "a2v4", "a35p1", "a35f1", "a4wsp1"],
+    "static_ur5_csv_allowed": false,
+    "frozen_or_stress_generation_allowed": false
+  },
+  "initializer": {
+    "primary": "hybrid_load_balanced",
+    "same_for_all_controlled_methods": true,
+    "fallback_allowed": false,
+    "cost_is_in_end_to_end_budget": true
+  },
+  "search": {
+    "fixed_iterations": [10, 20, 30],
+    "maximum_iterations": 30,
+    "fixed_end_to_end_time_s": [0.5, 1.0, 3.0],
+    "destroy_ratios": [0.1, 0.25, 0.4],
+    "repair_backend": "a4b_shared_regret_load_reinsert_v1",
+    "repair_candidate_evaluation_budget": 256,
+    "random_seeds": [1201, 1907],
+    "acceptance_rule": "verified-first; lower objective accepted; otherwise seeded simulated annealing; verified current never replaced by infeasible candidate",
+    "allow_infeasible_current": true,
+    "restart_no_improvement": 12,
+    "termination": "first of 30 iterations or 3.0 seconds end-to-end",
+    "objective_weights": {
+      "makespan": 1.0,
+      "load_variance": 0.05,
+      "travel_setup_time": 0.1,
+      "priority_tardiness": 1.0
+    }
+  },
+  "alns": {
+    "initial_operator_weight": 1.0,
+    "weight_update": "w_next=(1-rho)*w+rho*max(reward,1e-6) after every application",
+    "reaction_factor": 0.2,
+    "rewards": {
+      "global_best": 8.0,
+      "accepted_improvement": 4.0,
+      "new_feasible": 2.0,
+      "accepted_non_improvement": 1.0,
+      "rejected": 0.0
+    },
+    "operator_selection": "seeded roulette over positive weights",
+    "initial_temperature_fraction": 0.05,
+    "cooling_rate": 0.97
+  },
+  "methods": [
+    "random_lns",
+    "handcrafted_round_robin",
+    "best_single_train_selected",
+    "adaptive_alns",
+    "current_order_aware_lns_reference",
+    "small_instance_oracle_destroy_upper_bound"
+  ],
+  "destroy_operators": [
+    "random_destroy",
+    "worst_cost_destroy",
+    "load_imbalance_destroy",
+    "precedence_chain_destroy",
+    "critical_slack_destroy",
+    "shared_resource_conflict_destroy",
+    "relatedness_destroy",
+    "compound_destroy"
+  ],
+  "operator_selection": {
+    "split": "train",
+    "metric_order": ["verifier_coverage", "mean_best_objective_with_failures_last", "median_runtime", "operator_id"],
+    "validation_or_future_data_access": "forbidden"
+  },
+  "oracle_destroy": {
+    "maximum_atomic_units": 18,
+    "role": "small-instance upper bound and label validation only",
+    "scalable_baseline": false
+  },
+  "labels": {
+    "name": "search-generated neighborhood improvement labels",
+    "candidate_operators": "all eight registered destroy operators",
+    "same_repair_candidate_evaluation_budget": 256,
+    "primary_learning_form": "pairwise_or_listwise_ranking",
+    "not_true_expert_actions": true,
+    "save": ["feasible_improvement", "objective_improvement", "time_to_feasible", "repair_cost", "edit_distance", "pareto_dominance"]
+  },
+  "statistics": {
+    "independent_unit": "task_group_id",
+    "variants_are_clustered": true,
+    "failures_remain_in_denominator": true,
+    "development_results_are_descriptive": true
+  },
+  "hardware": {
+    "partition": "cpu",
+    "cpus_per_task": 1,
+    "memory_gb": 8,
+    "omp_num_threads": 1,
+    "mkl_num_threads": 1
+  },
+  "boundaries": [
+    "No A3 or A3.5 frozen instance witness evaluator or result is accessed or rerun.",
+    "A4a validation is not patched rerun or overwritten.",
+    "No A4b frozen_test or stress benchmark is generated.",
+    "No neural model checkpoint training reinsertion learning reinforcement learning dynamic insertion path planning physical modeling or collision-safety claim is included.",
+    "All A4b data and results are SIM_GEOMETRIC development-only."
+  ]
+}

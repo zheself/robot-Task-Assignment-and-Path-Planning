@@ -1,0 +1,72 @@
+{
+  "version": "a2-geometric-benchmark-v1",
+  "manifest_version": "a2-split-manifest-v1",
+  "master_seed": 260809,
+  "evidence_label": "SIM_GEOMETRIC",
+  "coordinate_frame": "synthetic_workcell_m",
+  "variants_per_group": 2,
+  "geometry": {
+    "curve_types": ["line", "arc", "bspline", "closed_loop"],
+    "samples_per_curve": 25,
+    "workpiece_radius_m": 0.32,
+    "robot_base_radius_m": 0.52,
+    "nominal_process_speed_m_s": 0.04,
+    "planning_horizon_s": 1200.0
+  },
+  "splits": {
+    "train": {
+      "group_count": 4,
+      "robot_count": [2, 4],
+      "segment_count": [8, 24],
+      "max_segments_per_curve": 3,
+      "precedence_probability": 0.15,
+      "shared_resource_probability": 0.20,
+      "tight_window_probability": 0.00
+    },
+    "validation": {
+      "group_count": 2,
+      "robot_count": [2, 5],
+      "segment_count": [10, 28],
+      "max_segments_per_curve": 3,
+      "precedence_probability": 0.25,
+      "shared_resource_probability": 0.30,
+      "tight_window_probability": 0.05
+    },
+    "frozen_test": {
+      "group_count": 3,
+      "robot_count": [3, 6],
+      "segment_count": [16, 40],
+      "max_segments_per_curve": 4,
+      "precedence_probability": 0.35,
+      "shared_resource_probability": 0.45,
+      "tight_window_probability": 0.10
+    },
+    "stress": {
+      "group_count": 1,
+      "robot_count": [8, 8],
+      "segment_count": [64, 80],
+      "max_segments_per_curve": 4,
+      "precedence_probability": 0.45,
+      "shared_resource_probability": 0.60,
+      "tight_window_probability": 0.20
+    }
+  },
+  "objective_weights": {
+    "makespan": 1.0,
+    "load_variance": 0.05,
+    "travel_setup_time": 0.10,
+    "priority_tardiness": 1.0
+  },
+  "baseline_protocol": {
+    "methods": ["greedy", "load_balanced", "hungarian", "assignment_milp", "deterministic_lns"],
+    "milp_time_limit_s": 10.0,
+    "milp_relative_gap": 0.0,
+    "lns_iterations": 100,
+    "lns_seed": 0
+  },
+  "boundaries": [
+    "All instances are programmatic SIM_GEOMETRIC evidence.",
+    "Reachability and shared-resource checks are analytical proxies, not IK or collision certificates.",
+    "Frozen-test groups must not guide model, feature, weight, or seed selection."
+  ]
+}

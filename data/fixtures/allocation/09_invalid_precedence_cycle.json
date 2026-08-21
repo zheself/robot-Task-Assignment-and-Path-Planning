@@ -1,0 +1,5 @@
+{
+  "fixture_id": "invalid_precedence_cycle", "description": "Mutual predecessor references form a forbidden cycle.",
+  "extends": "02_valid_same_robot_segments.json", "expected": {"valid": false, "issue_codes": ["PRECEDENCE_CYCLE"]},
+  "patch": [{"op": "replace", "path": "/segments/0/predecessor_ids", "value": ["seg-1"]}]
+}

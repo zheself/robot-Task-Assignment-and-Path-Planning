@@ -1,0 +1,8 @@
+{
+  "fixture_id": "valid_priority_window", "description": "A high-priority segment has an explicit finite release/due window.",
+  "extends": "01_valid_minimal.json", "expected": {"valid": true, "issue_codes": []},
+  "patch": [
+    {"op": "replace", "path": "/segments/0/priority", "value": 10},
+    {"op": "replace", "path": "/segments/0/time_window", "value": {"start_s": 5.0, "end_s": 15.0}}
+  ]
+}

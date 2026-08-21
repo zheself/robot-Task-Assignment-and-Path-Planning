@@ -1,0 +1,7 @@
+seed,method,coverage,verified,instances
+101,pair_pointer,0.625,90,144
+101,matched_static,0.4027777777777778,58,144
+211,pair_pointer,0.6388888888888888,92,144
+211,matched_static,0.3472222222222222,50,144
+307,pair_pointer,0.6875,99,144
+307,matched_static,0.4583333333333333,66,144

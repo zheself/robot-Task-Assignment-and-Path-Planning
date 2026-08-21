@@ -1,0 +1,8 @@
+{
+  "fixture_id": "valid_shared_zone", "description": "A segment references a declared capacity-one shared-zone proxy.",
+  "extends": "01_valid_minimal.json", "expected": {"valid": true, "issue_codes": []},
+  "patch": [
+    {"op": "replace", "path": "/segments/0/shared_resource_ids", "value": ["zone-0"]},
+    {"op": "add", "path": "/resources/-", "value": {"id": "zone-0", "resource_type": "shared_zone", "capacity": 1, "availability": {"start_s": 0.0, "end_s": 100.0}}}
+  ]
+}

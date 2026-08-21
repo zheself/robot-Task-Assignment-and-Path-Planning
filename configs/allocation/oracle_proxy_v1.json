@@ -1,0 +1,12 @@
+{
+  "version": "analytical-edge-oracle-v1",
+  "evidence_label": "SIM_GEOMETRIC",
+  "default_max_reach_m": 1.0,
+  "reach_by_kinematic_model_m": {
+    "abstract-arm-v1": 1.0,
+    "ur5-dh-proxy-v1": 0.85
+  },
+  "no_go_spheres": [],
+  "confidence": 0.25,
+  "boundary": "Analytical reach and spherical no-go proxies only; not IK, full collision checking, controller timing, or physical process evidence."
+}

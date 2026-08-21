@@ -1,0 +1,26 @@
+{
+  "version": "a2-scheduler-development-v1",
+  "evidence_label": "SIM_GEOMETRIC",
+  "source_benchmark": "configs/allocation/benchmark_v2.json",
+  "source_manifest": "data/manifests/allocation/a2_paper_manifest_v2.json",
+  "source_manifest_sha256": "c9f532e72db33324e8f84677001cab028eb9a8e5634857998375ae7ed99f0842",
+  "allowed_splits": ["train", "validation"],
+  "forbidden_splits": ["frozen_test", "stress"],
+  "methods": [
+    "load_balanced_v1",
+    "deadline_load_balanced_v2",
+    "deadline_assignment_milp_v2",
+    "order_aware_lns_v2"
+  ],
+  "milp_time_limit_s": 3.0,
+  "milp_relative_gap": 0.0,
+  "lns_iterations": 100,
+  "lns_seed": 0,
+  "selection_metric": "validation_candidate_coverage_then_weighted_proxy_score",
+  "boundaries": [
+    "This run is development-only and may access v2 train and validation instances only.",
+    "The observed v2 frozen-test and stress instances cannot guide method or parameter choices.",
+    "Deadline-aware scheduling remains a deterministic SIM_GEOMETRIC proxy, not collision-safe path planning.",
+    "Failure to find a schedule is not proof of global infeasibility."
+  ]
+}

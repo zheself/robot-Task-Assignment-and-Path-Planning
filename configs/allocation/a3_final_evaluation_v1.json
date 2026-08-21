@@ -1,0 +1,206 @@
+{
+  "version": "a3-one-time-frozen-evaluation-v1",
+  "status": "FROZEN_BEFORE_A3_FROZEN_ACCESS",
+  "frozen_date": "2026-08-10",
+  "evidence_label": "SIM_GEOMETRIC",
+  "source_locks": {
+    "a2_manifest_sha256": "0c98f30e92697ce8b5eca724df0f7d1b7053293df1e792707487ecb6c71b5398",
+    "benchmark_config_sha256": "66ca0402ff933f37edff5228c234a7b3ed868f97c62b53edad9ba8c283d7e34b",
+    "a3_development_config_sha256": "33dd1c5e22960823f483c0fec4e40b8cb98b0b30fbf9bb5456b4132da6122034",
+    "a3_development_summary_sha256": "06b44d99611974e025063e249373377d4d62f3d6aa191f4957dee6d8d8d4dbda",
+    "vocabulary_sha256": "a031d82d29b1d466a8bd4ecd3701a24c2fa89c960859c6798e318ef41ff58aa1",
+    "normalizer_sha256": "c1e93d70d6f9a4ffd93f42c638455f2bb12a40e9615fb1125c3d4f83714abb66"
+  },
+  "source_code_locks": {
+    "training_py_sha256": "26ef5f8576aba530babb2f24700f5e5e1bd2663678f269aa05791f30efe84d8f",
+    "model_py_sha256": "be6a37ea42cd70f88fd82365a14553f4999088c40facb915e539ed759a4df1b7",
+    "decoding_py_sha256": "420ea46fce1966d85bd77dbafe562ca7f97118e02f15920477d4583e329e779d",
+    "scheduling_py_sha256": "221d61c3bf5631dfb9b0045f2a440dd40e8c6548963ae99f80b8e0538040af9c",
+    "verifier_py_sha256": "6baddf172ad9606e704ea5b1ac9d25f2b8e966e1ae814567a1bc9ff9c7865d1d",
+    "heuristics_py_sha256": "dc2ca8116f2460367a15fae1c581a931f2293ef5ee9348010cd9a125e92a7805",
+    "milp_py_sha256": "bfbab536cb477450060022ebebc439b738f265f49290b98f2e7d57e8f8f52dbf",
+    "lns_py_sha256": "0b860216975021d93c66de27c2e593d0ada4849f24a0d96c0d1489f02217ff00",
+    "search_scheduling_py_sha256": "c1d0123c35b51f86a8ad8d8cd99a7caf2bb45077a871dbdc39452a53da0a088b",
+    "oracle_config_sha256": "3dea6a2b43e195f484111a2994de9e34e035408a606777b701a93d28b2256c9c",
+    "final_evaluator_sha256": "record_in_run_manifest_after_train_validation_only_test_and_before_first_frozen_access"
+  },
+  "selected_model": {
+    "family": "edge_mlp",
+    "selection_source": "W10_validation_only",
+    "decoder": "atomic_unit_hard_mask_plus_precedence_aware_order_v1",
+    "candidate_schedule_policy": "learned_precedence_aware_order_without_repair",
+    "checkpoint_policy": "evaluate_all_three_validation_selected_checkpoints_no_seed_selection",
+    "retraining": false,
+    "ensembling": false,
+    "test_time_adaptation": false,
+    "repair": false,
+    "checkpoints": [
+      {
+        "seed": 17,
+        "best_epoch": 12,
+        "state_sha256": "ad18413e210e1e671c9fa8f0d3eb3834814735336ffe2a9ca15aa4220f2e6407",
+        "checkpoint_file_sha256": "01589765bad6168270f0ec4cb2ce501706460e3147bd9099309c477142049cd5"
+      },
+      {
+        "seed": 29,
+        "best_epoch": 23,
+        "state_sha256": "9079b4d34818ad08e07b8ff173e9def5556dade8ef88f8cd23d357204beece96",
+        "checkpoint_file_sha256": "bec663a0fee319c2c37d97a2fc6bfa0345fbfd7754806354486346744d0dfe88"
+      },
+      {
+        "seed": 43,
+        "best_epoch": 21,
+        "state_sha256": "a92c4460c1d26a97d8c6307610599463890442cf074664cea77457dd6772248d",
+        "checkpoint_file_sha256": "0694c1b29285e337bae79903f772fa4eb0c44a4bffaa23db6fe7572ff0ed44cb"
+      }
+    ]
+  },
+  "data_access": {
+    "primary_split": "frozen_test",
+    "primary_instances": 144,
+    "primary_groups": 72,
+    "variants_per_group": 2,
+    "primary_cells": [
+      "iid_small",
+      "iid_medium",
+      "ood_dense_precedence",
+      "ood_resource_bottleneck",
+      "ood_tight_windows",
+      "ood_scale"
+    ],
+    "stress_split": "stress",
+    "stress_instances": 24,
+    "stress_role": "descriptive_only_except_negative_control_integrity",
+    "single_sealed_invocation": true,
+    "lexicographic_instance_order": true,
+    "witness_use": "hash_and_post_prediction_audit_only_never_model_or_decoder_input"
+  },
+  "baselines": {
+    "context_methods": [
+      "greedy",
+      "load_balanced",
+      "hungarian",
+      "assignment_milp",
+      "deterministic_lns"
+    ],
+    "strong_methods": [
+      "hybrid_load_balanced",
+      "hybrid_assignment_milp",
+      "order_aware_lns"
+    ],
+    "rerun_all_methods_in_same_evaluation": true,
+    "existing_a2_results_role": "provenance_cross_check_only",
+    "milp_time_limit_s": 3.0,
+    "milp_relative_gap": 0.0,
+    "lns_iterations": 100,
+    "lns_seed": 0,
+    "same_a1_scheduler_and_verifier": true,
+    "no_posthoc_repair_for_any_method": true
+  },
+  "aggregation": {
+    "independent_unit": "task_group_id",
+    "variant_aggregation": "mean_within_group",
+    "learned_seed_aggregation": "mean_of_three_fixed_seed_group_rates",
+    "seeds_are_not_independent_statistical_units": true,
+    "failed_candidate_quality": "missing_not_imputed",
+    "quality_population": "pairwise_jointly_verified_groups_only"
+  },
+  "metrics": {
+    "primary": "verified_candidate_coverage",
+    "secondary": [
+      "weighted_proxy_objective_lower_is_better",
+      "makespan",
+      "load_variance",
+      "travel_setup_time",
+      "priority_tardiness",
+      "full_pipeline_runtime_s",
+      "failure_status_and_reason",
+      "atomic_unit_teacher_agreement_diagnostic_only"
+    ],
+    "runtime_summary": "median_iqr_all_runs",
+    "training_cost_reported_separately": true,
+    "runtime_cannot_alone_support_superiority": true
+  },
+  "statistics": {
+    "bootstrap_seed": 260904,
+    "cluster_bootstrap_resamples": 5000,
+    "confidence_level": 0.95,
+    "paired_cluster_unit": "task_group_id",
+    "paired_coverage_difference_ci": true,
+    "paired_coverage_test": "one_sided_wilcoxon_greater_on_group_coverage_differences",
+    "paired_quality_test": "wilcoxon_on_jointly_verified_group_means",
+    "multiple_testing": "holm",
+    "overall_strong_comparison_family_size": 3,
+    "alpha": 0.05,
+    "cell_tests": "descriptive_ci_and_fixed_gate_only"
+  },
+  "difficulty_gates": {
+    "absolute_mean_seed_coverage": {
+      "iid_small": 0.95,
+      "iid_medium": 0.85,
+      "ood_dense_precedence": 0.50,
+      "ood_resource_bottleneck": 0.50,
+      "ood_tight_windows": 0.50,
+      "ood_scale": 0.50
+    },
+    "relative_weak_baseline_margin": 0.08333333333333333,
+    "relative_rule": "in_every_cell_learned_mean_seed_coverage_at_least_best_context_baseline_coverage_minus_one_group_equivalent",
+    "report_each_seed_without_cherry_picking": true
+  },
+  "decision_rules": {
+    "integrity_required": [
+      "all_source_and_checkpoint_hashes_match",
+      "all_144_frozen_instances_evaluated_by_all_three_checkpoints_and_all_eight_baselines",
+      "zero_schema_or_manifest_failures",
+      "zero_nan_or_unexpected_exceptions",
+      "hard_mask_and_atomic_units_never_violated",
+      "designed_edge_infeasible_detection_rate_equals_one"
+    ],
+    "baseline_floor_required": [
+      "all_absolute_difficulty_gates_pass",
+      "overall_learned_mean_seed_coverage_at_least_best_context_baseline_overall_coverage",
+      "all_relative_cell_rules_pass"
+    ],
+    "strong_competitive_margin": 0.05,
+    "strong_competitive_rule": "versus_at_least_one_strong_method_overall_coverage_difference_ci_lower_bound_at_least_minus_margin_and_no_cell_deficit_exceeds_one_group_equivalent",
+    "strong_superiority_rule": "overall_coverage_difference_ci_lower_bound_above_zero_and_holm_adjusted_p_below_alpha_against_all_three_strong_methods_with_no_cell_deficit_exceeding_one_group_equivalent",
+    "quality_superiority_rule": "reported_only_after_coverage_rule_and_only_on_jointly_verified_groups",
+    "a3_final_pass_rule": "integrity_required_and_baseline_floor_required",
+    "a4_remains_blocked_until_result_classification_recorded": true
+  },
+  "result_classes": {
+    "A3_FINAL_INVALID": "Integrity or execution protocol failed; no performance conclusion is allowed.",
+    "A3_FINAL_FAILED_BASELINE_FLOOR": "The fixed learned model failed the absolute or weak-baseline feasibility floor; stop the learned A3 branch without retuning on v4.",
+    "A3_FINAL_BASELINE_FLOOR_ONLY": "The learned model passed the minimum A3 floor but was not competitive with a strong baseline; no learned-method advantage claim is allowed.",
+    "A3_FINAL_COMPETITIVE_NOT_SUPERIOR": "The learned model met the registered non-inferiority-style margin against at least one strong baseline but did not prove superiority.",
+    "A3_FINAL_STRONG_ADVANTAGE": "The learned edge-scoring model met the strict registered coverage superiority rule; this still is not a GNN, collision-safety or real-production claim."
+  },
+  "rerun_policy": {
+    "performance_based_rerun_forbidden": true,
+    "exact_rerun_after_documented_infrastructure_failure_only": true,
+    "preserve_all_failed_attempt_logs": true,
+    "any_model_decoder_budget_threshold_or_metric_change_requires_new_version_and_cannot_restore_unseen_status": true
+  },
+  "outputs": {
+    "ignored_root": "outputs/phase1_allocation/a3_final_evaluation_v1",
+    "compact_report_root": "reports/phase1_allocation",
+    "required_formats": ["json", "csv", "markdown"],
+    "required_artifacts": [
+      "run_manifest",
+      "per_instance_predictions",
+      "per_seed_metrics",
+      "per_cell_metrics",
+      "paired_strong_baseline_statistics",
+      "failure_library",
+      "decision_record"
+    ]
+  },
+  "boundaries": [
+    "All final evidence remains SIM_GEOMETRIC.",
+    "The selected edge_mlp is not a GNN or graph Transformer.",
+    "The v4 baseline frozen outcomes were already observed during A2; A3 model and checkpoint selection used train and validation only.",
+    "A verified A1-proxy plan is not a motion trajectory, collision certificate, physical model or real execution.",
+    "No A4 repair, path planning, RL, test-time adaptation or physical-quality model is included.",
+    "No real production, real hemming, sim-to-real, formal safety or physical-quality improvement claim is permitted."
+  ]
+}

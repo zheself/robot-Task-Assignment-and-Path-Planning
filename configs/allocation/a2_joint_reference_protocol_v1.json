@@ -1,0 +1,27 @@
+{
+  "version": "a2-joint-reference-protocol-v1",
+  "evidence_label": "SIM_GEOMETRIC",
+  "fixture_policy": "all five A0 fixtures with expected.valid=true",
+  "benchmark_source": "configs/allocation/benchmark_v3.json",
+  "manifest_source": "data/manifests/allocation/a2_paper_manifest_v3.json",
+  "manifest_sha256": "a039238d50ac10a6ecc44d6001f07aa75cbc3169c9ac5c8c1800a1794742ae12",
+  "allowed_benchmark_split": "train",
+  "forbidden_splits": ["validation", "frozen_test", "stress"],
+  "train_selection_rule": "first 8 by (segment_count, instance_id) among instances with segment_count <= 10",
+  "train_sample_count": 8,
+  "max_segments": 10,
+  "max_assignment_combinations": 20000,
+  "node_limit": 250000,
+  "time_limit_s": 10.0,
+  "acceptance": {
+    "all_valid_fixtures_complete_and_verified": true,
+    "minimum_train_complete_rate": 0.5,
+    "zero_verification_failures": true
+  },
+  "boundaries": [
+    "Optimal is claimed only for complete enumeration within the A1 proxy.",
+    "Limit and unsupported_scale are distinct from infeasible.",
+    "No validation, frozen-test or stress instance may be read.",
+    "The reference is not path, collision, physical-process or factory optimality."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "commands": {
+    "evaluate_once": "sbatch --dependency=afterok:<generation_job> slurm/a3_5_final_evaluate.sbatch",
+    "generate": "sbatch slurm/a3_5_final_generate.sbatch",
+    "validation_preflight": "sbatch slurm/a3_5_final_validation_preflight.sbatch"
+  },
+  "created_utc": "2026-08-10T19:00:10.855094+00:00",
+  "dependencies": {
+    "numpy": "1.26.4",
+    "python": "3.11.15",
+    "scipy": "1.11.4",
+    "torch": "2.5.1+cu124"
+  },
+  "evaluation_absent_at_seal": true,
+  "frozen_absent_at_seal": true,
+  "protocol_sha256": "8c4d3cb7cc6e61ee589e98786ab78e77958d09694afb102d7f806eda9c208368",
+  "registered_lock_failures": [],
+  "source_hashes": {
+    "configs/allocation/a3_5_sealed_final_v1.json": "8c4d3cb7cc6e61ee589e98786ab78e77958d09694afb102d7f806eda9c208368",
+    "scripts/generate_a3_5_final_benchmark.py": "3c8506754bcec378c9a5df0e736b30e1c244d74e387ee6eb71128468ce657a6b",
+    "scripts/run_a3_5_final_evaluation.py": "eb1e2fd50433dea2f423e5db2b1ae1384c0a70ddfe990594bfda0f1715a85e07",
+    "scripts/seal_a3_5_final_evaluator.py": "7359093bd09c2f9b706a32a0c5dc8f1c539662ae4557a00f98db30ed55dcf7f3",
+    "slurm/a3_5_final_evaluate.sbatch": "5a37d75eba600eaacac46328c4b79bdfff09e4a93bfa5c03f546c3deb85952ee",
+    "slurm/a3_5_final_generate.sbatch": "3390adba40c8a4fd16b4d4048dcd7612eaf5167fc2c0e07a655bf5b35a4f8374",
+    "slurm/a3_5_final_validation_preflight.sbatch": "6ebba58b7fdcd21498130a1a27a9e737f67768048c611e8511d7f4582b868052",
+    "src/safe_residual_rl/allocation/pointer_final.py": "01959cef6965a1ad338e6a5e865a12b49db2e57db09ebabf2eaa2b596553b60d",
+    "tests/allocation/test_a3_5_final_evaluation.py": "ab47e41b63d377666dd9e2cbd0bee8efdbc0e27a278e0279161c7c138140ec75"
+  },
+  "verification": {
+    "excluded_v4_data_dependent_tests": [
+      "tests/allocation/test_a3_w9_foundation.py",
+      "tests/allocation/test_a3_w10_training.py"
+    ],
+    "non_v4_regression": "146 passed, 1 warning",
+    "targeted_tests": "13 passed",
+    "validation_preflight_checks": {
+      "complete_matrix": true,
+      "finite_runtime": true,
+      "validation_only": true,
+      "zero_atomicity": true,
+      "zero_mask": true
+    },
+    "validation_preflight_instances": 12,
+    "validation_preflight_job_id": "941015",
+    "validation_preflight_rows": 108,
+    "validation_preflight_summary_sha256": "c3aa16c5ba5e82d3a3de2dab14629d8695804a4d12a9f7b08bae17a08f6adba5"
+  },
+  "version": "a3-5-final-evaluator-seal-v1"
+}

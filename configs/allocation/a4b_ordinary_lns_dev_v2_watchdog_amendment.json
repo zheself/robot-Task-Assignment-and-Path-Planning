@@ -1,0 +1,29 @@
+{
+  "version": "a4b-ordinary-lns-dev-v2-watchdog-amendment-v1",
+  "protocol_id": "a4b_ordinary_lns_dev_v2",
+  "status": "FROZEN_AFTER_FAILED_TRAIN_GATE_BEFORE_RESTART",
+  "amendment_date": "2026-08-18",
+  "failed_job_id": "981071",
+  "base_config_sha256": "90b20a1335d48bac28252615284509d5993e9b21811f80175a5c53fe703c7cbc",
+  "scope": "operational_safety_watchdog_only",
+  "observed_failure": {
+    "fixed_iteration_traces": 240,
+    "incomplete_fixed_iteration_traces": 180,
+    "termination_reason": "safety_watchdog",
+    "configured_watchdog_s": 60.0,
+    "development_accessed": false
+  },
+  "replacement": {
+    "search.safety_watchdog_s": 1800.0,
+    "slurm.train_wall_time": "24:00:00",
+    "slurm.development_wall_time": "24:00:00"
+  },
+  "invariants": [
+    "The watchdog remains an operational fail-safe and is not an experimental budget.",
+    "Fixed-time deadlines remain 0.5 1.0 and 3.0 seconds and are unchanged.",
+    "Fixed-iteration runs still require exactly 30 completed neighborhoods before any 10 20 or 30 snapshot is emitted.",
+    "Data IDs splits seeds methods operators repair cap acceptance verifier metrics and gates are unchanged.",
+    "The failed job 981071 outputs are preserved and excluded from restarted calibration and method selection.",
+    "No development validation frozen_test stress A3 A3.5 or A4a instance is accessed by this amendment."
+  ]
+}

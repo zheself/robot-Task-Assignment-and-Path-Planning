@@ -1,0 +1,98 @@
+{
+  "version": "a3-train-validation-development-v1",
+  "stage": "W9_W10_DEVELOPMENT_ONLY",
+  "evidence_label": "SIM_GEOMETRIC",
+  "a2_manifest_sha256": "0c98f30e92697ce8b5eca724df0f7d1b7053293df1e792707487ecb6c71b5398",
+  "access_guard": {
+    "allowed_splits": ["train", "validation"],
+    "fit_split": "train",
+    "selection_split": "validation",
+    "forbidden_splits": ["frozen_test", "stress"],
+    "require_split_token_in_path": true
+  },
+  "teacher": {
+    "version": "a3-constructive-witness-imitation-v1",
+    "source": "constructive-witness-v1",
+    "train_usage": "assignment_and_order_supervision",
+    "validation_usage": "selection_metrics_only",
+    "frozen_usage": "forbidden",
+    "claim_boundary": "witness imitation is not optimal-solver imitation"
+  },
+  "graph": {
+    "version": "continuous-heterogeneous-graph-v1",
+    "node_types": ["segment", "robot", "resource"],
+    "relations": [
+      "robot_to_segment",
+      "segment_to_robot",
+      "segment_precedes_segment",
+      "segment_follows_segment",
+      "segment_uses_resource",
+      "resource_used_by_segment"
+    ],
+    "fit_vocabulary_on": "train_only",
+    "fit_normalization_on": "train_only",
+    "unknown_category_token": "<UNK>",
+    "normalization_epsilon": 1e-8
+  },
+  "models": {
+    "families": ["edge_mlp", "hetero_gnn", "graph_transformer"],
+    "hidden_dim": 64,
+    "message_passing_layers": 2,
+    "attention_heads": 4,
+    "dropout": 0.1,
+    "decoder": "atomic_unit_hard_mask_plus_precedence_aware_order_v1"
+  },
+  "loss": {
+    "assignment_cross_entropy_weight": 1.0,
+    "pairwise_order_bce_weight": 0.25,
+    "invalid_edge_logit": "negative_infinity",
+    "teacher_forced_order_pairs": true
+  },
+  "training": {
+    "seeds": [17, 29, 43],
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "max_epochs": 60,
+    "early_stopping_patience": 10,
+    "gradient_clip_norm": 1.0,
+    "device": "cpu",
+    "instance_batching": "one_graph_gradient_accumulation",
+    "shuffle_train_groups_each_epoch": true
+  },
+  "w9_smoke": {
+    "train_groups_per_cell": 2,
+    "validation_groups_per_cell": 1,
+    "epochs": 4,
+    "seed": 17,
+    "model_family": "hetero_gnn"
+  },
+  "selection": {
+    "primary": "validation_verified_candidate_coverage",
+    "tie_breakers": [
+      "validation_mean_verified_weighted_proxy_score",
+      "validation_atomic_unit_assignment_accuracy",
+      "validation_median_inference_runtime_s"
+    ],
+    "candidate_schedule_policy": "learned_precedence_aware_order_without_repair",
+    "frozen_test_selection_forbidden": true
+  },
+  "development_acceptance": {
+    "zero_train_validation_group_leakage": true,
+    "zero_forbidden_split_access": true,
+    "zero_teacher_hash_or_verifier_failures": true,
+    "normalizer_fit_count_equals_train_graph_count": true,
+    "invalid_edges_never_selected": true,
+    "atomic_units_never_split": true,
+    "decoded_candidates_cover_every_segment_once": true,
+    "deterministic_same_seed": true
+  },
+  "boundaries": [
+    "All graphs and results are SIM_GEOMETRIC.",
+    "PointNet is not used in A3 development v1.",
+    "Constructive witnesses are feasible A1-proxy teachers and are not optimal labels.",
+    "No frozen_test or stress instance, witness, label, metric or solver outcome may be read during development.",
+    "No A4 repair, path planning, collision guarantee, physical model or RL is included.",
+    "A separate preregistration is required before one-time frozen evaluation."
+  ]
+}

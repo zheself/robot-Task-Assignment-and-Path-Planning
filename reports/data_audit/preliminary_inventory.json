@@ -1,0 +1,3050 @@
+{
+  "schema_version": 1,
+  "source_root": "/public/home/v-chengwy/cjz/RL_credit-assign/Mechanism-Guided-Residual-Reinforcement-Learning-for-Robotic-Hemming/data/DATA/DATA",
+  "csv_file_count": 63,
+  "total_rows": 8912,
+  "robot_summary": {
+    "kuka_kr210_r2700_2": {
+      "files": 30,
+      "rows": 5240
+    },
+    "kuka_kr210_r3100_2": {
+      "files": 6,
+      "rows": 460
+    },
+    "kuka_kr240_r3330": {
+      "files": 9,
+      "rows": 775
+    },
+    "ur5": {
+      "files": 16,
+      "rows": 2160
+    },
+    "unverified": {
+      "files": 2,
+      "rows": 277
+    }
+  },
+  "duplicate_hash_groups": [],
+  "files": [
+    {
+      "relative_path": "KR210 R2700-2/20250522/CSV/data01.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14870,
+      "sha256": "9b04fd5258ead3754bde211d4c4611748d6043b254764fc441f851e909ecf27c",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-22 17:32:19.215",
+      "first_field_last_row": "2025-05-22 17:42:11.028",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 5.807856404861523,
+        "p95": 13.068441589811268,
+        "max": 14.84942381327464
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 5.807856404861523,
+        "p95": 13.068441589811268,
+        "max": 14.84942381327464
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250522/CSV/data010.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14905,
+      "sha256": "d24e188f340d0092b210039cccad6bd31c8e8d6fc6cbe11152970d3f6a75f9be",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-22 20:00:52.326",
+      "first_field_last_row": "2025-05-22 20:11:45.082",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 7.384751039122484,
+        "p95": 13.952589024121687,
+        "max": 14.91685034111583
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 7.384751039122484,
+        "p95": 13.952589024121687,
+        "max": 14.91685034111583
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250522/CSV/data011.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14878,
+      "sha256": "5b4fde08d577e2c196f33e5623af808c42500d53925c5cf775bffaf38947e4f6",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-05-22 20:17:11.540",
+      "first_field_last_row": "2025-05-22 20:27:25.436",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 7.010095005654083,
+        "p95": 13.717025818309363,
+        "max": 15.38486775775637
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 7.010095005654083,
+        "p95": 13.717025818309363,
+        "max": 15.38486775775637
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250522/CSV/data02.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14917,
+      "sha256": "0dfd4c9186b519bd313be766943a260f1f3381e969f0debeb808316209e4d1c2",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-22 17:53:52.852",
+      "first_field_last_row": "2025-05-22 18:05:43.972",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.555285460445906,
+        "p95": 14.035925490573819,
+        "max": 14.56516589958485
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.555285460445906,
+        "p95": 14.035925490573819,
+        "max": 14.56516589958485
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250522/CSV/data03.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14865,
+      "sha256": "08011ee4d5a87dbb7ced7b67a6c5eb870f10dc9939196d9b47564b24fecc83de",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-22 18:14:10.772",
+      "first_field_last_row": "2025-05-22 18:24:51.390",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.731255919415415,
+        "p95": 12.860074541120438,
+        "max": 14.940669535115674
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.731255919415415,
+        "p95": 12.860074541120438,
+        "max": 14.940669535115674
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250522/CSV/data04.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14889,
+      "sha256": "55e091fe920986f5c79a99eb86dc0e700905adf269546673a6fb6a117e3d1981",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-22 18:29:26.443",
+      "first_field_last_row": "2025-05-22 18:40:06.287",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.716582131747917,
+        "p95": 13.879248567935578,
+        "max": 14.637369500866901
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.716582131747917,
+        "p95": 13.879248567935578,
+        "max": 14.637369500866901
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250522/CSV/data05.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14877,
+      "sha256": "e8e28d2ca6fb446ce66c9569c4508984b738f327498081a9eb91287604cff33b",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-22 18:44:37.438",
+      "first_field_last_row": "2025-05-22 18:54:57.575",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.458716637721818,
+        "p95": 13.512037598005492,
+        "max": 14.291849240616065
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.458716637721818,
+        "p95": 13.512037598005492,
+        "max": 14.291849240616065
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250522/CSV/data06.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14889,
+      "sha256": "40b4ebe3e5a9c3f457ebac7767a2c4333e6dbef72c7bbb3ccdd6fe98838e589c",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-22 18:59:09.951",
+      "first_field_last_row": "2025-05-22 19:09:36.227",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.9973174010137065,
+        "p95": 14.334980571697225,
+        "max": 15.08202506035701
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.9973174010137065,
+        "p95": 14.334980571697225,
+        "max": 15.08202506035701
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250522/CSV/data07.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14853,
+      "sha256": "7023d05ca2d620f22d2fa0933b3d09d3cd991ab01a6be531b8054f6fd4bacc58",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-22 19:15:16.159",
+      "first_field_last_row": "2025-05-22 19:25:27.823",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.846742991106805,
+        "p95": 13.979291264422091,
+        "max": 15.18611037335917
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.846742991106805,
+        "p95": 13.979291264422091,
+        "max": 15.18611037335917
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250522/CSV/data08.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14892,
+      "sha256": "6b913b59e6b0cf59ef67f84696b79bcdb292de62cd218932fecd974fdcab793f",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-22 19:30:05.032",
+      "first_field_last_row": "2025-05-22 19:40:55.505",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 7.164081145716598,
+        "p95": 14.22899157570955,
+        "max": 15.241487876252526
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 7.164081145716598,
+        "p95": 14.22899157570955,
+        "max": 15.241487876252526
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250522/CSV/data09.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14877,
+      "sha256": "dc2ad5249cda601f42c3c7ffba167aa973455105d36a621fbe9978dd485e9a8d",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-22 19:45:11.959",
+      "first_field_last_row": "2025-05-22 19:55:35.261",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.837339225297734,
+        "p95": 13.660306049240264,
+        "max": 14.732334658307915
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.837339225297734,
+        "p95": 13.660306049240264,
+        "max": 14.732334658307915
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250522/CSV/data_all+手摇10个.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 148701,
+      "sha256": "5879f5bed0aca9989184b64c599b40c0198e45eba3c81dc4dfb8745dcdeef7d1",
+      "encoding": "utf-8-sig",
+      "row_count": 1010,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-05-22 18:14:10.772",
+      "first_field_last_row": "2025-05-22 21:23:23.197",
+      "declared_xyz_error_source_unit": {
+        "count": 1010,
+        "median": 6.799100197878452,
+        "p95": 13.923176999931925,
+        "max": 15.241487876252526
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 1010,
+        "median": 6.799100197878452,
+        "p95": 13.923176999931925,
+        "max": 15.241487876252526
+      },
+      "warnings": [
+        "merged_file_candidate_do_not_combine_with_components"
+      ]
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250522/CSV/data_all.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 147239,
+      "sha256": "88c990ca8ad42c11c742b4cac6c5d69eb45fb6cd93b0ee73fb0d0e3cdce91115",
+      "encoding": "utf-8-sig",
+      "row_count": 1000,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-22 18:14:10.772",
+      "first_field_last_row": "2025-05-22 18:40:06.287",
+      "declared_xyz_error_source_unit": {
+        "count": 1000,
+        "median": 6.738145063429675,
+        "p95": 13.939632867709015,
+        "max": 15.241487876252526
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 1000,
+        "median": 6.738145063429675,
+        "p95": 13.939632867709015,
+        "max": 15.241487876252526
+      },
+      "warnings": [
+        "merged_file_candidate_do_not_combine_with_components"
+      ]
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250522/CSV/test.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 507,
+      "sha256": "f76a5ff69be38afc1bd80f28fd19c079026545acef020a8da9a7dcda2930269d",
+      "encoding": "utf-8-sig",
+      "row_count": 3,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-22 20:17:11.540",
+      "first_field_last_row": "2025-05-22 20:17:25.992",
+      "declared_xyz_error_source_unit": {
+        "count": 3,
+        "median": 6.524952448529811,
+        "p95": 10.348667999671317,
+        "max": 10.773525283131484
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 3,
+        "median": 6.524952448529811,
+        "p95": 10.348667999671317,
+        "max": 10.773525283131484
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250522/CSV/手摇10个.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 1544,
+      "sha256": "7207f3b2e337d1aefd2ba9b1f2deb12da39c9fce3e6723abddd871486071655e",
+      "encoding": "utf-8-sig",
+      "row_count": 10,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-22 21:23:23.197",
+      "first_field_last_row": "2025-05-22 21:23:23.197",
+      "declared_xyz_error_source_unit": {
+        "count": 10,
+        "median": 9.588723676794622,
+        "p95": 9.768446144042471,
+        "max": 9.810027502502177
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 10,
+        "median": 9.588723676794622,
+        "p95": 9.768446144042471,
+        "max": 9.810027502502177
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250529/CSV/Newdata011.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14456,
+      "sha256": "92802b87f853c46fec3281f1566831d05a116193a11fdd3dd3f71836a2aa076e",
+      "encoding": "utf-8-sig",
+      "row_count": 97,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-05-29 13:07:56.931",
+      "first_field_last_row": "2025-05-29 13:21:36.171",
+      "declared_xyz_error_source_unit": {
+        "count": 97,
+        "median": 6.561252258656426,
+        "p95": 12.27633433535973,
+        "max": 13.781274831632022
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 97,
+        "median": 6.561252258656426,
+        "p95": 12.27633433535973,
+        "max": 13.781274831632022
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250529/CSV/data01.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14865,
+      "sha256": "bee134e0657874addb4d84a6d410a645787cb9305288067b79cbc67a7b05f6fd",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-29 14:38:27.303",
+      "first_field_last_row": "2025-05-29 14:51:59.579",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.442904901595603,
+        "p95": 12.589630697015851,
+        "max": 13.899634724661398
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.442904901595603,
+        "p95": 12.589630697015851,
+        "max": 13.899634724661398
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250529/CSV/data010.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14591,
+      "sha256": "2e2672ff9ee8d18109bc7e7b99b19bbbff7f2373628e554cc98c6c63cba6f3a3",
+      "encoding": "utf-8-sig",
+      "row_count": 98,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-29 17:18:47.294",
+      "first_field_last_row": "2025-05-29 17:32:58.900",
+      "declared_xyz_error_source_unit": {
+        "count": 98,
+        "median": 6.727770237909418,
+        "p95": 13.063943458617008,
+        "max": 13.749907300794314
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 98,
+        "median": 6.727770237909418,
+        "p95": 13.063943458617008,
+        "max": 13.749907300794314
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250529/CSV/data02.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14898,
+      "sha256": "d45a24df9cac64b1f1c2ec461738acbf7538deb6c70b0146919ecde7e0b56c48",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-29 14:55:23.130",
+      "first_field_last_row": "2025-05-29 15:09:15.383",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.922217508059823,
+        "p95": 11.904546337583108,
+        "max": 13.452810800669106
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.922217508059823,
+        "p95": 11.904546337583108,
+        "max": 13.452810800669106
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250529/CSV/data03.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14562,
+      "sha256": "b64a5cfc062dbae5b4d576c84ba09391780e66b77563982e7383e44b9fb99fc0",
+      "encoding": "utf-8-sig",
+      "row_count": 98,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-29 15:13:05.303",
+      "first_field_last_row": "2025-05-29 15:27:13.184",
+      "declared_xyz_error_source_unit": {
+        "count": 98,
+        "median": 5.8563340316003805,
+        "p95": 12.360362913257621,
+        "max": 13.775411180626078
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 98,
+        "median": 5.8563340316003805,
+        "p95": 12.360362913257621,
+        "max": 13.775411180626078
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250529/CSV/data04.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14897,
+      "sha256": "ca82d1179d76bf236e33cf9b0043f0a48149299ced11afc6a4c2b9fa062edebf",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-29 15:33:03.030",
+      "first_field_last_row": "2025-05-29 15:46:46.745",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 7.58144619091783,
+        "p95": 12.83170127589189,
+        "max": 13.955868600021923
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 7.58144619091783,
+        "p95": 12.83170127589189,
+        "max": 13.955868600021923
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250529/CSV/data05.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14884,
+      "sha256": "8c6979bc7c593ffbe50cda91d4e091736b53218310d6df3c190436d3a5215cb2",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-29 15:50:07.550",
+      "first_field_last_row": "2025-05-29 16:04:07.997",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 5.729596188293568,
+        "p95": 11.733444717679085,
+        "max": 13.714308599612595
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 5.729596188293568,
+        "p95": 11.733444717679085,
+        "max": 13.714308599612595
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250529/CSV/data06.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14857,
+      "sha256": "42da674e78a0164112b07ad1d826b3bddaa4391c3e5131b98823bc804310c91e",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-29 16:07:09.292",
+      "first_field_last_row": "2025-05-29 16:21:53.896",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.63795702767027,
+        "p95": 13.017781430511313,
+        "max": 13.93403799357938
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 6.63795702767027,
+        "p95": 13.017781430511313,
+        "max": 13.93403799357938
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250529/CSV/data07.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14598,
+      "sha256": "79deb87c8e624e0f6fe0ba4e9098b749c3e53acd5585078764f0242564f3ed30",
+      "encoding": "utf-8-sig",
+      "row_count": 98,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-29 16:25:54.714",
+      "first_field_last_row": "2025-05-29 16:39:39.943",
+      "declared_xyz_error_source_unit": {
+        "count": 98,
+        "median": 6.777837895107577,
+        "p95": 11.837972111644904,
+        "max": 14.095456678656882
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 98,
+        "median": 6.777837895107577,
+        "p95": 11.837972111644904,
+        "max": 14.095456678656882
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250529/CSV/data08.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14875,
+      "sha256": "c6fb745864d58f7e91afe33601d92754f8252680189e60a149f5149d07396d3a",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-29 16:42:01.153",
+      "first_field_last_row": "2025-05-29 16:55:39.525",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 5.995515254309301,
+        "p95": 11.82133764115979,
+        "max": 13.318336422985476
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 5.995515254309301,
+        "p95": 11.82133764115979,
+        "max": 13.318336422985476
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250529/CSV/data09.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 14889,
+      "sha256": "232bebdd4da727d75049d9f41d2622c1c6ad66dddb947ce445ecb4bbfc8f5c38",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-29 16:58:15.224",
+      "first_field_last_row": "2025-05-29 17:12:11.437",
+      "declared_xyz_error_source_unit": {
+        "count": 100,
+        "median": 7.760001661956227,
+        "p95": 12.260211988100744,
+        "max": 13.77053984232759
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 100,
+        "median": 7.760001661956227,
+        "p95": 12.260211988100744,
+        "max": 13.77053984232759
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250529/CSV/data_all.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 147548,
+      "sha256": "6bae912dedcb63152ee9f6e647631e331b622003e4f6c9c932cd01c9b7bf6ff1",
+      "encoding": "utf-8-sig",
+      "row_count": 1004,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-05-29 15:13:05.303",
+      "first_field_last_row": "",
+      "declared_xyz_error_source_unit": {
+        "count": 1004,
+        "median": 6.642094554532185,
+        "p95": 12.576805911887842,
+        "max": 14.095456678656882
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 1004,
+        "median": 6.642094554532185,
+        "p95": 12.576805911887842,
+        "max": 14.095456678656882
+      },
+      "warnings": [
+        "merged_file_candidate_do_not_combine_with_components"
+      ]
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250529/CSV/test.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 288,
+      "sha256": "a474063b1cdd6dd349dace7a6ec9907f57411aa619bea0c997c82e232a87e245",
+      "encoding": "utf-8-sig",
+      "row_count": 2,
+      "columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "-17.416582",
+      "first_field_last_row": "-15.012767",
+      "declared_xyz_error_source_unit": {
+        "count": 2,
+        "median": 7.947953184031194,
+        "p95": 9.838600016292995,
+        "max": 10.048671886544307
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 2,
+        "median": 7.947953184031194,
+        "p95": 9.838600016292995,
+        "max": 10.048671886544307
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250529/CSV/手摇10个.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 1304,
+      "sha256": "9bf0e2dfffda84fed83c948637a923739a27a344cc54485510beb5d99ee64bd2",
+      "encoding": "utf-8-sig",
+      "row_count": 10,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "",
+      "first_field_last_row": "",
+      "declared_xyz_error_source_unit": {
+        "count": 10,
+        "median": 0.8089469592616145,
+        "p95": 0.9023439115624998,
+        "max": 0.9248272121877699
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 10,
+        "median": 0.8089469592616145,
+        "p95": 0.9023439115624998,
+        "max": 0.9248272121877699
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210 R2700-2/20250529/CSV/手摇10验证.csv",
+      "robot_id": "kuka_kr210_r2700_2",
+      "bytes": 1511,
+      "sha256": "a4ded46377cf7105d293a94605daf00e29ef9a39bf466d4369263292c77324fb",
+      "encoding": "utf-8-sig",
+      "row_count": 10,
+      "columns": [
+        "Time",
+        "Sequence",
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "2025-05-29 19:14:17",
+      "first_field_last_row": "2025-05-29 19:21:27",
+      "declared_xyz_error_source_unit": {
+        "count": 10,
+        "median": 1.4587622159647555,
+        "p95": 1.6372045863277622,
+        "max": 1.6995465034472468
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 10,
+        "median": 1.4587622159647555,
+        "p95": 1.6372045863277622,
+        "max": 1.6995465034472468
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210-R3100-2-FLR_8163181_20250608/CSV/建模数据1.csv",
+      "robot_id": "kuka_kr210_r3100_2",
+      "bytes": 9322,
+      "sha256": "51216c0aded8d42686254ff6a4f63d60e4eb47b6081ccbc34f400eccdadd79ac",
+      "encoding": "utf-8-sig",
+      "row_count": 62,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-06-08 11:38:06.728",
+      "first_field_last_row": "2025-06-08 11:48:19.819",
+      "declared_xyz_error_source_unit": {
+        "count": 62,
+        "median": 0.8673653606041664,
+        "p95": 1.177713896438459,
+        "max": 1.2844166082506097
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 62,
+        "median": 0.8673653606041664,
+        "p95": 1.177713896438459,
+        "max": 1.2844166082506097
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210-R3100-2-FLR_8163181_20250608/CSV/建模数据2.csv",
+      "robot_id": "kuka_kr210_r3100_2",
+      "bytes": 10228,
+      "sha256": "f6602c039419f617b38d55167b50bdfca6b8f7828d3709d22afb34371bd87727",
+      "encoding": "utf-8-sig",
+      "row_count": 68,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-06-08 11:51:27.453",
+      "first_field_last_row": "2025-06-08 12:01:08.153",
+      "declared_xyz_error_source_unit": {
+        "count": 68,
+        "median": 0.7335818883384078,
+        "p95": 1.1472986796215634,
+        "max": 1.3420348883321929
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 68,
+        "median": 0.7335818883384078,
+        "p95": 1.1472986796215634,
+        "max": 1.3420348883321929
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210-R3100-2-FLR_8163181_20250608/CSV/建模数据3.csv",
+      "robot_id": "kuka_kr210_r3100_2",
+      "bytes": 8862,
+      "sha256": "b21680abc5b2427be81e1e94b27673d0c2d691ae753f77101d438a54bf92967d",
+      "encoding": "utf-8-sig",
+      "row_count": 59,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-06-08 12:19:58.001",
+      "first_field_last_row": "2025-06-08 12:30:17.934",
+      "declared_xyz_error_source_unit": {
+        "count": 59,
+        "median": 0.833107869157984,
+        "p95": 1.21648281980155,
+        "max": 1.3243648725446493
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 59,
+        "median": 0.833107869157984,
+        "p95": 1.21648281980155,
+        "max": 1.3243648725446493
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210-R3100-2-FLR_8163181_20250608/CSV/建模数据4.csv",
+      "robot_id": "kuka_kr210_r3100_2",
+      "bytes": 10811,
+      "sha256": "308be1b637ae7576c04752d6a3b8afae58d856bf72da40812d85a8b80491ab95",
+      "encoding": "utf-8-sig",
+      "row_count": 72,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-06-08 12:34:39.250",
+      "first_field_last_row": "2025-06-08 12:44:43.812",
+      "declared_xyz_error_source_unit": {
+        "count": 72,
+        "median": 0.8471325778564902,
+        "p95": 1.2365680382499007,
+        "max": 1.4092877452360655
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 72,
+        "median": 0.8471325778564902,
+        "p95": 1.2365680382499007,
+        "max": 1.4092877452360655
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210-R3100-2-FLR_8163181_20250608/CSV/建模数据_x1x2x3.csv",
+      "robot_id": "kuka_kr210_r3100_2",
+      "bytes": 28102,
+      "sha256": "6b787625f0c2325ec5ed646174d1fc45d256384fd47beeec8b4a0e06fc82b8ca",
+      "encoding": "utf-8-sig",
+      "row_count": 189,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-06-08 11:51:27.453",
+      "first_field_last_row": "2025-06-08 11:48:19.819",
+      "declared_xyz_error_source_unit": {
+        "count": 189,
+        "median": 0.833107869157984,
+        "p95": 1.1933193711761199,
+        "max": 1.3420348883321929
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 189,
+        "median": 0.833107869157984,
+        "p95": 1.1933193711761199,
+        "max": 1.3420348883321929
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KR210-R3100-2-FLR_8163181_20250608/CSV/建模数据潘.csv",
+      "robot_id": "kuka_kr210_r3100_2",
+      "bytes": 1538,
+      "sha256": "f93788b8e2b39a3c255810462a159aa1e2e6f50a962bb3807038ef449ab16a26",
+      "encoding": "utf-8-sig",
+      "row_count": 10,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-06-08 14:36:36.837",
+      "first_field_last_row": "2025-06-08 14:37:42.156",
+      "declared_xyz_error_source_unit": {
+        "count": 10,
+        "median": 0.9692216444772991,
+        "p95": 1.1141000949802438,
+        "max": 1.2058962154019701
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 10,
+        "median": 0.9692216444772991,
+        "p95": 1.1141000949802438,
+        "max": 1.2058962154019701
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KUKA_KR240R3330/Hemm1.csv",
+      "robot_id": "kuka_kr240_r3330",
+      "bytes": 7570,
+      "sha256": "0924b906e87953431b3dbbcb801af9e4c56d5b4749de874b93006a211c811dbf",
+      "encoding": "utf-8-sig",
+      "row_count": 92,
+      "columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "A",
+        "B",
+        "C"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "25.36",
+      "first_field_last_row": "0.62",
+      "declared_xyz_error_source_unit": {
+        "count": 0,
+        "median": null,
+        "p95": null,
+        "max": null
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 92,
+        "median": 2637.486982186085,
+        "p95": 3179.1277100680863,
+        "max": 3232.038976276276
+      },
+      "warnings": [
+        "missing_or_nonstandard_real_xyz_headers"
+      ]
+    },
+    {
+      "relative_path": "KUKA_KR240R3330/test.csv",
+      "robot_id": "kuka_kr240_r3330",
+      "bytes": 355,
+      "sha256": "96c7967c413b44c033f71bec2b7d452ba728bfd7cca8a104669bdbbde518ae57",
+      "encoding": "utf-8-sig",
+      "row_count": 2,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-07-17 18:22:25.103",
+      "first_field_last_row": "2025-07-17 18:22:30.606",
+      "declared_xyz_error_source_unit": {
+        "count": 2,
+        "median": 2.580415608073331,
+        "p95": 2.6061503574889433,
+        "max": 2.6090097740906777
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 2,
+        "median": 2.580415608073331,
+        "p95": 2.6061503574889433,
+        "max": 2.6090097740906777
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KUKA_KR240R3330/建模数据1.csv",
+      "robot_id": "kuka_kr240_r3330",
+      "bytes": 9068,
+      "sha256": "875e3069b94eca76fa5c6382a14c57f8ca911378eee9d37e66f82ea78396a1fc",
+      "encoding": "utf-8-sig",
+      "row_count": 48,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real",
+        "X-REAL",
+        "Y-REAL",
+        "Z-REAL",
+        "a-real",
+        "b-real",
+        "c-real",
+        ""
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "22:25.1",
+      "first_field_last_row": "32:36.5",
+      "declared_xyz_error_source_unit": {
+        "count": 48,
+        "median": 2.2997649823955983,
+        "p95": 2.8960033272585672,
+        "max": 3.1516983635076583
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 48,
+        "median": 2520.6362409715493,
+        "p95": 3162.7797852522044,
+        "max": 3379.1155640016646
+      },
+      "warnings": [
+        "real_column_order_is_['b-real', 'c-real', '']"
+      ]
+    },
+    {
+      "relative_path": "KUKA_KR240R3330/建模数据2.csv",
+      "robot_id": "kuka_kr240_r3330",
+      "bytes": 13988,
+      "sha256": "f3b687f1a69841e94639a329f826810eb413fb1dcfdc4ce1ee322949cda1b004",
+      "encoding": "utf-8-sig",
+      "row_count": 74,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real",
+        "X-REAL",
+        "Y-REAL",
+        "Z-REAL",
+        "a-real",
+        "b-real",
+        "c-real",
+        ""
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "37:13.4",
+      "first_field_last_row": "46:17.2",
+      "declared_xyz_error_source_unit": {
+        "count": 74,
+        "median": 1.9043617597378235,
+        "p95": 2.7381100698893,
+        "max": 4.052798112460457
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 74,
+        "median": 2148.8218705425015,
+        "p95": 3016.708670757862,
+        "max": 3180.2480036147826
+      },
+      "warnings": [
+        "real_column_order_is_['b-real', 'c-real', '']"
+      ]
+    },
+    {
+      "relative_path": "KUKA_KR240R3330/建模数据3.csv",
+      "robot_id": "kuka_kr240_r3330",
+      "bytes": 10474,
+      "sha256": "30306c9bc7b151d023f97ed4fae117338c0a62b25c4db52f3e6dd4c0e1811ce8",
+      "encoding": "utf-8-sig",
+      "row_count": 70,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-07-17 21:19:29.331",
+      "first_field_last_row": "2025-07-17 21:28:08.235",
+      "declared_xyz_error_source_unit": {
+        "count": 70,
+        "median": 1.857953866541766,
+        "p95": 2.339577508602331,
+        "max": 2.5611366871886596
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 70,
+        "median": 1.857953866541766,
+        "p95": 2.339577508602331,
+        "max": 2.5611366871886596
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KUKA_KR240R3330/建模数据4.csv",
+      "robot_id": "kuka_kr240_r3330",
+      "bytes": 12183,
+      "sha256": "2f906f36f62849968211b89bd093dd8eada4890bf641cbb4f4453bdd0e4fbee9",
+      "encoding": "utf-8-sig",
+      "row_count": 81,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-07-17 22:16:16.172",
+      "first_field_last_row": "2025-07-17 22:25:08.737",
+      "declared_xyz_error_source_unit": {
+        "count": 81,
+        "median": 1.801644439576503,
+        "p95": 2.5518079899775246,
+        "max": 3.8652037493204956
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 81,
+        "median": 1.801644439576503,
+        "p95": 2.5518079899775246,
+        "max": 3.8652037493204956
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KUKA_KR240R3330/建模数据5.csv",
+      "robot_id": "kuka_kr240_r3330",
+      "bytes": 10214,
+      "sha256": "d747373710efc9519e7b2aa09a6f124c8f9bf672fb9d80e15ede26b603e8fb2b",
+      "encoding": "utf-8-sig",
+      "row_count": 68,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-07-17 22:32:42.812",
+      "first_field_last_row": "2025-07-17 22:40:51.714",
+      "declared_xyz_error_source_unit": {
+        "count": 68,
+        "median": 1.7187521539077917,
+        "p95": 2.3308715358826104,
+        "max": 3.735185165944984
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 68,
+        "median": 1.7187521539077917,
+        "p95": 2.3308715358826104,
+        "max": 3.735185165944984
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KUKA_KR240R3330/建模数据_x1x2x3x4.csv",
+      "robot_id": "kuka_kr240_r3330",
+      "bytes": 40372,
+      "sha256": "591dd3514251449c308c4ad52c2c8c16637f3210770f95624501191fc8f173ca",
+      "encoding": "utf-8-sig",
+      "row_count": 273,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-07-17 20:37:13.388",
+      "first_field_last_row": "2025-07-17 18:32:36.526",
+      "declared_xyz_error_source_unit": {
+        "count": 273,
+        "median": 1.8813055378053054,
+        "p95": 2.7538728136838193,
+        "max": 4.052798112460457
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 273,
+        "median": 1.8813055378053054,
+        "p95": 2.7538728136838193,
+        "max": 4.052798112460457
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "KUKA_KR240R3330/验证数据.csv",
+      "robot_id": "kuka_kr240_r3330",
+      "bytes": 9976,
+      "sha256": "09d14021ee153c03e0534849ef001c81cceffbc0c4de5537cb109cb6e7b6c74a",
+      "encoding": "utf-8-sig",
+      "row_count": 67,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-07-18 08:47:59.401",
+      "first_field_last_row": "2025-07-18 08:54:58.666",
+      "declared_xyz_error_source_unit": {
+        "count": 67,
+        "median": 1.7136016050332237,
+        "p95": 2.272772160381961,
+        "max": 3.307525643402
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 67,
+        "median": 1.7136016050332237,
+        "p95": 2.272772160381961,
+        "max": 3.307525643402
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "UR5_DATA/20250714/建模数据.csv",
+      "robot_id": "ur5",
+      "bytes": 9713,
+      "sha256": "f2d8936329943a3f9e8c4ce89121ff87e89d0f231a77232fc9c90c07aa98b595",
+      "encoding": "utf-8-sig",
+      "row_count": 100,
+      "columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real",
+        ""
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "-8.627",
+      "first_field_last_row": "16.958",
+      "declared_xyz_error_source_unit": {
+        "count": 97,
+        "median": 1.99776455319439,
+        "p95": 3.036415728273027,
+        "max": 3.4695009727624813
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 0,
+        "median": null,
+        "p95": null,
+        "max": null
+      },
+      "warnings": [
+        "real_column_order_is_['y-real', 'z-real', '']"
+      ]
+    },
+    {
+      "relative_path": "UR5_DATA/20250806/10.csv",
+      "robot_id": "ur5",
+      "bytes": 1296,
+      "sha256": "e81ddeaf6943c228394bcfb89c428d76b5a98aebae95c780d75ab7db3941b9ce",
+      "encoding": "utf-8-sig",
+      "row_count": 10,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-08-06 18:18:48.854",
+      "first_field_last_row": "2025-08-06 18:19:56.253",
+      "declared_xyz_error_source_unit": {
+        "count": 10,
+        "median": 2.6059904600752892,
+        "p95": 2.767351199767569,
+        "max": 2.820278709631343
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 10,
+        "median": 2.6059904600752892,
+        "p95": 2.767351199767569,
+        "max": 2.820278709631343
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "UR5_DATA/20250806/建模数据1.csv",
+      "robot_id": "ur5",
+      "bytes": 12710,
+      "sha256": "cafc2f8e167bf824f4bd35c68de1cc8b371928a3d3b514831a221f4e88477b71",
+      "encoding": "utf-8-sig",
+      "row_count": 115,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "28:51.8",
+      "first_field_last_row": "28:32.5",
+      "declared_xyz_error_source_unit": {
+        "count": 115,
+        "median": 1.3323453005884494,
+        "p95": 3.1791985291177687,
+        "max": 4.490014253874947
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 115,
+        "median": 1.3323453005884494,
+        "p95": 3.1791985291177687,
+        "max": 4.490014253874947
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "UR5_DATA/20250806/验证数据.csv",
+      "robot_id": "ur5",
+      "bytes": 3122,
+      "sha256": "2b0b0060f9981416cdfeb3f89bbd5d71d3f7cf9090f492441e61bb90acc52480",
+      "encoding": "utf-8-sig",
+      "row_count": 28,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "35:36.7",
+      "first_field_last_row": "47:36.8",
+      "declared_xyz_error_source_unit": {
+        "count": 28,
+        "median": 1.5223131423257579,
+        "p95": 3.178045021583753,
+        "max": 3.4099919354742885
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 28,
+        "median": 1.5223131423257579,
+        "p95": 3.178045021583753,
+        "max": 3.4099919354742885
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "UR5_DATA/20250807/10Pos.csv",
+      "robot_id": "ur5",
+      "bytes": 1430,
+      "sha256": "02826e73164a830c44bcb36283dd07d7b5a54eceed49bad061324d848c1751a0",
+      "encoding": "utf-8-sig",
+      "row_count": 9,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real",
+        "rx-real",
+        "ry-real",
+        "rz-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "2025-08-07 16:40:16.694",
+      "first_field_last_row": "2025-08-07 16:41:05.784",
+      "declared_xyz_error_source_unit": {
+        "count": 9,
+        "median": 2.638625968188752,
+        "p95": 2.725751034946076,
+        "max": 2.746696925399657
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 9,
+        "median": 690.2014682842275,
+        "p95": 748.5735527496524,
+        "max": 754.2409584276762
+      },
+      "warnings": [
+        "real_column_order_is_['rx-real', 'ry-real', 'rz-real']"
+      ]
+    },
+    {
+      "relative_path": "UR5_DATA/20250807/建模数据.csv",
+      "robot_id": "ur5",
+      "bytes": 47524,
+      "sha256": "ae0c6f5ca94e7ea6568a24bb4cf7e730ea0f82fadf4fd5e852d7d2a35749a2c9",
+      "encoding": "utf-8-sig",
+      "row_count": 351,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real",
+        "rx-real",
+        "ry-real",
+        "rz-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "25:48.4",
+      "first_field_last_row": "10:15.5",
+      "declared_xyz_error_source_unit": {
+        "count": 351,
+        "median": 4.012718250762199,
+        "p95": 4.976002718764094,
+        "max": 5.4467627826076495
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 351,
+        "median": 462.08656945356023,
+        "p95": 567.9598596063995,
+        "max": 629.8364354425263
+      },
+      "warnings": [
+        "real_column_order_is_['rx-real', 'ry-real', 'rz-real']"
+      ]
+    },
+    {
+      "relative_path": "UR5_DATA/20250807/验证数据(1).csv",
+      "robot_id": "ur5",
+      "bytes": 13013,
+      "sha256": "21f99bfeffc9ee027beef9984de47f0f2d6ba18ef8b11dd1cd2cb776d5539521",
+      "encoding": "utf-8-sig",
+      "row_count": 96,
+      "columns": [
+        "Time",
+        "Sequence",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "x",
+        "y",
+        "z",
+        "x-real",
+        "y-real",
+        "z-real",
+        "rx-real",
+        "ry-real",
+        "rz-real"
+      ],
+      "joint_columns": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ],
+      "first_field_first_row": "14:04.6",
+      "first_field_last_row": "23:06.1",
+      "declared_xyz_error_source_unit": {
+        "count": 96,
+        "median": 3.8558401950438372,
+        "p95": 4.945942340884336,
+        "max": 5.2356139429870066
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 96,
+        "median": 462.75152111570185,
+        "p95": 585.8276285689217,
+        "max": 635.2144430808346
+      },
+      "warnings": [
+        "real_column_order_is_['rx-real', 'ry-real', 'rz-real']"
+      ]
+    },
+    {
+      "relative_path": "UR5_DATA/data01.csv",
+      "robot_id": "ur5",
+      "bytes": 10855,
+      "sha256": "e6bcb40ee84814f7f728c314d775dd1bad41b1ecce3fb7ddfc32b0979d2a9663",
+      "encoding": "utf-8-sig",
+      "row_count": 91,
+      "columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "TPC_Rx",
+        "TPC_Ry",
+        "TPC_Rz",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "-36.244",
+      "first_field_last_row": "8.639",
+      "declared_xyz_error_source_unit": {
+        "count": 91,
+        "median": 2.082891346182006,
+        "p95": 3.5282399433965823,
+        "max": 4.649766015618433
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 91,
+        "median": 2.082891346182006,
+        "p95": 3.5282399433965823,
+        "max": 4.649766015618433
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "UR5_DATA/data02.csv",
+      "robot_id": "ur5",
+      "bytes": 10964,
+      "sha256": "b14f7acd85b31da310df3219133ddc9ea020c936fb87dea5ab7b3f27ff169eea",
+      "encoding": "utf-8-sig",
+      "row_count": 92,
+      "columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "TPC_Rx",
+        "TPC_Ry",
+        "TPC_Rz",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "29.314",
+      "first_field_last_row": "-38.599",
+      "declared_xyz_error_source_unit": {
+        "count": 92,
+        "median": 2.4230017047182577,
+        "p95": 4.099033480629593,
+        "max": 4.803343844656563
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 92,
+        "median": 2.4230017047182577,
+        "p95": 4.099033480629593,
+        "max": 4.803343844656563
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "UR5_DATA/data03.csv",
+      "robot_id": "ur5",
+      "bytes": 10759,
+      "sha256": "e2e10034c24e9520ce76817a594e23698a2f450e2d30a7e83ebba71d53e8bf8a",
+      "encoding": "utf-8-sig",
+      "row_count": 90,
+      "columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "TPC_Rx",
+        "TPC_Ry",
+        "TPC_Rz",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "-54.331",
+      "first_field_last_row": "-55.123",
+      "declared_xyz_error_source_unit": {
+        "count": 90,
+        "median": 2.269219294533212,
+        "p95": 3.9626276400821334,
+        "max": 4.950360378962356
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 90,
+        "median": 2.269219294533212,
+        "p95": 3.9626276400821334,
+        "max": 4.950360378962356
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "UR5_DATA/data04.csv",
+      "robot_id": "ur5",
+      "bytes": 10637,
+      "sha256": "e7a23ea0359704df20a92ef0b787a04fb901271b09a171fbac25010d3d0a2432",
+      "encoding": "utf-8-sig",
+      "row_count": 89,
+      "columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "TPC_Rx",
+        "TPC_Ry",
+        "TPC_Rz",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "-14.048",
+      "first_field_last_row": "-53.229",
+      "declared_xyz_error_source_unit": {
+        "count": 89,
+        "median": 2.1413010063977436,
+        "p95": 3.695408466819982,
+        "max": 4.145682211651035
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 89,
+        "median": 2.1413010063977436,
+        "p95": 3.695408466819982,
+        "max": 4.145682211651035
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "UR5_DATA/data05.csv",
+      "robot_id": "ur5",
+      "bytes": 10834,
+      "sha256": "4e48d5f5a0b501aff6bc563be1b93158d68989f968d43efdd00e7394d80eae7a",
+      "encoding": "utf-8-sig",
+      "row_count": 91,
+      "columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "TPC_Rx",
+        "TPC_Ry",
+        "TPC_Rz",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "-45.996",
+      "first_field_last_row": "-57.995",
+      "declared_xyz_error_source_unit": {
+        "count": 91,
+        "median": 2.229734701707798,
+        "p95": 3.7887750121677337,
+        "max": 4.639677489869325
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 91,
+        "median": 2.229734701707798,
+        "p95": 3.7887750121677337,
+        "max": 4.639677489869325
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "UR5_DATA/data06.csv",
+      "robot_id": "ur5",
+      "bytes": 10732,
+      "sha256": "4a089369c32ea01380d86b75237867c9e270e2d92519c205e55b070e4ef408a9",
+      "encoding": "utf-8-sig",
+      "row_count": 90,
+      "columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "TPC_Rx",
+        "TPC_Ry",
+        "TPC_Rz",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "21.918",
+      "first_field_last_row": "27.848",
+      "declared_xyz_error_source_unit": {
+        "count": 90,
+        "median": 2.1739057036469847,
+        "p95": 3.601519136889828,
+        "max": 5.180617415907105
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 90,
+        "median": 2.1739057036469847,
+        "p95": 3.601519136889828,
+        "max": 5.180617415907105
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "UR5_DATA/data07.csv",
+      "robot_id": "ur5",
+      "bytes": 10852,
+      "sha256": "0772ccb2ca21036255f525b3e3afb712d8dc3f9fce7e52622263f30598c466ce",
+      "encoding": "utf-8-sig",
+      "row_count": 91,
+      "columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "TPC_Rx",
+        "TPC_Ry",
+        "TPC_Rz",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "-39.23",
+      "first_field_last_row": "16.989",
+      "declared_xyz_error_source_unit": {
+        "count": 91,
+        "median": 2.334271115359181,
+        "p95": 4.11903072659162,
+        "max": 4.447174496239114
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 91,
+        "median": 2.334271115359181,
+        "p95": 4.11903072659162,
+        "max": 4.447174496239114
+      },
+      "warnings": []
+    },
+    {
+      "relative_path": "UR5_DATA/data08.csv",
+      "robot_id": "ur5",
+      "bytes": 11092,
+      "sha256": "d267cf8517467b685780b92ad41451195a41cf02386e8c578c71017fd71401ab",
+      "encoding": "utf-8-sig",
+      "row_count": 93,
+      "columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "TPC_Rx",
+        "TPC_Ry",
+        "TPC_Rz",
+        "z-real",
+        "y-real",
+        "x-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "-2.323",
+      "first_field_last_row": "10.64",
+      "declared_xyz_error_source_unit": {
+        "count": 93,
+        "median": 1751.706433740825,
+        "p95": 1943.6072415927833,
+        "max": 1980.9153993924149
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 93,
+        "median": 2.0605671549357907,
+        "p95": 3.6850450784124718,
+        "max": 4.400380551725003
+      },
+      "warnings": [
+        "real_column_order_is_['z-real', 'y-real', 'x-real']",
+        "declared_header_mapping_much_worse_than_positional_xyz_mapping"
+      ]
+    },
+    {
+      "relative_path": "UR5_DATA/data_all.csv",
+      "robot_id": "ur5",
+      "bytes": 85857,
+      "sha256": "ece9ed4074b09fe988cf637517f58bdce025ec641fedfeae738121760693ceca",
+      "encoding": "utf-8-sig",
+      "row_count": 724,
+      "columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "TPC_Rx",
+        "TPC_Ry",
+        "TPC_Rz",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "-36.244",
+      "first_field_last_row": "16.989",
+      "declared_xyz_error_source_unit": {
+        "count": 724,
+        "median": 2.2109283377106204,
+        "p95": 3.8430654266639426,
+        "max": 5.152388281176001
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 724,
+        "median": 2.2109283377106204,
+        "p95": 3.8430654266639426,
+        "max": 5.152388281176001
+      },
+      "warnings": [
+        "merged_file_candidate_do_not_combine_with_components"
+      ]
+    },
+    {
+      "relative_path": "test00.csv",
+      "robot_id": "unverified",
+      "bytes": 12552,
+      "sha256": "773bc8cf889eb1037ac830bc766fdd1f183b597291faf0edc5c8df44d7be9c34",
+      "encoding": "utf-8-sig",
+      "row_count": 81,
+      "columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "R",
+        "P",
+        "Y",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "0",
+      "first_field_last_row": "-0.002929688",
+      "declared_xyz_error_source_unit": {
+        "count": 81,
+        "median": 1.7501228028167373,
+        "p95": 2.2321728758452073,
+        "max": 2.310782339117147
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 81,
+        "median": 1.7501228028167373,
+        "p95": 2.2321728758452073,
+        "max": 2.310782339117147
+      },
+      "warnings": [
+        "unknown_robot_frame_and_abnormal_scale_requires_confirmation"
+      ]
+    },
+    {
+      "relative_path": "train00.csv",
+      "robot_id": "unverified",
+      "bytes": 24617,
+      "sha256": "8039f3f33bb8a4fab65e7f3e8801b7cd4e97e43364847ffea0f36c5775b628eb",
+      "encoding": "utf-8-sig",
+      "row_count": 196,
+      "columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6",
+        "x",
+        "y",
+        "z",
+        "R",
+        "P",
+        "Y",
+        "x-real",
+        "y-real",
+        "z-real"
+      ],
+      "joint_columns": [
+        "θ1",
+        "θ2",
+        "θ3",
+        "θ4",
+        "θ5",
+        "θ6"
+      ],
+      "first_field_first_row": "0.0",
+      "first_field_last_row": "0.0",
+      "declared_xyz_error_source_unit": {
+        "count": 196,
+        "median": 1.8529175179168447,
+        "p95": 2.5200520298978315,
+        "max": 4.668281486458278
+      },
+      "positional_last3_xyz_error_source_unit": {
+        "count": 196,
+        "median": 1.8529175179168447,
+        "p95": 2.5200520298978315,
+        "max": 4.668281486458278
+      },
+      "warnings": [
+        "unknown_robot_frame_and_abnormal_scale_requires_confirmation"
+      ]
+    }
+  ]
+}

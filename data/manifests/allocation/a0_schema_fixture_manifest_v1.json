@@ -1,0 +1,27 @@
+{
+  "manifest_version": "a0-schema-fixture-manifest-v1",
+  "status": "frozen_a0",
+  "schema_version": "allocation-instance-v1",
+  "constraint_dictionary_version": "allocation-constraints-v1",
+  "evidence_label": "SYNTHETIC",
+  "fixture_count": 12,
+  "valid_fixture_count": 5,
+  "invalid_fixture_count": 7,
+  "files_sha256": {
+    "configs/allocation/schema_v1.json": "7da22a6163a748fda02f5b7212f97a92ba949d1c062a0aacc9f8b9fdea5c0ddc",
+    "configs/allocation/constraints_v1.json": "d7a02fa7422065c4c455a11c4015766d0ca3fef0c7f97900740b28af7b1cfe00",
+    "data/fixtures/allocation/01_valid_minimal.json": "8d663eea05f533f127261edadb1b6b8c75ce53da8f2486cfb91b09af661a96c9",
+    "data/fixtures/allocation/02_valid_same_robot_segments.json": "6c47dfbdd1f65004378231f42d672054a7628f1eb154eb8bbd223930031df7a7",
+    "data/fixtures/allocation/03_valid_explicit_boundary.json": "555c698b55441ab7db5b46dcb4d081a3c1d850741c55d8265cdc45b053eda92d",
+    "data/fixtures/allocation/04_valid_shared_zone.json": "e8958201b55918fe55fda57964ec18707d59d59dd6e6f518ccaee67605a66198",
+    "data/fixtures/allocation/05_valid_priority_window.json": "8442f6377448a8e9de466a431ab1ac4c96f8685a2029d38a3aad1ab1452fa52b",
+    "data/fixtures/allocation/06_invalid_duplicate_segment_id.json": "b1ef08b3ec85d291a170f5dbceb018df74f288274afa41e16fe348b0a71bd971",
+    "data/fixtures/allocation/07_invalid_noncontiguous_index.json": "bba819a270f14874d01a33650e20c0a3edeef342368cfdf0981d7a7389e47829",
+    "data/fixtures/allocation/08_invalid_curve_discontinuity.json": "f7965461ac2acef3af32a3152aa7918d56ed248db1af2182ac355d40abdefd6b",
+    "data/fixtures/allocation/09_invalid_precedence_cycle.json": "ec4ecb044535a5825d93341a4f6d8e0874ddbddb1ab9da9e18052862fedfcdda",
+    "data/fixtures/allocation/10_invalid_unknown_resource.json": "f88841ad43769e34ad9db6c3f77f91cfbb1088b41d701658987fc3a697c41f1b",
+    "data/fixtures/allocation/11_invalid_not_splittable_parent.json": "0aa7365dbb0de65cff82523eca38c7dbbb71c078dd41e6dd2be358f02fcfbece",
+    "data/fixtures/allocation/12_invalid_endpoint_mismatch.json": "2d5aaeaabd757cc5d7fa6af253cce041030d4c64059201756195b8b0a693a25a"
+  },
+  "change_rule": "Any semantic or fixture change requires a new version, new hashes, and full A0 test rerun."
+}

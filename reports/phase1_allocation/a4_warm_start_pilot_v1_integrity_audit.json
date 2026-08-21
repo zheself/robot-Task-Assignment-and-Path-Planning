@@ -1,0 +1,25 @@
+{
+  "version": "a4-warm-start-posthoc-integrity-audit-v1",
+  "classification": "A4A_PRIMARY_EVALUATION_INVALID_STOP",
+  "formal_decision": "STOP_A4_LEARNING_WARM_START_BRANCH",
+  "evidence_label": "SIM_GEOMETRIC_DEVELOPMENT_ONLY",
+  "immutable_aggregator_decision": "STOP_A4_LEARNING_WARM_START_BRANCH",
+  "immutable_aggregator_mechanical_integrity": true,
+  "semantic_integrity": false,
+  "failures": [
+    "MILP adapter used a load-balanced state on 28 primary rows whose MILP assignment had a schedule-infeasible result; those rows are not a valid MILP-incumbent warm start.",
+    "The 1.0 s evaluator marked an incumbent unsuccessful when repair ended slightly after the wall-clock budget, even when first_feasible_time_s was already within budget; the incumbent-at-budget should have been retained."
+  ],
+  "affected_evidence": [
+    "hybrid_assignment_milp plus repair in every view where the MILP scheduler rejected its raw plan",
+    "all fixed-end-to-end-time coverage and downstream timing gates"
+  ],
+  "unaffected_descriptive_evidence": [
+    "raw initializer outputs",
+    "fixed-iteration 10/50/100 traces for Pair-Pointer, matched static, load-balanced and cold start",
+    "mechanical matrix, ID, hash, split, checkpoint, seed, mask, atomicity and witness checks"
+  ],
+  "decision_rule": "The preregistration requires zero integrity failures. No confirmatory warm-start conclusion is allowed and no new frozen benchmark may be generated.",
+  "rerun_policy": "Do not repair or rerun a4_warm_start_pilot_v1 validation. A corrected study would require explicit authorization, a new version, new seed, new IDs and a new preregistration.",
+  "historical_boundaries": "A3 and A3.5 results remain unchanged and closed."
+}

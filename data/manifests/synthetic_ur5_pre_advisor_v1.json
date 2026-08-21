@@ -1,0 +1,105 @@
+{
+  "entries": [
+    {
+      "date_id": "date_B",
+      "path_id": "test_path_00",
+      "sample_group": "test_group_00",
+      "session_id": "test_session_00",
+      "source": "deterministic_synthetic_generator_v1",
+      "split": "test"
+    },
+    {
+      "date_id": "date_B",
+      "path_id": "test_path_01",
+      "sample_group": "test_group_01",
+      "session_id": "test_session_01",
+      "source": "deterministic_synthetic_generator_v1",
+      "split": "test"
+    },
+    {
+      "date_id": "date_B",
+      "path_id": "test_path_02",
+      "sample_group": "test_group_02",
+      "session_id": "test_session_02",
+      "source": "deterministic_synthetic_generator_v1",
+      "split": "test"
+    },
+    {
+      "date_id": "date_A",
+      "path_id": "train_path_00",
+      "sample_group": "train_group_00",
+      "session_id": "train_session_00",
+      "source": "deterministic_synthetic_generator_v1",
+      "split": "train"
+    },
+    {
+      "date_id": "date_A",
+      "path_id": "train_path_01",
+      "sample_group": "train_group_01",
+      "session_id": "train_session_01",
+      "source": "deterministic_synthetic_generator_v1",
+      "split": "train"
+    },
+    {
+      "date_id": "date_A",
+      "path_id": "train_path_02",
+      "sample_group": "train_group_02",
+      "session_id": "train_session_02",
+      "source": "deterministic_synthetic_generator_v1",
+      "split": "train"
+    },
+    {
+      "date_id": "date_A",
+      "path_id": "train_path_03",
+      "sample_group": "train_group_03",
+      "session_id": "train_session_03",
+      "source": "deterministic_synthetic_generator_v1",
+      "split": "train"
+    },
+    {
+      "date_id": "date_A",
+      "path_id": "train_path_04",
+      "sample_group": "train_group_04",
+      "session_id": "train_session_04",
+      "source": "deterministic_synthetic_generator_v1",
+      "split": "train"
+    },
+    {
+      "date_id": "date_A",
+      "path_id": "train_path_05",
+      "sample_group": "train_group_05",
+      "session_id": "train_session_05",
+      "source": "deterministic_synthetic_generator_v1",
+      "split": "train"
+    },
+    {
+      "date_id": "date_A",
+      "path_id": "val_path_00",
+      "sample_group": "val_group_00",
+      "session_id": "val_session_00",
+      "source": "deterministic_synthetic_generator_v1",
+      "split": "validation"
+    },
+    {
+      "date_id": "date_A",
+      "path_id": "val_path_01",
+      "sample_group": "val_group_01",
+      "session_id": "val_session_01",
+      "source": "deterministic_synthetic_generator_v1",
+      "split": "validation"
+    },
+    {
+      "date_id": "date_A",
+      "path_id": "val_path_02",
+      "sample_group": "val_group_02",
+      "session_id": "val_session_02",
+      "source": "deterministic_synthetic_generator_v1",
+      "split": "validation"
+    }
+  ],
+  "evidence_level": "SYNTHETIC",
+  "manifest_id": "synthetic_ur5_pre_advisor_v1",
+  "robot_id": "ur5",
+  "schema_version": 1,
+  "sha256": "fd40aa1768b0bb52caf03813e59c913027c8d6b2287e0f38b30fbcd285a7dfaa"
+}

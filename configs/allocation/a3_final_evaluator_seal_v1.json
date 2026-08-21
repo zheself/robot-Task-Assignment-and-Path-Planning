@@ -1,0 +1,29 @@
+{
+  "version": "a3-final-evaluator-seal-v1",
+  "status": "SEALED_AFTER_DEVELOPMENT_TESTS_BEFORE_FROZEN_ACCESS",
+  "created_utc": "2026-08-10T13:54:53Z",
+  "protocol_sha256": "ce574b6b62c2218f8a2f7b3130646444cc00b60ccc69c6822bdde5d3f48ab756",
+  "files": {
+    "src/safe_residual_rl/allocation/final_evaluation.py": "15ff8b459360f2dd44b79280a740925fbe7c397b32e011fd8b919f384d91d11f",
+    "scripts/run_a3_final_evaluation.py": "e8f315211e65ccfa5f58c665f01f378f2377be97c952c00e0fda8e2b43628ce1",
+    "tests/allocation/test_a3_final_evaluator.py": "b82dfd43533a2905d844d044692ad5eaa2ae032f125dc7bf11e67d852281c7db",
+    "slurm/a3_final_eval_sealed.sbatch": "293f062f7ec907c7e57e1c6fd2237cd7f3f1f7a4cd735ba034412499de064341"
+  },
+  "development_evidence": {
+    "targeted_tests": "17 passed",
+    "full_regression": "136 passed, 1 existing Gymnasium warning",
+    "local_validation_smoke": "4 instances x 11 methods = 44 rows, passed",
+    "slurm_validation_smoke_job": "940903",
+    "slurm_validation_smoke_state": "COMPLETED exit 0",
+    "slurm_validation_smoke_sha256": "83b1c67d6756cea6efd911b7a031ae03db9cd91302f9773e222ea4d8a67a0643",
+    "accessed_splits": ["train", "validation"],
+    "frozen_test_accessed": false,
+    "stress_accessed": false
+  },
+  "execution_contract": {
+    "mode": "sealed",
+    "confirmation": "RUN_A3_FINAL_V1_ONCE",
+    "output_must_not_exist_before_start": "outputs/phase1_allocation/a3_final_evaluation_v1",
+    "performance_based_rerun_forbidden": true
+  }
+}

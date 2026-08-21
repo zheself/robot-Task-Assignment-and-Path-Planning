@@ -1,0 +1,24 @@
+{
+  "version": "a2-witness-readiness-v1",
+  "source_benchmark": "configs/allocation/benchmark_v3.json",
+  "source_manifest": "data/manifests/allocation/a2_paper_manifest_v3.json",
+  "source_manifest_sha256": "a039238d50ac10a6ecc44d6001f07aa75cbc3169c9ac5c8c1800a1794742ae12",
+  "allowed_splits": ["train", "validation"],
+  "forbidden_splits": ["frozen_test", "stress"],
+  "tight_pre_margin_duration": 0.25,
+  "tight_post_margin_duration": 0.75,
+  "loose_pre_margin_s": 30.0,
+  "acceptance": {
+    "construction_rate": 1.0,
+    "verification_rate": 1.0,
+    "determinism_rate": 1.0,
+    "non_window_semantics_preservation_rate": 1.0,
+    "zero_hash_failures": true
+  },
+  "boundaries": [
+    "Witness readiness is a benchmark-integrity gate, not evidence that a new solver is superior.",
+    "Only time windows may be reconstructed; geometry, capabilities, tools, precedence, handoff and resources must remain unchanged.",
+    "The witness certifies A1 proxy feasibility only.",
+    "No v2/v3 frozen-test or stress instance may be read."
+  ]
+}

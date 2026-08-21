@@ -1,0 +1,17 @@
+{
+  "fixture_id": "valid_same_robot_segments", "description": "Two contiguous segments declare same-robot continuity.",
+  "extends": "01_valid_minimal.json", "expected": {"valid": true, "issue_codes": []},
+  "patch": [
+    {"op": "replace", "path": "/segments/0/handoff_policy", "value": "same_robot"},
+    {"op": "add", "path": "/segments/-", "value": {
+      "id": "seg-1", "parent_curve_id": "curve-a", "segment_index": 1,
+      "sampled_curve_m": [[0.1, 0.0, 0.0], [0.2, 0.0, 0.0]],
+      "start_pose": {"position_m": [0.1, 0.0, 0.0], "quaternion_xyzw": [0.0, 0.0, 0.0, 1.0]},
+      "end_pose": {"position_m": [0.2, 0.0, 0.0], "quaternion_xyzw": [0.0, 0.0, 0.0, 1.0]},
+      "process_direction": "forward", "length_m": 0.1, "process_duration_s": 2.0,
+      "required_capabilities": ["continuous_process"], "required_tool_id": "tool-a", "priority": 1,
+      "time_window": {"start_s": 0.0, "end_s": 100.0}, "predecessor_ids": ["seg-0"],
+      "handoff_policy": "same_robot", "shared_resource_ids": []
+    }}
+  ]
+}

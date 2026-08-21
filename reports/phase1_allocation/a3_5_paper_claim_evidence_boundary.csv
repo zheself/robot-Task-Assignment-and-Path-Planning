@@ -1,0 +1,7 @@
+claim,evidence,status,boundary
+Dynamic autoregressive Pair-Pointer improves matched static decoding,"65.05% vs 40.28%; paired +24.77 points; CI [18.52,31.48]; p≈1e-5",SUPPORTED,"Same hetero-GNN, training data, supervision and hard-mask framework; SIM_GEOMETRIC only"
+Improvement is robust to seed and registered difficulty,All three seed differences positive; all six cell differences non-negative,SUPPORTED,"Six registered synthetic geometric cells, not arbitrary industrial distributions"
+Pair-Pointer is better than strong optimisation/heuristic methods,"65.05% below 68.75% hybrid load-balanced, 72.22% MILP and 79.86% LNS",NOT_SUPPORTED,Hybrid load-balanced dominates Pair-Pointer in overall coverage-runtime
+Hard mask alone caused the improvement,Both matched learned decoders use hard feasibility masking,NOT_IDENTIFIED,"The comparison isolates the autoregressive pair decoder plus dynamic state, not a mask-only ablation"
+Teacher labels are expert/global-optimal solutions,MILP/LNS/constructive heterogeneous verified incumbents,NOT_SUPPORTED,Do not call them LNS expert demonstrations
+"Real deployment, collision safety or physical quality improvement","No real CAD/log execution, collision certification or physical model in this experiment",NOT_SUPPORTED,All evidence is SIM_GEOMETRIC

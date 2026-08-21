@@ -1,0 +1,27 @@
+{
+  "robot_id": "ur5",
+  "dof": 6,
+  "source_length_unit": "mm",
+  "internal_length_unit": "m",
+  "source_joint_unit": "degree",
+  "internal_joint_unit": "radian",
+  "dh_convention": "standard_DH_to_be_verified",
+  "dh_columns": ["d_m", "theta_offset_rad", "a_m", "alpha_rad"],
+  "dh_params": [
+    [0.089159, 0.0, 0.0, 1.5707963267948966],
+    [0.0, 0.0, -0.425, 0.0],
+    [0.0, 0.0, -0.39225, 0.0],
+    [0.10915, 0.0, 0.0, 1.5707963267948966],
+    [0.09465, 0.0, 0.0, -1.5707963267948966],
+    [0.0823, 0.0, 0.0, 0.0]
+  ],
+  "tool_transform": [
+    [1.0, 0.0, 0.0, 0.0],
+    [0.0, 1.0, 0.0, 0.0],
+    [0.0, 0.0, 1.0, 0.0],
+    [0.0, 0.0, 0.0, 1.0]
+  ],
+  "joint_limits_rad": null,
+  "verification_status": "unverified_against_dataset_and_controller"
+}
+

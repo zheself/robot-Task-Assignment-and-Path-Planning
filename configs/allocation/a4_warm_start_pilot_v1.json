@@ -1,0 +1,99 @@
+{
+  "version": "a4-warm-start-pilot-v1",
+  "status": "PREREGISTERED_BEFORE_A4_DATA_GENERATION",
+  "evidence_label": "SIM_GEOMETRIC_DEVELOPMENT_ONLY",
+  "research_question": "Under an identical repair backend, does the frozen Pair-Pointer warm start reach verified feasibility or train-frozen target quality faster than matched static, load-balanced, MILP-incumbent, and cold initializers?",
+  "data": {
+    "master_seed": 440317,
+    "id_prefix": "a4wsp1",
+    "splits": ["train", "validation"],
+    "forbidden_splits": ["frozen_test", "stress"],
+    "train_groups_per_cell": 8,
+    "validation_groups_per_cell": 4,
+    "variants_per_group": 2,
+    "train_groups_total": 48,
+    "validation_groups_total": 24,
+    "train_instances_total": 96,
+    "validation_instances_total": 48,
+    "cells": ["iid_small", "iid_medium", "dense_precedence", "resource_bottleneck", "tight_windows", "scale"],
+    "generator_geometry_and_cells": "identical to a3_5_pointer_pilot_v1 except seed, namespace, counts and protocol label",
+    "disjoint_from": ["a2_paper_v2", "a2_paper_v3", "a2_paper_v4", "a3_5_pointer_pilot_v1", "a3_5_sealed_final_v1"],
+    "witnesses": "new A4 train/validation constructive audit witnesses only"
+  },
+  "immutable_initializers": {
+    "pair_pointer_seeds": [101, 211, 307],
+    "matched_static_seeds": [101, 211, 307],
+    "checkpoint_registry": "configs/allocation/a3_5_sealed_final_v1.json",
+    "seed_pairing": [[101, 101], [211, 211], [307, 307]],
+    "retraining": "forbidden",
+    "best_seed_selection": "forbidden",
+    "ensemble": "forbidden",
+    "preprocessing": "locked A3.5 train-fitted vocabulary/normalizer, exported once as immutable inference metadata; no old frozen data"
+  },
+  "initializers": [
+    "pair_pointer_seed_101", "pair_pointer_seed_211", "pair_pointer_seed_307",
+    "static_seed_101", "static_seed_211", "static_seed_307",
+    "hybrid_load_balanced", "hybrid_assignment_milp", "cold_start"
+  ],
+  "raw_references": ["pair_pointer_raw", "matched_static_raw", "hybrid_load_balanced_raw", "hybrid_assignment_milp_raw", "order_aware_lns_raw"],
+  "repair": {
+    "backend": "identical_atomic_unit_alns_v1",
+    "random_seeds": [401, 907],
+    "fixed_iterations": [10, 50, 100],
+    "fixed_end_to_end_time_s": [0.5, 1.0, 3.0],
+    "maximum_iterations_per_time_budget": 100,
+    "primary_fixed_iterations": 50,
+    "primary_end_to_end_time_s": 1.0,
+    "destroy_fractions": [0.1, 0.25, 0.4],
+    "operators": ["random_destroy", "worst_load_destroy", "atomic_reassign", "robot_local_relocate", "robot_local_swap", "precedence_safe_reorder"],
+    "reinsert": "hard-feasible regret/load insertion with seeded tie diversification",
+    "acceptance": "lexicographic verified-first then lower weighted proxy score; infeasible states use a fixed deterministic surrogate and seeded simulated-annealing escape",
+    "scheduler": "unchanged A1 deterministic build_schedule",
+    "verifier": "unchanged A1 verify_plan",
+    "same_parameters_for_every_initializer": true,
+    "milp_initializer_time_limit_s": 3.0,
+    "original_lns_iterations": 100,
+    "objective_weights": {"makespan": 1.0, "load_variance": 0.05, "travel_setup_time": 0.1, "priority_tardiness": 1.0}
+  },
+  "target_score": {
+    "rule": "per-cell median verified weighted proxy score of order_aware_lns on A4 train only",
+    "freeze_before_validation": true,
+    "validation_dependent_selection": "forbidden"
+  },
+  "statistics": {
+    "independent_unit": "task_group_id",
+    "variants_are_clustered": true,
+    "overall_one_group_equivalent": 0.041666666666666664,
+    "per_cell_one_group_equivalent": 0.25,
+    "coverage_denominator": "all instances, seeds and repair seeds in the registered matrix",
+    "runtime": "median/IQR with initializer, repair-only and end-to-end decomposition",
+    "time_to_target_aggregation": "restricted mean with failures censored at the registered end-to-end budget",
+    "primary_view": "1.0-second end-to-end verifier coverage",
+    "co_primary_diagnostic": "50-iteration verifier coverage",
+    "timing_threads": 1
+  },
+  "continue_gate": {
+    "integrity_failures_allowed": 0,
+    "pair_plus_repair_above_pair_raw": true,
+    "minimum_pair_seed_wins_over_matched_static": 2,
+    "minimum_mean_pair_vs_static_improvement": 0.041666666666666664,
+    "load_balanced_advantage_options": {
+      "coverage_gain": 0.041666666666666664,
+      "coverage_noninferiority_margin": 0.041666666666666664,
+      "time_to_target_relative_improvement": 0.10,
+      "objective_relative_improvement": 0.05,
+      "scale_gain_without_other_cell_regression": 0.25
+    },
+    "maximum_non_scale_cell_regression": 0.25,
+    "minimum_initializer_assignment_retention": 0.5,
+    "pass_class": "CONTINUE_TO_NEW_A4_PREREGISTRATION",
+    "stop_class": "STOP_A4_LEARNING_WARM_START_BRANCH"
+  },
+  "failure_classes": ["initializer_timeout", "initializer_incomplete", "repair_timeout", "repair_dead_end", "schedule_infeasible", "precedence_failure", "time_window_failure", "shared_resource_failure", "mask_integrity_failure", "atomicity_failure", "matrix_integrity_failure"],
+  "boundaries": [
+    "No A3/A3.5 frozen instance, witness, or sealed evaluator is accessed or rerun.",
+    "A4 data and outcomes are SIM_GEOMETRIC development-only.",
+    "No RL, dynamic insertion, robot failure, path planning, physical model, complex collision planning, real robot, sim-to-real or process-quality claim is included.",
+    "A passing pilot authorises only a new preregistration; it does not authorise a frozen benchmark."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": "a1-solver-protocol-v1",
+  "time_limit_s": 30.0,
+  "relative_gap": 0.0,
+  "deterministic_seed": 0,
+  "methods": [
+    "greedy-cost-v1",
+    "load-balanced-greedy-v1",
+    "hungarian-order-v1",
+    "assignment-milp-v1"
+  ],
+  "required_records": [
+    "status",
+    "runtime_s",
+    "objective_value",
+    "best_bound",
+    "mip_gap",
+    "diagnostics"
+  ],
+  "boundary": "The MILP optimizes assignment proxy load, followed by deterministic proxy scheduling; it is not a joint path-planning or continuous-collision oracle."
+}

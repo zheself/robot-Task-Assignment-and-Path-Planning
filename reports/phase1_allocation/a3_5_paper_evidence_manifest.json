@@ -1,0 +1,32 @@
+{
+  "descriptive_only": true,
+  "generated_hashes": {
+    "reports/phase1_allocation/a3_5_paper_claim_evidence_boundary.csv": "e46dae8e36574b08975a1ed51b8a4a363d875ab1d3abe745d7e50e55b860b600",
+    "reports/phase1_allocation/a3_5_paper_development_frozen.csv": "777203baa828e8fef851d16c3374821228ec53952b8dccbcb6c8818345f0d456",
+    "reports/phase1_allocation/a3_5_paper_difficulty_cells.csv": "ce4efc43c641b57749fa74f60b75bc8c3642b05919ae8c060b5994e6290b232a",
+    "reports/phase1_allocation/a3_5_paper_failure_counts.csv": "a309d5a5bee7b0b7e7d7ac432a45f35907602b7b48f2821758313046cf075d80",
+    "reports/phase1_allocation/a3_5_paper_main_results.csv": "36ba68186cbb50ee3f5ba1ebd9c9920835897f37f457a2c486eb8a6c03922b48",
+    "reports/phase1_allocation/a3_5_paper_seed_stability.csv": "07c4c6403fe7ba89785685b13248f74bf31fb1db6e65f8d22fd1d501835d4eaa",
+    "reports/phase1_allocation/figures/a3_5_sealed_final_v1/coverage_runtime_pareto.pdf": "087757974e8d8ebb15367dfff294a4f301400f90acf1c9f1cb35afeb1136fb9d",
+    "reports/phase1_allocation/figures/a3_5_sealed_final_v1/coverage_runtime_pareto.png": "28b8b67f809126591d167cb60e9123842e0c30f3f90ac08d19ba05132140d855",
+    "reports/phase1_allocation/figures/a3_5_sealed_final_v1/development_vs_frozen.pdf": "50dbdc9d9304b3fb7a168ac712870e3b3cdafc94759db82fd9576b51c3fa079c",
+    "reports/phase1_allocation/figures/a3_5_sealed_final_v1/development_vs_frozen.png": "825e35d5a17c727f849dbcccaa662f6176b48e088d16e2ef222b4adb3b3142f8",
+    "reports/phase1_allocation/figures/a3_5_sealed_final_v1/difficulty_cell_coverage.pdf": "1a79982acb816cb460ee75f7c5585517e2df5867b182f1b35a21d038438ced16",
+    "reports/phase1_allocation/figures/a3_5_sealed_final_v1/difficulty_cell_coverage.png": "0cc582ce25ae2ced83425373ae9bf45a5472bcf2d4d9451924fc29076ce0345d",
+    "reports/phase1_allocation/figures/a3_5_sealed_final_v1/failure_counts.pdf": "d9cdd37d4acbd69343fed9cd82ac0385ba6f2779082a7542d4a7bcd88a0edd8f",
+    "reports/phase1_allocation/figures/a3_5_sealed_final_v1/failure_counts.png": "70f4f76c09e1e77a7f72d4fc68227caa37021b7ce1acda5ddfd3fc0061aa539a",
+    "reports/phase1_allocation/figures/a3_5_sealed_final_v1/method_architecture_dynamic_state.pdf": "27a822696b58d0d551c617d9a271208c23994c76256b3813bdd09f47c1eab92c",
+    "reports/phase1_allocation/figures/a3_5_sealed_final_v1/method_architecture_dynamic_state.png": "a0a82bf09611be39a41196426a4c624b7ec45f46502e9a3e5ecdc1cc0ce5f826",
+    "reports/phase1_allocation/figures/a3_5_sealed_final_v1/seed_stability.pdf": "e4c5468dc632fc69f477e2b05c703f5845578cfb916609297e1f3a843464f618",
+    "reports/phase1_allocation/figures/a3_5_sealed_final_v1/seed_stability.png": "9634d9ca68ebc1726be4e4306776a6d45dffa2e7032e8c9b67ce4095588db9a8"
+  },
+  "no_model_or_evaluation_run": true,
+  "result_class": "A3_5_DECODER_HYPOTHESIS_SUPPORTED",
+  "source_hashes": {
+    "evidence_script": "d3cd7177a4971da3bec6b82ecc737aeed3a8b7ecf42d86d3378d48d39a13a980",
+    "pilot_summary": "426fd1fb3a1a7d8c5c0351011556a3e444d834ee47877ef9b12a1eebf3c9e707",
+    "sealed_rows": "11d6efda45ae0743b5ea906dc7466be9dd69c82bb39a5bac530ab03be57717d4",
+    "sealed_summary": "391e0ad91afcf32fe34ab608c2dcfa7fc7190a5751fb6ec77e3f316fb727e570"
+  },
+  "version": "a3-5-paper-evidence-v1"
+}

@@ -1,0 +1,19 @@
+[project]
+title = "Data-Calibrated Mechanism-Guided Safe Residual RL"
+internal_length_unit = "m"
+internal_angle_unit = "rad"
+legacy_rl_reproduction = false
+phase1_simulator = "custom_gymnasium"
+
+[robot_decision]
+status = "pending_data_audit"
+mvp_robot = "ur5"
+alternative_robot = "kuka_kr210_r2700_2"
+do_not_mix_robots = true
+
+[claim_scope]
+real_training = false
+real_online_control = false
+data_calibrated_simulation = true
+real_historical_external_validation = "pending"
+

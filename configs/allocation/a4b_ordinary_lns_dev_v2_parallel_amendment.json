@@ -1,0 +1,46 @@
+{
+  "version": "a4b-ordinary-lns-dev-v2-cpu-parallel-amendment-v1",
+  "protocol_id": "a4b_ordinary_lns_dev_v2",
+  "status": "FROZEN_DURING_SERIAL_CALIBRATION_BEFORE_PARALLEL_SUBMISSION",
+  "amendment_date": "2026-08-18",
+  "superseded_running_chain": ["983899", "983900", "983901_[0-5]", "983902"],
+  "base_config_sha256": "90b20a1335d48bac28252615284509d5993e9b21811f80175a5c53fe703c7cbc",
+  "runtime_amendment_sha256": "e653da9801a9b0044b370a00f19afe3d0f8b83e9a9daca0f096cbfb85fb28be9",
+  "watchdog_amendment_sha256": "28f1a18c968206f51480c0a6263669940c808df632e48918181d93074785cbed",
+  "scope": "execution_sharding_and_audit_only",
+  "parallel_execution": {
+    "worker_count": 6,
+    "shard_key": "difficulty_cell",
+    "cells": ["iid_small", "iid_medium", "dense_precedence", "resource_bottleneck", "tight_windows", "scale"],
+    "node": "sist_gpu59",
+    "partition": "normal",
+    "account": "v-chengwy",
+    "cpus_per_worker": 1,
+    "memory_gb_per_worker": 4,
+    "omp_num_threads": 1,
+    "mkl_num_threads": 1,
+    "cuda_visible_devices": "",
+    "fixed_time_policy": "parallel_across_cells_sequential_within_cell_on_disjoint_pinned_cpus",
+    "train_and_development_corresponding_concurrency": 6
+  },
+  "expected_calibration_matrix": {
+    "instances_per_cell": 4,
+    "fixed_iteration_traces_per_cell": 40,
+    "fixed_time_traces_per_cell": 12,
+    "traces_per_cell": 52,
+    "fixed_iteration_traces_total": 240,
+    "fixed_time_traces_total": 72,
+    "traces_total": 312,
+    "required_completed_iterations": 30
+  },
+  "invariants": [
+    "A trace remains single-threaded and deterministic.",
+    "Methods within each cell and instance run in the preregistered deterministic order.",
+    "Initializer operators repair cap scheduler verifier acceptance budgets seeds denominators and gates are unchanged.",
+    "The 0.5 1.0 and 3.0 second fixed end-to-end cutoffs are unchanged.",
+    "The 1800 second stall watchdog is unchanged.",
+    "Merge rejects every missing duplicate incomplete or hash-inconsistent shard.",
+    "No partial output from the superseded serial calibration is reused.",
+    "No GPU frozen benchmark neural model reinforcement learning or reinsertion learning is permitted."
+  ]
+}

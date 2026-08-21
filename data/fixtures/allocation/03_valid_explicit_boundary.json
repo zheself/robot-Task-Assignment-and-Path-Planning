@@ -1,0 +1,8 @@
+{
+  "fixture_id": "valid_explicit_boundary", "description": "A declared boundary allows a robot handoff.",
+  "extends": "02_valid_same_robot_segments.json", "expected": {"valid": true, "issue_codes": []},
+  "patch": [
+    {"op": "replace", "path": "/segments/0/handoff_policy", "value": "explicit_boundary"},
+    {"op": "replace", "path": "/segments/1/handoff_policy", "value": "explicit_boundary"}
+  ]
+}

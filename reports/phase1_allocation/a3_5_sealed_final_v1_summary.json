@@ -1,0 +1,131 @@
+{
+  "accessed_split": "frozen_test",
+  "checks": {
+    "all_metrics_finite": true,
+    "complete_method_matrix": true,
+    "zero_atomicity_violations": true,
+    "zero_hard_mask_violations": true,
+    "zero_integrity_failures": true
+  },
+  "created_utc": "2026-08-10T19:13:34.227475+00:00",
+  "evidence_label": "SIM_GEOMETRIC",
+  "integrity_failures": [],
+  "manifest_file_sha256": "13b5d093d6edd863128f5dd683f1ff98ce21185c9deac1165e591bc0ae4dd400",
+  "methods": {
+    "pair_pointer": {
+      "conditional_weighted_proxy_score": 88.72346231677585,
+      "coverage": 0.6504629629629629,
+      "median_runtime_s": 0.4459936572238803,
+      "rows": 432,
+      "runtime_iqr_s": [
+        0.2258636555634439,
+        0.7442616182379425
+      ],
+      "total_runtime_s": 252.95531228370965
+    },
+    "static": {
+      "conditional_weighted_proxy_score": 79.05467899625484,
+      "coverage": 0.4027777777777778,
+      "median_runtime_s": 0.006130135618150234,
+      "rows": 432,
+      "runtime_iqr_s": [
+        0.005446812603622675,
+        0.008075370453298092
+      ],
+      "total_runtime_s": 2.93712536431849
+    }
+  },
+  "primary": {
+    "cell_differences": {
+      "dense_precedence": 0.48611111111111116,
+      "iid_medium": 0.125,
+      "iid_small": 0.0,
+      "resource_bottleneck": 0.34722222222222227,
+      "scale": 0.25,
+      "tight_windows": 0.27777777777777773
+    },
+    "cluster_bootstrap_ci95": [
+      0.18518518518518517,
+      0.3148148148148148
+    ],
+    "mean_paired_coverage_difference": 0.24768518518518523,
+    "one_sided_randomization_p": 9.99990000099999e-06,
+    "robustness_flag": true,
+    "seed_differences": {
+      "101": 0.2222222222222222,
+      "211": 0.2916666666666667,
+      "307": 0.22916666666666666
+    },
+    "supported": true
+  },
+  "protocol_sha256": "8c4d3cb7cc6e61ee589e98786ab78e77958d09694afb102d7f806eda9c208368",
+  "repair_used": false,
+  "required_wording": "primary test and robustness flag pass",
+  "result_class": "A3_5_DECODER_HYPOTHESIS_SUPPORTED",
+  "seal_sha256": "64b670831fb5f863462253cf3b79ec9daf96b45f319734ca06006e8db29bcc62",
+  "secondary_pairwise": {
+    "hybrid_assignment_milp": {
+      "ci95": [
+        -0.13657407407407407,
+        -0.009201388888893937
+      ],
+      "mean_difference": -0.07175925925925926
+    },
+    "hybrid_load_balanced": {
+      "ci95": [
+        -0.10185185185185186,
+        0.025462962962962958
+      ],
+      "mean_difference": -0.03703703703703705
+    },
+    "order_aware_lns": {
+      "ci95": [
+        -0.212962962962963,
+        -0.08564814814814815
+      ],
+      "mean_difference": -0.14814814814814817
+    }
+  },
+  "strong_baselines": {
+    "hybrid_assignment_milp": {
+      "conditional_weighted_proxy_score": 105.42790480339922,
+      "coverage": 0.7222222222222222,
+      "median_runtime_s": 0.6651628650724888,
+      "rows": 144,
+      "runtime_iqr_s": [
+        0.06793261738494039,
+        2.3752757757902145
+      ],
+      "total_runtime_s": 170.25284698046744
+    },
+    "hybrid_load_balanced": {
+      "conditional_weighted_proxy_score": 112.21311541489477,
+      "coverage": 0.6875,
+      "median_runtime_s": 0.020119045861065388,
+      "rows": 144,
+      "runtime_iqr_s": [
+        0.012823314405977726,
+        0.026640312746167183
+      ],
+      "total_runtime_s": 3.020586697384715
+    },
+    "order_aware_lns": {
+      "conditional_weighted_proxy_score": 91.83268315789121,
+      "coverage": 0.7986111111111112,
+      "median_runtime_s": 0.4992695953696966,
+      "rows": 144,
+      "runtime_iqr_s": [
+        0.28396584186702967,
+        0.6645293119363487
+      ],
+      "total_runtime_s": 72.2407591715455
+    }
+  },
+  "v4_accessed": false,
+  "versions": {
+    "numpy": "1.26.4",
+    "python": "3.11.15",
+    "scipy": "1.11.4",
+    "torch": "2.5.1+cu124"
+  }
+}

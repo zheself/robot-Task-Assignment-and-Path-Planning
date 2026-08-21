@@ -1,0 +1,34 @@
+{
+  "candidate_id": "ur5_real_static_candidate_v1",
+  "status": "candidate_unverified_not_frozen",
+  "evidence_level": "REAL_STATIC",
+  "robot_id": "ur5",
+  "runtime_assumptions": {
+    "joint_unit": "degree_unverified",
+    "length_unit": "mm_unverified",
+    "coordinate_frame": "unverified",
+    "tcp": "unverified",
+    "date_semantics": "unverified"
+  },
+  "roles": {
+    "train": [
+      "data01.csv", "data02.csv", "data03.csv", "data04.csv", "data05.csv", "data06.csv", "data07.csv",
+      "20250806/建模数据1.csv"
+    ],
+    "validation": ["20250806/验证数据.csv"],
+    "test_cross_date": ["20250807/验证数据(1).csv"],
+    "reserved_matched_case_study": ["20250806/10.csv", "20250807/10Pos.csv"],
+    "reserved_additional": ["20250807/建模数据.csv"],
+    "external_frame_shift_diagnostic": ["20250714/建模数据.csv"],
+    "excluded": ["data_all.csv", "data08.csv"]
+  },
+  "rationale": {
+    "grouping": "whole source files only; no row-level random split",
+    "test": "filename-labeled validation file from a held-out date",
+    "case_study": "matched static repeat points kept out of model selection",
+    "external": "20250714 has approximately 50 mm FK/nominal mismatch and is not simulator-compatible"
+  },
+  "warning": "Do not promote this document to a final split manifest before metadata confirmation.",
+  "sha256": "642442e03908a6351cf7f04e3b279af248c12a35725bf1807a56abc71813156f",
+  "hash_scope": "candidate_definition_before_sha256_and_runtime_row_counts"
+}

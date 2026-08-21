@@ -1,0 +1,5 @@
+{
+  "fixture_id": "invalid_duplicate_segment_id", "description": "Duplicate task IDs are rejected before allocation.",
+  "extends": "02_valid_same_robot_segments.json", "expected": {"valid": false, "issue_codes": ["DUPLICATE_SEGMENT_ID"]},
+  "patch": [{"op": "replace", "path": "/segments/1/id", "value": "seg-0"}]
+}

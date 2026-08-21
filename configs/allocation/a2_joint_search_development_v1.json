@@ -1,0 +1,44 @@
+{
+  "version": "a2-joint-search-development-v1",
+  "evidence_label": "SIM_GEOMETRIC",
+  "source_benchmark": "configs/allocation/benchmark_v3.json",
+  "source_manifest": "data/manifests/allocation/a2_paper_manifest_v3.json",
+  "source_manifest_sha256": "a039238d50ac10a6ecc44d6001f07aa75cbc3169c9ac5c8c1800a1794742ae12",
+  "allowed_splits": ["train", "validation"],
+  "forbidden_splits": ["frozen_test", "stress"],
+  "methods": [
+    "hybrid_load_balanced_v2",
+    "order_aware_lns_v2",
+    "beam_alns_v1"
+  ],
+  "milp_time_limit_s": 3.0,
+  "milp_relative_gap": 0.0,
+  "lns_iterations": 100,
+  "lns_seed": 0,
+  "beam_alns_iterations": 12,
+  "beam_alns_seed": 0,
+  "beam_width": 8,
+  "beam_node_limit": 30000,
+  "selection_metric": "validation_candidate_coverage_then_pairwise_verified_weighted_proxy_score",
+  "development_gate": {
+    "minimum_validation_candidate_coverage": 0.95,
+    "maximum_per_cell_coverage_drop_vs_order_aware_lns": 0.08333333333333333,
+    "minimum_cells_with_strict_coverage_gain_vs_order_aware_lns": 1,
+    "maximum_validation_median_runtime_s": 5.0
+  },
+  "joint_reference_protocol": {
+    "fixtures_only_before_benchmark_development": true,
+    "max_segments": 10,
+    "max_assignment_combinations": 20000,
+    "node_limit": 250000,
+    "time_limit_s": 10.0,
+    "optimal_claim_scope": "A1 proxy only when SEARCH_COMPLETE=True"
+  },
+  "boundaries": [
+    "This development run may access v3 train and validation instances only.",
+    "V2 and v3 frozen-test and stress instances are forbidden for method, budget and threshold selection.",
+    "Beam search branches robot and shared-resource proxy order; it is not motion planning or a collision certificate.",
+    "Joint-reference optimal means complete bounded enumeration within the A1 proxy only.",
+    "Failure to find a schedule is not proof of global infeasibility."
+  ]
+}

@@ -1,0 +1,4 @@
+method,instances,verified,coverage,conditional_score,median_runtime_s,status_counts
+hybrid_assignment_milp,48,38,0.7916666666666666,107.8312059199258,0.8339269319549203,"{""feasible_limit"": 4, ""optimal"": 34, ""schedule_infeasible"": 10}"
+order_aware_lns,48,39,0.8125,91.28176674636222,0.48600385896861553,"{""feasible"": 39, ""schedule_infeasible"": 9}"
+hybrid_load_balanced,48,37,0.7708333333333334,112.88661643437656,0.017846539616584778,"{""feasible"": 37, ""schedule_infeasible"": 11}"

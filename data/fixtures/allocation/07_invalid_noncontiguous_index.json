@@ -1,0 +1,5 @@
+{
+  "fixture_id": "invalid_noncontiguous_index", "description": "A parent curve cannot skip segment index 1.",
+  "extends": "02_valid_same_robot_segments.json", "expected": {"valid": false, "issue_codes": ["NONCONTIGUOUS_SEGMENT_INDEX"]},
+  "patch": [{"op": "replace", "path": "/segments/1/segment_index", "value": 2}]
+}

@@ -1,0 +1,139 @@
+{
+  "protocol_id": "a4b_ordinary_lns_dev_v2",
+  "date": "2026-08-19",
+  "status": "FROZEN_AFTER_JOB_984111_METADATA_ONLY_FAILURE_BEFORE_RECOVERY",
+  "scope": "metadata_reconstruction_only_no_search",
+  "formal_action": "HOLD_A4B_LEARNED_DESTROY_TRAINING",
+  "base_config_sha256": "90b20a1335d48bac28252615284509d5993e9b21811f80175a5c53fe703c7cbc",
+  "runtime_amendment_sha256": "e653da9801a9b0044b370a00f19afe3d0f8b83e9a9daca0f096cbfb85fb28be9",
+  "watchdog_amendment_sha256": "28f1a18c968206f51480c0a6263669940c808df632e48918181d93074785cbed",
+  "parallel_amendment_sha256": "01189b87aac2c64265f3baca27ec90533d373a19cad40790474494551021c8b1",
+  "corpus_manifest_file_sha256": "04243046284043d28ef16ebc7f87710c6a8434edfaf172eb38b642ebab152989",
+  "corpus_manifest_semantic_sha256": "dddb0db22febad8f10a8d15192ea8019f586f80035a882308a2794ca4737530c",
+  "failed_job": {
+    "job_id": "984111",
+    "state": "FAILED",
+    "exit_code": "1:0",
+    "node": "sist_gpu59",
+    "partition": "normal",
+    "account": "v-chengwy",
+    "allocated_cpus": 6,
+    "requested_memory": "24G",
+    "gpu_requested": false,
+    "start_cluster_local": "2026-08-18T23:23:59+08:00",
+    "end_cluster_local": "2026-08-19T07:56:11+08:00",
+    "elapsed": "08:32:12",
+    "total_cpu": "19:01:26",
+    "failure_stage": "post_trace_shard_metadata_record",
+    "failure_signature": "AttributeError: module 'numpy' has no attribute '__version'",
+    "runner_sha256": "8850981378a0b53d8516d0957ec2ba7bdadf07659285f2352bb284c84ff4614e",
+    "worker_wrapper_sha256": "fbeeb7eb6e22ff1a99993fd94ea00c79ffdc4f90a38368dd0b3ce8d09e859f00",
+    "packed_slurm_sha256": "a0b72736725a9d2d44db550049205c82ddc5ac35c3be14b26b562598ffe0c363",
+    "packed_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "packed_stderr_sha256": "949f3a5561f0120221468e025c0993aa070921bcdc9194ebbc53c9b53402a0cd"
+  },
+  "expected_matrix": {
+    "cells": [
+      "iid_small",
+      "iid_medium",
+      "dense_precedence",
+      "resource_bottleneck",
+      "tight_windows",
+      "scale"
+    ],
+    "instances_per_cell": 4,
+    "fixed_iteration_traces_per_cell": 40,
+    "fixed_time_traces_per_cell": 12,
+    "traces_per_cell": 52,
+    "fixed_iteration_traces_total": 240,
+    "fixed_time_traces_total": 72,
+    "traces_total": 312,
+    "required_completed_iterations": 30,
+    "reconstructed_rows_total": 792,
+    "transition_signature_sha256": "a825c4591d9b6dfece3a74c909b8a902d71d6f5076a32811b90e2fd02bacfb8a"
+  },
+  "artifacts": {
+    "iid_small": {
+      "cpu": 0,
+      "trace_path": "outputs/phase1_allocation/a4b_ordinary_lns_dev_v2/train_calibration_shards/iid_small.jsonl",
+      "trace_sha256": "a7237ff0d5fd02013edaad0c7f025183f1f54904072972aa4cddfe808af7c8e9",
+      "log_path": "logs/a4b_v2_calibration_984111_iid_small.err",
+      "log_sha256": "b064aab4c0224aa7383c912d2ab503ef23deacafd69d2c569da8015057ad8904"
+    },
+    "iid_medium": {
+      "cpu": 1,
+      "trace_path": "outputs/phase1_allocation/a4b_ordinary_lns_dev_v2/train_calibration_shards/iid_medium.jsonl",
+      "trace_sha256": "d3839296dfcf73ed75867f653bf4cfe08257386f6d29cf777c047c31dddafc37",
+      "log_path": "logs/a4b_v2_calibration_984111_iid_medium.err",
+      "log_sha256": "feb763b135462450b45899730a898bf32edd203e96d23d98b2a80e36842db900"
+    },
+    "dense_precedence": {
+      "cpu": 2,
+      "trace_path": "outputs/phase1_allocation/a4b_ordinary_lns_dev_v2/train_calibration_shards/dense_precedence.jsonl",
+      "trace_sha256": "ae0ec8fab7665772f1d71620be4d56b93f5152125c1c35b008eca561ec29437c",
+      "log_path": "logs/a4b_v2_calibration_984111_dense_precedence.err",
+      "log_sha256": "5f9056708a11c62784544bab78cd4eb7dac0d896a1036258f73ef8c13b1bc032"
+    },
+    "resource_bottleneck": {
+      "cpu": 28,
+      "trace_path": "outputs/phase1_allocation/a4b_ordinary_lns_dev_v2/train_calibration_shards/resource_bottleneck.jsonl",
+      "trace_sha256": "7c7b3839bbfc2f07d834b720e54b066b5d10771465f4835b6d488333446cf14f",
+      "log_path": "logs/a4b_v2_calibration_984111_resource_bottleneck.err",
+      "log_sha256": "c3d29451e20ac1231a719a1a79cef6d58bd79f9390a01328727b33017ade7303"
+    },
+    "tight_windows": {
+      "cpu": 29,
+      "trace_path": "outputs/phase1_allocation/a4b_ordinary_lns_dev_v2/train_calibration_shards/tight_windows.jsonl",
+      "trace_sha256": "3bebc58b9a5675af98dcadfdcfcfa9d897501d3ed5578c4389cf11d848abf09f",
+      "log_path": "logs/a4b_v2_calibration_984111_tight_windows.err",
+      "log_sha256": "4c51c3390e749080fb5bcd83e0ad907ca429d414a238856baef49ff584828aa1"
+    },
+    "scale": {
+      "cpu": 30,
+      "trace_path": "outputs/phase1_allocation/a4b_ordinary_lns_dev_v2/train_calibration_shards/scale.jsonl",
+      "trace_sha256": "03986ae943b73b0f422b271e7c770856434b2ca46a01209f8173616b7ccc0206",
+      "log_path": "logs/a4b_v2_calibration_984111_scale.err",
+      "log_sha256": "ed3fd770f178051434fb5ef6c604366d7b1faa7e20cbb01074fe9fa5bedf7248"
+    }
+  },
+  "execution_source_hashes": {
+    "configs/allocation/a4b_ordinary_lns_dev_v2.json": "90b20a1335d48bac28252615284509d5993e9b21811f80175a5c53fe703c7cbc",
+    "configs/allocation/a4b_ordinary_lns_dev_v2_parallel_amendment.json": "01189b87aac2c64265f3baca27ec90533d373a19cad40790474494551021c8b1",
+    "configs/allocation/a4b_ordinary_lns_dev_v2_runtime_amendment.json": "e653da9801a9b0044b370a00f19afe3d0f8b83e9a9daca0f096cbfb85fb28be9",
+    "configs/allocation/a4b_ordinary_lns_dev_v2_watchdog_amendment.json": "28f1a18c968206f51480c0a6263669940c808df632e48918181d93074785cbed",
+    "docs/31_a4b_ordinary_lns_recovery_preregistration.md": "ba095096028a321d5a4ef32204f5bf15e8273486e5a1e797bb59ec98375e7d1c",
+    "docs/33_a4b_v2_runtime_hardware_amendment.md": "536237a582becc1fe43c8e0cef8996182fcc62eaafe4e69992289b6e35b4b85b",
+    "docs/34_a4b_v2_watchdog_recovery_amendment.md": "367a4975d2bc6ad9b884d8469f8428f97416f7713e1a19e83c05a6e0344bbd8b",
+    "docs/35_a4b_v2_cpu_parallel_execution_amendment.md": "98917d02ac3aa51d60cbebd0271a1f15918c13105410d85ec1bc873ab42690cc",
+    "scripts/run_a4b_cpu_worker.sh": "fbeeb7eb6e22ff1a99993fd94ea00c79ffdc4f90a38368dd0b3ce8d09e859f00",
+    "scripts/run_a4b_ordinary_lns_development.py": "8850981378a0b53d8516d0957ec2ba7bdadf07659285f2352bb284c84ff4614e",
+    "scripts/submit_a4b_v2_parallel_chain.sh": "ee2bdf5bb46119b79d53c7ff305d100974b918e4c1813a616f689590d8933a50",
+    "slurm/a4b_v2_calibration_array.sbatch": "6bedaa2a85d8878231176a464aefe337235d5242e366bce0d3a19ae7eb3e8b92",
+    "slurm/a4b_v2_calibration_packed.sbatch": "a0b72736725a9d2d44db550049205c82ddc5ac35c3be14b26b562598ffe0c363",
+    "slurm/a4b_v2_development_array.sbatch": "d877792e2d395fe76122195a50a551613c4df418ca212ff91cbdcf71680820f6",
+    "slurm/a4b_v2_development_packed.sbatch": "600ff05f48adaa70423313ae3ea3d3a57a1ef2a527016bdede7ede11132338a4",
+    "slurm/a4b_v2_development_smoke.sbatch": "8b39913f329a082624f3db5a3ecf77cdb3cb45dc0221bbdee596b029e87e511a",
+    "slurm/a4b_v2_finalize.sbatch": "7161db694433605fb639f103faae9f426699931c3156d445bd4e761fac202f18",
+    "slurm/a4b_v2_merge_gate_labels.sbatch": "98be2aa5378e1c8e6651ac28ea6004e0ad8c9de0f224dd81382f73b6589db6ba",
+    "slurm/a4b_v2_train_gate.sbatch": "e9e7e236a361ed4c2bbbf8f22fccdf5e2931a399b8d92b192792f817dfef0ef5",
+    "src/safe_residual_rl/allocation/search/alns_v2.py": "ff1339b6e391065629cc0e8eaad552d8f8a46d6091433770c8716a06e7e764b8",
+    "src/safe_residual_rl/allocation/search/anytime.py": "728a20432b9bc85d127859355334825eccd1ea867286522f230d65c75d55ab36",
+    "src/safe_residual_rl/allocation/search/data_v2.py": "a9a4fba4a02154ce2bd5283eeea0398e1f3b3b014cce698d151dc6e18a2160d6",
+    "src/safe_residual_rl/allocation/search/diagnostics.py": "dd5d0458db2c75fff1e3064efb1b9bc43cab7ea008ee17476a1f03d261984500",
+    "src/safe_residual_rl/allocation/search/metrics.py": "59f31084665302226767a2a79f6508d73dadd937a8aada24827f44db2169dc0f",
+    "src/safe_residual_rl/allocation/search/operators.py": "7c701d53e1ee0c33fc5ae086dad3c9cd7f9ac7825ea44141bcf49ed8cbc54540",
+    "src/safe_residual_rl/allocation/search/operators_v2.py": "2f534ba85c5b6d9a157d02f0f09abef9cfc892d6d706240396bc22a6c6e2b65e",
+    "src/safe_residual_rl/allocation/search/trace.py": "68cf1fd2e45002c582c087bd2e458fed04ea5787ea2acb5d24a7773822e8438b",
+    "tests/allocation/test_a4b_v2_recovery.py": "6aee7ac23cb43b963f9215c58247c1b3635947292093381e2cc9b9c87aaa6c91"
+  },
+  "recovery_rules": {
+    "allowed_input": "the six exact JSONL and stderr artifacts listed above",
+    "allowed_output": "six reconstructed shard JSON metadata files plus one recovery record",
+    "search_execution_allowed": false,
+    "trace_rewrite_allowed": false,
+    "missing_or_changed_artifact_action": "fail_closed",
+    "unavailable_original_worker_fields": "must_be_explicitly_marked_unavailable_not_fabricated",
+    "merge_requires_recovered_provenance": true,
+    "development_access_before_train_gates": false
+  }
+}

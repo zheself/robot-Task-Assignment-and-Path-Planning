@@ -1,0 +1,204 @@
+{
+  "accessed_splits": [
+    "train",
+    "validation"
+  ],
+  "boundaries": [
+    "Development may access v3 train and validation only.",
+    "V2/v3 frozen-test and stress are forbidden for method or budget selection.",
+    "Assignment and sequence beams are heuristic and do not prove infeasibility or global optimality.",
+    "Constructive witnesses establish only A1 proxy feasibility and alter time windows by a registered rule.",
+    "No path, collision, physical-process or factory claim is supported."
+  ],
+  "config_sha256": "f224efb4879506d520742f4541a0c272b28e13644df1eac3228e729871316329",
+  "created_utc": "2026-08-09T18:03:00.028788+00:00",
+  "evidence_label": "SIM_GEOMETRIC",
+  "instance_count": 240,
+  "run_count": 480,
+  "runner_version": "a2-scheduler-development-runner-v1",
+  "schema_version": "a2-scheduler-development-results-v1",
+  "source_manifest_sha256": "a039238d50ac10a6ecc44d6001f07aa75cbc3169c9ac5c8c1800a1794742ae12",
+  "summary": [
+    {
+      "candidate_coverage": 1.0,
+      "cell_id": "medium_balanced",
+      "instances": 48,
+      "mean_score_verified": 38.14665667902043,
+      "median_runtime_s": 2.337122127501061,
+      "method": "assignment_beam_sequence_v1",
+      "split": "train",
+      "status_counts": "{\"feasible\": 48}",
+      "verified_instances": 48
+    },
+    {
+      "candidate_coverage": 1.0,
+      "cell_id": "medium_balanced",
+      "instances": 48,
+      "mean_score_verified": 37.285725836559244,
+      "median_runtime_s": 0.46623317900230177,
+      "method": "order_aware_lns_v2",
+      "split": "train",
+      "status_counts": "{\"feasible\": 48}",
+      "verified_instances": 48
+    },
+    {
+      "candidate_coverage": 0.9583333333333334,
+      "cell_id": "medium_precedence",
+      "instances": 48,
+      "mean_score_verified": 42.88300425036418,
+      "median_runtime_s": 3.061307450494496,
+      "method": "assignment_beam_sequence_v1",
+      "split": "train",
+      "status_counts": "{\"feasible\": 46, \"schedule_infeasible\": 2}",
+      "verified_instances": 46
+    },
+    {
+      "candidate_coverage": 0.9375,
+      "cell_id": "medium_precedence",
+      "instances": 48,
+      "mean_score_verified": 44.28723357807209,
+      "median_runtime_s": 0.518071429542033,
+      "method": "order_aware_lns_v2",
+      "split": "train",
+      "status_counts": "{\"feasible\": 45, \"schedule_infeasible\": 3}",
+      "verified_instances": 45
+    },
+    {
+      "candidate_coverage": 1.0,
+      "cell_id": "medium_resource",
+      "instances": 48,
+      "mean_score_verified": 54.43058119357053,
+      "median_runtime_s": 5.989475920010591,
+      "method": "assignment_beam_sequence_v1",
+      "split": "train",
+      "status_counts": "{\"feasible\": 48}",
+      "verified_instances": 48
+    },
+    {
+      "candidate_coverage": 1.0,
+      "cell_id": "medium_resource",
+      "instances": 48,
+      "mean_score_verified": 54.88259768734017,
+      "median_runtime_s": 0.7252637245110236,
+      "method": "order_aware_lns_v2",
+      "split": "train",
+      "status_counts": "{\"feasible\": 48}",
+      "verified_instances": 48
+    },
+    {
+      "candidate_coverage": 1.0,
+      "cell_id": "small_sparse",
+      "instances": 48,
+      "mean_score_verified": 28.766086169668764,
+      "median_runtime_s": 0.3208399649884086,
+      "method": "assignment_beam_sequence_v1",
+      "split": "train",
+      "status_counts": "{\"feasible\": 48}",
+      "verified_instances": 48
+    },
+    {
+      "candidate_coverage": 1.0,
+      "cell_id": "small_sparse",
+      "instances": 48,
+      "mean_score_verified": 29.953166697144553,
+      "median_runtime_s": 0.20060868602013215,
+      "method": "order_aware_lns_v2",
+      "split": "train",
+      "status_counts": "{\"feasible\": 48}",
+      "verified_instances": 48
+    },
+    {
+      "candidate_coverage": 1.0,
+      "cell_id": "medium_balanced",
+      "instances": 12,
+      "mean_score_verified": 42.98767564331877,
+      "median_runtime_s": 3.296712215000298,
+      "method": "assignment_beam_sequence_v1",
+      "split": "validation",
+      "status_counts": "{\"feasible\": 12}",
+      "verified_instances": 12
+    },
+    {
+      "candidate_coverage": 1.0,
+      "cell_id": "medium_balanced",
+      "instances": 12,
+      "mean_score_verified": 43.5866925584717,
+      "median_runtime_s": 0.519093924027402,
+      "method": "order_aware_lns_v2",
+      "split": "validation",
+      "status_counts": "{\"feasible\": 12}",
+      "verified_instances": 12
+    },
+    {
+      "candidate_coverage": 0.8333333333333334,
+      "cell_id": "medium_precedence",
+      "instances": 12,
+      "mean_score_verified": 44.540504361502606,
+      "median_runtime_s": 4.624821574485395,
+      "method": "assignment_beam_sequence_v1",
+      "split": "validation",
+      "status_counts": "{\"feasible\": 10, \"schedule_infeasible\": 2}",
+      "verified_instances": 10
+    },
+    {
+      "candidate_coverage": 0.9166666666666666,
+      "cell_id": "medium_precedence",
+      "instances": 12,
+      "mean_score_verified": 50.353074964279564,
+      "median_runtime_s": 0.6164173654979095,
+      "method": "order_aware_lns_v2",
+      "split": "validation",
+      "status_counts": "{\"feasible\": 11, \"schedule_infeasible\": 1}",
+      "verified_instances": 11
+    },
+    {
+      "candidate_coverage": 1.0,
+      "cell_id": "medium_resource",
+      "instances": 12,
+      "mean_score_verified": 52.48734598170481,
+      "median_runtime_s": 5.480959629494464,
+      "method": "assignment_beam_sequence_v1",
+      "split": "validation",
+      "status_counts": "{\"feasible\": 12}",
+      "verified_instances": 12
+    },
+    {
+      "candidate_coverage": 1.0,
+      "cell_id": "medium_resource",
+      "instances": 12,
+      "mean_score_verified": 56.32608931371388,
+      "median_runtime_s": 0.7201102070102934,
+      "method": "order_aware_lns_v2",
+      "split": "validation",
+      "status_counts": "{\"feasible\": 12}",
+      "verified_instances": 12
+    },
+    {
+      "candidate_coverage": 1.0,
+      "cell_id": "small_sparse",
+      "instances": 12,
+      "mean_score_verified": 26.6070998902948,
+      "median_runtime_s": 0.24915336348931305,
+      "method": "assignment_beam_sequence_v1",
+      "split": "validation",
+      "status_counts": "{\"feasible\": 12}",
+      "verified_instances": 12
+    },
+    {
+      "candidate_coverage": 1.0,
+      "cell_id": "small_sparse",
+      "instances": 12,
+      "mean_score_verified": 28.351391358254585,
+      "median_runtime_s": 0.18005147151416168,
+      "method": "order_aware_lns_v2",
+      "split": "validation",
+      "status_counts": "{\"feasible\": 12}",
+      "verified_instances": 12
+    }
+  ],
+  "versions": {
+    "numpy": "1.26.4",
+    "python": "3.11.15",
+    "scipy": "1.17.1"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "fixture_id": "valid_minimal",
+  "description": "One auditable continuous segment and one compatible robot.",
+  "expected": {"valid": true, "issue_codes": []},
+  "instance": {
+    "schema_version": "allocation-instance-v1",
+    "evidence_label": "SYNTHETIC",
+    "instance_id": "fixture-minimal",
+    "workpiece_id": "wp-001",
+    "layout_id": "layout-001",
+    "coordinate_frame": "workpiece",
+    "segments": [{
+      "id": "seg-0", "parent_curve_id": "curve-a", "segment_index": 0,
+      "sampled_curve_m": [[0.0, 0.0, 0.0], [0.1, 0.0, 0.0]],
+      "start_pose": {"position_m": [0.0, 0.0, 0.0], "quaternion_xyzw": [0.0, 0.0, 0.0, 1.0]},
+      "end_pose": {"position_m": [0.1, 0.0, 0.0], "quaternion_xyzw": [0.0, 0.0, 0.0, 1.0]},
+      "process_direction": "forward", "length_m": 0.1, "process_duration_s": 2.0,
+      "required_capabilities": ["continuous_process"], "required_tool_id": "tool-a",
+      "priority": 1, "time_window": {"start_s": 0.0, "end_s": 100.0},
+      "predecessor_ids": [], "handoff_policy": "not_splittable", "shared_resource_ids": []
+    }],
+    "robots": [{
+      "id": "robot-0",
+      "base_pose": {"position_m": [0.0, -0.5, 0.0], "quaternion_xyzw": [0.0, 0.0, 0.0, 1.0]},
+      "capabilities": ["continuous_process"], "tool_ids": ["tool-a"],
+      "availability": {"start_s": 0.0, "end_s": 100.0}, "kinematic_model_id": "abstract-arm-v1",
+      "initial_joint_state_rad": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "nominal_cartesian_speed_m_s": 0.1
+    }],
+    "resources": []
+  }
+}

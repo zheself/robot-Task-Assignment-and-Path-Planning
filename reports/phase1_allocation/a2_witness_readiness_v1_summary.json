@@ -1,0 +1,33 @@
+{
+  "acceptance": {
+    "checks": {
+      "construction_rate": true,
+      "determinism_rate": true,
+      "non_window_semantics_preservation_rate": true,
+      "verification_rate": true,
+      "zero_hash_failures": true
+    },
+    "observed": {
+      "construction_rate": 1.0,
+      "determinism_rate": 1.0,
+      "non_window_semantics_preservation_rate": 1.0,
+      "verification_rate": 1.0,
+      "zero_hash_failures": true
+    },
+    "passed": true
+  },
+  "accessed_splits": [
+    "train",
+    "validation"
+  ],
+  "boundaries": [
+    "Witness readiness is a benchmark-integrity gate, not evidence that a new solver is superior.",
+    "Only time windows may be reconstructed; geometry, capabilities, tools, precedence, handoff and resources must remain unchanged.",
+    "The witness certifies A1 proxy feasibility only.",
+    "No v2/v3 frozen-test or stress instance may be read."
+  ],
+  "created_utc": "2026-08-09T18:04:35.488511+00:00",
+  "instance_count": 240,
+  "schema_version": "a2-witness-readiness-results-v1",
+  "source_manifest_sha256": "a039238d50ac10a6ecc44d6001f07aa75cbc3169c9ac5c8c1800a1794742ae12"
+}

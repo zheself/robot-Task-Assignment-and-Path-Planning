@@ -1,0 +1,8 @@
+{
+  "fixture_id": "invalid_curve_discontinuity", "description": "Adjacent segments of one continuous parent curve must meet geometrically.",
+  "extends": "02_valid_same_robot_segments.json", "expected": {"valid": false, "issue_codes": ["CURVE_DISCONTINUITY"]},
+  "patch": [
+    {"op": "replace", "path": "/segments/1/sampled_curve_m/0", "value": [0.11, 0.0, 0.0]},
+    {"op": "replace", "path": "/segments/1/start_pose/position_m", "value": [0.11, 0.0, 0.0]}
+  ]
+}

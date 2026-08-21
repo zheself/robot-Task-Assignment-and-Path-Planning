@@ -1,0 +1,5 @@
+{
+  "fixture_id": "invalid_endpoint_mismatch", "description": "Start pose must coincide with the first sampled curve point.",
+  "extends": "01_valid_minimal.json", "expected": {"valid": false, "issue_codes": ["START_POSE_MISMATCH"]},
+  "patch": [{"op": "replace", "path": "/segments/0/start_pose/position_m", "value": [0.01, 0.0, 0.0]}]
+}

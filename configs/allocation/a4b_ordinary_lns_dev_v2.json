@@ -1,0 +1,98 @@
+{
+  "version": "a4b-ordinary-lns-dev-v2",
+  "protocol_id": "a4b_ordinary_lns_dev_v2",
+  "status": "PREREGISTERED_BEFORE_A4B_V2_DATA_GENERATION",
+  "evidence_label": "SIM_GEOMETRIC_DEVELOPMENT_ONLY",
+  "data": {
+    "master_seed": 915731,
+    "id_prefix": "a4blnsd2",
+    "splits": ["train", "development"],
+    "forbidden_splits": ["validation", "frozen_test", "stress"],
+    "cells": ["iid_small", "iid_medium", "dense_precedence", "resource_bottleneck", "tight_windows", "scale"],
+    "train_groups_per_cell": 8,
+    "development_groups_per_cell": 4,
+    "variants_per_group": 2,
+    "train_groups_total": 48,
+    "development_groups_total": 24,
+    "train_instances_total": 96,
+    "development_instances_total": 48,
+    "operator_selection_groups_per_cell": 2,
+    "label_states_per_cell": 4,
+    "disjoint_id_prefixes": ["a2v2", "a2v3", "a2v4", "a35p1", "a35f1", "a4wsp1", "a4bnlsd1"],
+    "static_ur5_csv_allowed": false,
+    "frozen_or_stress_generation_allowed": false
+  },
+  "initializer": {
+    "primary": "hybrid_load_balanced",
+    "same_for_all_controlled_methods": true,
+    "fallback_allowed": false,
+    "cost_is_in_end_to_end_budget": true
+  },
+  "search": {
+    "fixed_iterations": [10, 20, 30],
+    "fixed_end_to_end_time_s": [0.5, 1.0, 3.0],
+    "safety_watchdog_s": 60.0,
+    "destroy_ratios": [0.1, 0.25, 0.4],
+    "repair_candidate_evaluation_budget": 256,
+    "repair_micro_deadline_s": 3.0,
+    "random_seeds": [2203, 2909],
+    "restart_no_improvement": 12,
+    "allow_infeasible_current": true,
+    "objective_weights": {
+      "makespan": 1.0,
+      "load_variance": 0.05,
+      "travel_setup_time": 0.1,
+      "priority_tardiness": 1.0
+    }
+  },
+  "alns": {
+    "candidate_update_schemes": ["online", "segmented"],
+    "segment_length": 8,
+    "reaction_factor": 0.2,
+    "initial_temperature_fraction": 0.02,
+    "cooling_rate": 0.97,
+    "rewards": {
+      "global_best": 8.0,
+      "new_feasible": 6.0,
+      "strict_improvement": 4.0,
+      "unseen_diversification": 1.0,
+      "no_signal": 0.0
+    }
+  },
+  "methods": ["random_lns", "handcrafted_round_robin", "best_single_train_selected", "adaptive_alns", "small_instance_oracle_destroy_upper_bound"],
+  "destroy_operators": ["random_destroy", "worst_cost_destroy", "load_imbalance_destroy", "precedence_chain_destroy", "critical_slack_destroy", "shared_resource_conflict_destroy", "relatedness_destroy", "compound_destroy"],
+  "operator_selection": {
+    "split": "train",
+    "validation_or_future_data_access": "forbidden",
+    "metric_order": ["exact_10_complete", "verifier_coverage", "mean_objective_failures_last", "median_runtime", "operator_id"]
+  },
+  "metrics": {
+    "gap_before_first_incumbent": 1.0,
+    "gap_clip": [0.0, 1.0],
+    "target_source": "train_cell_median_best_verified",
+    "reference_source": "train_cell_worst_verified_or_1p25_target",
+    "failure_penalty": 1.0
+  },
+  "labels": {
+    "name": "search-generated neighborhood improvement labels",
+    "destroy_ratio": 0.25,
+    "same_repair_candidate_evaluation_budget": 256,
+    "micro_deadline_s": 3.0,
+    "primary_learning_form": "pairwise_or_listwise_ranking",
+    "not_true_expert_actions": true
+  },
+  "hardware": {
+    "partition": "cpu",
+    "cpus_per_task": 1,
+    "memory_gb": 8,
+    "omp_num_threads": 1,
+    "mkl_num_threads": 1
+  },
+  "boundaries": [
+    "No old frozen instance witness evaluator or result is accessed or rerun.",
+    "A4a validation and A4b v1 outputs are not patched rerun or overwritten.",
+    "No validation frozen_test or stress split is generated.",
+    "No neural checkpoint reinforcement learning reinsertion learning path planning physical modeling or collision-safety claim is included.",
+    "All evidence is SIM_GEOMETRIC development-only."
+  ]
+}

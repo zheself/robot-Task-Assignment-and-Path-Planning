@@ -1,0 +1,6 @@
+method,failure_class,count,total_rows,failure_rate
+hybrid_assignment_milp,schedule_infeasible,40,144,0.2777777777777778
+hybrid_load_balanced,schedule_infeasible,45,144,0.3125
+matched_static,schedule_infeasible,258,432,0.5972222222222222
+order_aware_lns,schedule_infeasible,29,144,0.2013888888888889
+pair_pointer,schedule_infeasible,151,432,0.34953703703703703

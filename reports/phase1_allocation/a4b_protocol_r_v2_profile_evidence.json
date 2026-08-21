@@ -1,0 +1,47 @@
+{
+  "version": "a4b-protocol-r-v2-read-only-profile-evidence-v1",
+  "status": "OBSERVED_V2_EVIDENCE_NOT_PROTOCOL_R_RESULT",
+  "evidence_label": "SIM_GEOMETRIC_DEVELOPMENT_ONLY",
+  "source_scope": "A4b ordinary-LNS v2 development fixed-iteration traces only",
+  "trace_count": 384,
+  "step_count": 11520,
+  "quantile_definition": "sorted nearest lower index int((n-1)*p)",
+  "overall": {
+    "guidance_runtime_s": {"q25": 0.011532061, "median": 0.014793201, "q75": 0.026302372},
+    "repair_runtime_s": {"q25": 2.078861022, "median": 5.996137797, "q75": 11.818453705},
+    "repair_selection_runtime_s": {"q25": 2.062981566, "median": 5.980784494, "q75": 11.786448808},
+    "scheduler_runtime_s": {"q25": 0.000177951, "median": 0.000294148, "q75": 0.000440598},
+    "verifier_runtime_s": {"q25": 0.0, "median": 0.0, "q75": 0.0},
+    "candidate_evaluations": {"q25": 153, "median": 256, "q75": 256},
+    "candidate_cap_256_steps": 7612,
+    "candidate_cap_256_fraction": 0.660763889,
+    "median_selection_fraction_of_repair": 0.997439468
+  },
+  "by_cell": {
+    "iid_small": {"repair_median_s": 0.386789, "repair_q75_s": 0.890361, "repair_selection_median_s": 0.380557, "exact30_return_median_s": 18.324, "candidate_cap_fraction": 0.0026},
+    "iid_medium": {"repair_median_s": 3.800134, "repair_q75_s": 5.264458, "repair_selection_median_s": 3.786476, "exact30_return_median_s": 94.043, "candidate_cap_fraction": 0.5682},
+    "dense_precedence": {"repair_median_s": 12.173257, "repair_q75_s": 15.149831, "repair_selection_median_s": 12.143991, "exact30_return_median_s": 367.765, "candidate_cap_fraction": 0.8234},
+    "resource_bottleneck": {"repair_median_s": 6.257252, "repair_q75_s": 8.409302, "repair_selection_median_s": 6.242549, "exact30_return_median_s": 192.633, "candidate_cap_fraction": 0.8661},
+    "tight_windows": {"repair_median_s": 5.421328, "repair_q75_s": 7.537946, "repair_selection_median_s": 5.408585, "exact30_return_median_s": 153.159, "candidate_cap_fraction": 0.7375},
+    "scale": {"repair_median_s": 21.447889, "repair_q75_s": 29.141023, "repair_selection_median_s": 21.415654, "exact30_return_median_s": 584.49, "candidate_cap_fraction": 0.9667}
+  },
+  "interpretation": [
+    "Repair selection and structural diagnostics dominate ordinary-search wall time.",
+    "Scheduler and verifier timing cannot explain the multi-second neighborhood cost.",
+    "The 256-candidate cap is reached by a majority of steps overall and nearly all scale steps.",
+    "Protocol R must preserve the cap and candidate order; acceleration must remove repeated computation rather than evaluate fewer candidates."
+  ],
+  "source_sha256": {
+    "docs/37_a4b_v2_development_closure.md": "c708ef85e787c421f822866ce29b3f2c3d6dcc4d1ab761907bfdaca78f4d4cf9",
+    "reports/phase1_allocation/a4b_ordinary_lns_dev_v2_summary.json": "11266b76f3859ab9e15303c83cb41620b033929d98397384870db3741428b889",
+    "configs/allocation/a4b_ordinary_lns_dev_v2.json": "90b20a1335d48bac28252615284509d5993e9b21811f80175a5c53fe703c7cbc",
+    "src/safe_residual_rl/allocation/search/alns_v2.py": "ff1339b6e391065629cc0e8eaad552d8f8a46d6091433770c8716a06e7e764b8",
+    "src/safe_residual_rl/allocation/search/diagnostics.py": "dd5d0458db2c75fff1e3064efb1b9bc43cab7ea008ee17476a1f03d261984500",
+    "development_traces/dense_precedence.jsonl": "e8e3901a89d2ccf40f41e2daf47d046a6ba23e250f815ab9cd75fedfe6dfa525",
+    "development_traces/iid_medium.jsonl": "e3ab1138394189bf89613ead06689f4c019df08b126d81ee3b0d644c8818e5ae",
+    "development_traces/iid_small.jsonl": "2b6474befc7f3271a3f1ca7937c4bb786f45157f2b21899a2c8c83436711cbb8",
+    "development_traces/resource_bottleneck.jsonl": "f5d50a3edae4674a02e293a0f40dfbd717b588ae5511264874897645aae774ce",
+    "development_traces/scale.jsonl": "eb18accd4d5fad490043d90b9a4753fe1241bb079cdc0cd3d346aba47e45b5c0",
+    "development_traces/tight_windows.jsonl": "617db02b57fdd041a1ed5b48705488729bef85dbc4f6d330b32e8d9a2f5692fc"
+  }
+}

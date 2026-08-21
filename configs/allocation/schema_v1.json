@@ -1,0 +1,33 @@
+{
+  "schema_version": "allocation-instance-v1",
+  "plan_schema_version": "allocation-plan-v1",
+  "units": {"position": "m", "angle": "rad", "time": "s", "speed": "m/s", "quaternion": "xyzw"},
+  "evidence_labels": ["SYNTHETIC", "SIM_GEOMETRIC"],
+  "enums": {
+    "process_direction": ["forward", "reverse", "either"],
+    "handoff_policy": ["free", "same_robot", "explicit_boundary", "not_splittable"],
+    "resource_type": ["shared_zone", "fixture", "no_go"]
+  },
+  "required_top_level": ["schema_version", "evidence_label", "instance_id", "workpiece_id", "layout_id", "coordinate_frame", "segments", "robots", "resources"],
+  "plan_contract": {
+    "required_top_level": ["schema_version", "instance_id", "method_id", "schedule", "solver_status", "objective_terms", "diagnostics"],
+    "scheduled_segment": ["segment_id", "robot_id", "order_index", "planned_start_s", "planned_end_s"],
+    "boundary": "A0 checks structure, unique coverage and references; A1 verifier checks process and scheduling constraints."
+  },
+  "semantic_rules": [
+    "segment IDs, robot IDs and resource IDs are unique and non-empty",
+    "segments of each parent curve use contiguous zero-based segment_index values",
+    "adjacent segments of one parent curve meet geometrically within 1e-6 m",
+    "not_splittable parent curves contain exactly one segment",
+    "predecessor references exist and form a directed acyclic graph",
+    "sampled curves contain at least two finite 3D points and match start/end poses",
+    "poses use a finite position and a unit xyzw quaternion",
+    "all internal values use SI units"
+  ],
+  "out_of_scope": [
+    "full geometric collision guarantee",
+    "stress/contact/plasticity/quality model",
+    "offline-RL transitions",
+    "real factory deployment evidence"
+  ]
+}
